@@ -1,22 +1,39 @@
 //
-//  AppDelegate.m
+//  MKRAppDelegate.m
 //  rostel
 //
 //  Created by Anton Zlotnikov on 20.09.16.
 //  Copyright © 2016 mayak. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "MKRAppDelegate.h"
+#import "MKRAppDataProvider.h"
+#import "MKRNetworkConfigManager.h"
+#import "UIWindows+Additions.h"
 
-@interface AppDelegate ()
+@interface MKRAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation MKRAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    NSLog(@"Application launched");
+    [[MKRAppDataProvider shared] extraInit];
+
+    [self setWindow:[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]];
+    [self.window setBackgroundColor:[UIColor whiteColor]];
+//    [[[MKRAppDataProvider shared] authService] setTokenIsInvalid];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"auth" bundle:nil];
+    if ([[[MKRAppDataProvider shared] authService] isAuthed]) {
+        [MKRNetworkConfigManager setAuthHeaderWithToken:[[[MKRAppDataProvider shared] authService] authToken]];
+//        [self.window setRootViewController:mapViewController animated:YES];
+    } else {
+        [self.window setRootViewController:[storyboard instantiateInitialViewController] animated:YES];
+    }
+
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

@@ -16,4 +16,6 @@
 - (void)showErrorForErrorContainer:(MKRErrorContainer *)errorContainer;
 
 - (void)backToLoginController;
+
+- (void)registerKeyboardActions;
 @end

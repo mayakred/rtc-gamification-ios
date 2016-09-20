@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eeV-Wq-hqp">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Авторизация-->
+        <scene sceneID="ed9-Mf-KeK">
+            <objects>
+                <viewController storyboardIdentifier="MKRAuthPhoneViewController" id="CeR-FH-Ymy" customClass="MKRAuthPhoneViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OJ2-Rd-S2G"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZCH-k1-w3o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oyo-AC-e4O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXF-gi-zM5">
+                                <color key="backgroundColor" red="0.0" green="0.66666666666666663" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xfl-7I-5Lb"/>
+                                </constraints>
+                                <state key="normal" title="ВЫСЛАТЬ КОД"/>
+                                <state key="disabled">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendCodeClick:" destination="CeR-FH-Ymy" eventType="touchUpInside" id="zQo-VT-FDE"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewx-oa-z39">
+                                <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="fDL-h2-bYo"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер телефона" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vlc-tg-7nQ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="NfN-AY-RvZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="z5Z-m2-kF9" customClass="SHSPhoneTextField">
+                                <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Qvx-jk-jgO"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CeR-FH-Ymy" id="7vt-3X-fpQ"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Для регистрации обратитесь к директору филиала" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVr-fQ-D09">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="249" id="Y0r-f6-oJj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ewx-oa-z39" firstAttribute="top" secondItem="Vlc-tg-7nQ" secondAttribute="bottom" constant="37" id="5Eq-A1-itC"/>
+                            <constraint firstItem="oVr-fQ-D09" firstAttribute="centerX" secondItem="Oyo-AC-e4O" secondAttribute="centerX" id="Iuh-Ps-6GB"/>
+                            <constraint firstItem="Vlc-tg-7nQ" firstAttribute="leading" secondItem="Oyo-AC-e4O" secondAttribute="leading" constant="30" id="Nhb-mT-hrM"/>
+                            <constraint firstItem="ewx-oa-z39" firstAttribute="leading" secondItem="Oyo-AC-e4O" secondAttribute="leading" constant="30" id="S2H-xe-u3K"/>
+                            <constraint firstItem="ZCH-k1-w3o" firstAttribute="top" secondItem="hXF-gi-zM5" secondAttribute="bottom" id="SAh-JN-Jdz"/>
+                            <constraint firstItem="z5Z-m2-kF9" firstAttribute="top" secondItem="Vlc-tg-7nQ" secondAttribute="bottom" constant="8" id="WVd-y3-loj"/>
+                            <constraint firstAttribute="trailing" secondItem="z5Z-m2-kF9" secondAttribute="trailing" constant="30" id="Zqs-Ci-OjG"/>
+                            <constraint firstItem="z5Z-m2-kF9" firstAttribute="leading" secondItem="Oyo-AC-e4O" secondAttribute="leading" constant="30" id="dAf-Bd-KQx"/>
+                            <constraint firstAttribute="trailing" secondItem="hXF-gi-zM5" secondAttribute="trailing" id="hSa-8Z-Aim"/>
+                            <constraint firstItem="oVr-fQ-D09" firstAttribute="top" secondItem="z5Z-m2-kF9" secondAttribute="bottom" constant="29" id="oEr-wv-kZf"/>
+                            <constraint firstItem="hXF-gi-zM5" firstAttribute="leading" secondItem="Oyo-AC-e4O" secondAttribute="leading" id="oXf-Wj-kGQ"/>
+                            <constraint firstAttribute="trailing" secondItem="ewx-oa-z39" secondAttribute="trailing" constant="30" id="wCu-C3-OGB"/>
+                            <constraint firstAttribute="trailing" secondItem="Vlc-tg-7nQ" secondAttribute="trailing" constant="30" id="wyx-bj-2FH"/>
+                            <constraint firstItem="Vlc-tg-7nQ" firstAttribute="top" secondItem="OJ2-Rd-S2G" secondAttribute="bottom" constant="49" id="yqk-Z3-Xzo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Авторизация" id="y2Z-n3-vHd"/>
+                    <connections>
+                        <outlet property="phoneTextField" destination="z5Z-m2-kF9" id="pEa-3a-cji"/>
+                        <outlet property="sendCodeButton" destination="hXF-gi-zM5" id="56d-yt-Rzj"/>
+                        <outlet property="sendCodeButtonBottomConstraint" destination="SAh-JN-Jdz" id="OI3-YY-YRH"/>
+                        <segue destination="8gw-bn-QhQ" kind="show" identifier="sendCodeSegue" id="pAu-Ax-Tgs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LQO-Hz-FCG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770" y="-54"/>
+        </scene>
+        <!--Код авторизации-->
+        <scene sceneID="HJA-Rm-KQG">
+            <objects>
+                <viewController title="Код авторизации" id="8gw-bn-QhQ" customClass="MKRAuthCodeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gju-vp-W9d"/>
+                        <viewControllerLayoutGuide type="bottom" id="wqh-xf-06J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lxa-LV-VOX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5V-8S-9nc">
+                                <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KHn-UM-zIG"/>
+                                </constraints>
+                                <state key="normal" title="ВОЙТИ"/>
+                                <state key="disabled">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendCodeClick:" destination="8gw-bn-QhQ" eventType="touchUpInside" id="Lhq-hU-ZQi"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yG3-EA-ZoO" customClass="MKRLoginCodeInputView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="4A2-1Z-yKt"/>
+                                    <constraint firstAttribute="height" constant="40" id="Wfb-o6-dBy"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите код из SMS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdF-GR-RhH">
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72z-nh-K7S">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="IXq-Pd-kWm"/>
+                                    <constraint firstAttribute="height" constant="30" id="RQh-u3-her"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Выслать код повторно">
+                                    <color key="titleColor" red="0.0" green="0.66666666669999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yG3-EA-ZoO" firstAttribute="centerX" secondItem="Lxa-LV-VOX" secondAttribute="centerX" id="D1C-zM-F0I"/>
+                            <constraint firstItem="wqh-xf-06J" firstAttribute="top" secondItem="H5V-8S-9nc" secondAttribute="bottom" id="JEQ-Mo-Fdz"/>
+                            <constraint firstItem="H5V-8S-9nc" firstAttribute="leading" secondItem="Lxa-LV-VOX" secondAttribute="leading" id="Pds-cj-udu"/>
+                            <constraint firstAttribute="trailing" secondItem="H5V-8S-9nc" secondAttribute="trailing" id="Smm-lA-wSB"/>
+                            <constraint firstItem="jdF-GR-RhH" firstAttribute="top" secondItem="Gju-vp-W9d" secondAttribute="bottom" constant="21" id="Wwb-fW-8Yg"/>
+                            <constraint firstItem="jdF-GR-RhH" firstAttribute="centerX" secondItem="Lxa-LV-VOX" secondAttribute="centerX" id="Zte-dW-7xz"/>
+                            <constraint firstItem="72z-nh-K7S" firstAttribute="top" secondItem="yG3-EA-ZoO" secondAttribute="bottom" constant="20" id="bBi-3Z-nXf"/>
+                            <constraint firstItem="yG3-EA-ZoO" firstAttribute="top" secondItem="jdF-GR-RhH" secondAttribute="bottom" constant="27.5" id="dp8-d2-NpW"/>
+                            <constraint firstItem="72z-nh-K7S" firstAttribute="centerX" secondItem="Lxa-LV-VOX" secondAttribute="centerX" id="yD8-R2-z97"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="codeInputView" destination="yG3-EA-ZoO" id="5IU-4U-aia"/>
+                        <outlet property="sendCodeButton" destination="H5V-8S-9nc" id="pHD-D7-Zp4"/>
+                        <outlet property="sendCodeButtonBottomConstraint" destination="JEQ-Mo-Fdz" id="WNq-65-ffa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qrj-qe-j6L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1668" y="-54.422788605697157"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MLO-td-4i7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eeV-Wq-hqp" customClass="MKRNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vvT-wd-EN9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CeR-FH-Ymy" kind="relationship" relationship="rootViewController" id="q8c-0U-EFK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="75a-ME-ywe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="-53.523238380809602"/>
+        </scene>
+    </scenes>
+</document>

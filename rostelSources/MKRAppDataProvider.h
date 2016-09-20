@@ -14,7 +14,7 @@
 
 + (MKRAppDataProvider *)shared;
 
-//need to call this in AppDelegate first
+//need to call this in MKRAppDelegate first
 - (void)extraInit;
 
 // clue for improper use (produces compile time error)

@@ -12,15 +12,7 @@
 
 
 + (UIColor *)mkr_blueColor {
-    return [UIColor colorWithRed:55.f/255.f green:122.f/255.f blue:187.f/255.f alpha:1];
-}
-
-+ (UIColor *)mkr_lightBlueColor {
-    return [UIColor colorWithRed:216.f/255.f green:234.f/255.f blue:248.f/255.f alpha:1];
-}
-
-+ (UIColor *)mkr_darkBlueColor {
-    return [UIColor colorWithRed:33.f/255.f green:76.f/255.f blue:154.f/255.f alpha:1];
+    return [UIColor colorWithRed:0/255.f green:170.f/255.f blue:231.f/255.f alpha:1];
 }
 
 + (UIColor *)mkr_greyColor {

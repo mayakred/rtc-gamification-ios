@@ -32,9 +32,9 @@
     [self.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
     topBorder = [CALayer layer];
     topBorder.frame = CGRectMake(0.0f, self.navigationBar.frame.size.height, self.view.frame.size.width, 0.5f);
-    topBorder.backgroundColor = [[UIColor mkr_darkBlueColor] CGColor];
+    topBorder.backgroundColor = [[UIColor mkr_blueColor] CGColor];
     [self.navigationBar.layer addSublayer:topBorder];
-    [self setTransparentStyle];
+    [self setWhiteStyle];
     // Do any additional setup after loading the view.
 }
 
@@ -67,10 +67,10 @@
 
 - (void)setWhiteStyle {
     style = MKRNavBarStyleWhite;
-    [topBorder setHidden:YES];
+    [topBorder setHidden:NO];
     [self.navigationBar setTranslucent:NO];
     [self.navigationBar setTitleTextAttributes:@{
-            NSForegroundColorAttributeName:[UIColor mkr_blueColor],
+            NSForegroundColorAttributeName:[UIColor blackColor],
             NSFontAttributeName:[UIFont systemFontOfSize:17]
     }];
     [self.navigationBar setTintColor:[UIColor mkr_blueColor]];

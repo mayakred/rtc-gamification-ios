@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  MKRAuthPhoneViewController.h
 //  rostel
 //
 //  Created by Anton Zlotnikov on 20.09.16.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface MKRAuthPhoneViewController : UIViewController
 
 @end
-
