@@ -1,784 +1,656 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>47</string>
-	<key>objects</key>
-	<dict>
-		<key>101212CE4E941E2DC66650F7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DEA0D13DA0BB1AB30FB784D5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A50DCB11D90DA9D00FE1A76</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3A50DCBC1D90DA9D00FE1A76</string>
-				<string>3A50DCBB1D90DA9D00FE1A76</string>
-				<string>5C080137E19DDF32918E95FA</string>
-				<string>101212CE4E941E2DC66650F7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A50DCB21D90DA9D00FE1A76</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>CLASSPREFIX</key>
-				<string>MKR</string>
-				<key>LastUpgradeCheck</key>
-				<string>0800</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>mayak</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>3A50DCB91D90DA9D00FE1A76</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.0</string>
-						<key>DevelopmentTeam</key>
-						<string>44FPHB4323</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>3A50DCB51D90DA9D00FE1A76</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 6.3</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>3A50DCB11D90DA9D00FE1A76</string>
-			<key>productRefGroup</key>
-			<string>3A50DCBB1D90DA9D00FE1A76</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>3A50DCB91D90DA9D00FE1A76</string>
-			</array>
-		</dict>
-		<key>3A50DCB51D90DA9D00FE1A76</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>3A50DCCF1D90DA9D00FE1A76</string>
-				<string>3A50DCD01D90DA9D00FE1A76</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>3A50DCB61D90DA9D00FE1A76</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>3A50DCC51D90DA9D00FE1A76</string>
-				<string>3A50DCC21D90DA9D00FE1A76</string>
-				<string>3A50DCBF1D90DA9D00FE1A76</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3A50DCB71D90DA9D00FE1A76</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>3ADA42C495B9B9C859ADEA98</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3A50DCB81D90DA9D00FE1A76</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>3A50DCCD1D90DA9D00FE1A76</string>
-				<string>3A50DCCA1D90DA9D00FE1A76</string>
-				<string>3A50DCC81D90DA9D00FE1A76</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3A50DCB91D90DA9D00FE1A76</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>3A50DCD11D90DA9D00FE1A76</string>
-			<key>buildPhases</key>
-			<array>
-				<string>B04A14AB4E704813F01A23D4</string>
-				<string>3A50DCB61D90DA9D00FE1A76</string>
-				<string>3A50DCB71D90DA9D00FE1A76</string>
-				<string>3A50DCB81D90DA9D00FE1A76</string>
-				<string>CB312472417AC9586E36B7B3</string>
-				<string>671884D4AAB934D841B06C9A</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>rostel</string>
-			<key>productName</key>
-			<string>rostel</string>
-			<key>productReference</key>
-			<string>3A50DCBA1D90DA9D00FE1A76</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>3A50DCBA1D90DA9D00FE1A76</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>rostel.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>3A50DCBB1D90DA9D00FE1A76</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3A50DCBA1D90DA9D00FE1A76</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A50DCBC1D90DA9D00FE1A76</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3A50DCC01D90DA9D00FE1A76</string>
-				<string>3A50DCC11D90DA9D00FE1A76</string>
-				<string>3A50DCC31D90DA9D00FE1A76</string>
-				<string>3A50DCC41D90DA9D00FE1A76</string>
-				<string>3A50DCC61D90DA9D00FE1A76</string>
-				<string>3A50DCC91D90DA9D00FE1A76</string>
-				<string>3A50DCCB1D90DA9D00FE1A76</string>
-				<string>3A50DCCE1D90DA9D00FE1A76</string>
-				<string>3A50DCBD1D90DA9D00FE1A76</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>rostel</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A50DCBD1D90DA9D00FE1A76</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3A50DCBE1D90DA9D00FE1A76</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A50DCBE1D90DA9D00FE1A76</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A50DCBF1D90DA9D00FE1A76</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3A50DCBE1D90DA9D00FE1A76</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3A50DCC01D90DA9D00FE1A76</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A50DCC11D90DA9D00FE1A76</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A50DCC21D90DA9D00FE1A76</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3A50DCC11D90DA9D00FE1A76</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3A50DCC31D90DA9D00FE1A76</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A50DCC41D90DA9D00FE1A76</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A50DCC51D90DA9D00FE1A76</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3A50DCC41D90DA9D00FE1A76</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3A50DCC61D90DA9D00FE1A76</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3A50DCC71D90DA9D00FE1A76</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A50DCC71D90DA9D00FE1A76</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A50DCC81D90DA9D00FE1A76</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3A50DCC61D90DA9D00FE1A76</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3A50DCC91D90DA9D00FE1A76</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A50DCCA1D90DA9D00FE1A76</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3A50DCC91D90DA9D00FE1A76</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3A50DCCB1D90DA9D00FE1A76</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3A50DCCC1D90DA9D00FE1A76</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A50DCCC1D90DA9D00FE1A76</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A50DCCD1D90DA9D00FE1A76</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3A50DCCB1D90DA9D00FE1A76</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3A50DCCE1D90DA9D00FE1A76</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A50DCCF1D90DA9D00FE1A76</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVES</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>3A50DCD01D90DA9D00FE1A76</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVES</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>3A50DCD11D90DA9D00FE1A76</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>3A50DCD21D90DA9D00FE1A76</string>
-				<string>3A50DCD31D90DA9D00FE1A76</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>3A50DCD21D90DA9D00FE1A76</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>BAECC5DF7CA97FF3F08E0A09</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>44FPHB4323</string>
-				<key>INFOPLIST_FILE</key>
-				<string>rostel/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.mayak.rostel</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>3A50DCD31D90DA9D00FE1A76</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>8C7213B989BA63949FC458B0</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>44FPHB4323</string>
-				<key>INFOPLIST_FILE</key>
-				<string>rostel/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.mayak.rostel</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>3ADA42C495B9B9C859ADEA98</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DEA0D13DA0BB1AB30FB784D5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5C080137E19DDF32918E95FA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BAECC5DF7CA97FF3F08E0A09</string>
-				<string>8C7213B989BA63949FC458B0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>671884D4AAB934D841B06C9A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-rostel/Pods-rostel-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>8C7213B989BA63949FC458B0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-rostel.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-rostel/Pods-rostel.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B04A14AB4E704813F01A23D4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>BAECC5DF7CA97FF3F08E0A09</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-rostel.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-rostel/Pods-rostel.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CB312472417AC9586E36B7B3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-rostel/Pods-rostel-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>DEA0D13DA0BB1AB30FB784D5</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-rostel.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>3A50DCB21D90DA9D00FE1A76</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A50DCBF1D90DA9D00FE1A76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A50DCBE1D90DA9D00FE1A76 /* main.m */; };
+		3A50DCC21D90DA9D00FE1A76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A50DCC11D90DA9D00FE1A76 /* AppDelegate.m */; };
+		3A50DCC51D90DA9D00FE1A76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A50DCC41D90DA9D00FE1A76 /* ViewController.m */; };
+		3A50DCC81D90DA9D00FE1A76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A50DCC61D90DA9D00FE1A76 /* Main.storyboard */; };
+		3A50DCCA1D90DA9D00FE1A76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A50DCC91D90DA9D00FE1A76 /* Assets.xcassets */; };
+		3A50DCCD1D90DA9D00FE1A76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A50DCCB1D90DA9D00FE1A76 /* LaunchScreen.storyboard */; };
+		3ADA42C495B9B9C859ADEA98 /* libPods-rostel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA0D13DA0BB1AB30FB784D5 /* libPods-rostel.a */; };
+		58AAA08FBA70AC81E42E357C /* MKRGlobalErrorsObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA92DCE44DC937AF47BCD /* MKRGlobalErrorsObserver.m */; };
+		58AAA278BAA52676102C029C /* MKRLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA5363F62D9890B4814BB /* MKRLabel.m */; };
+		58AAA2848307B934F76E73BB /* MKRBaseCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA694AEE1F05B5D79CD3F /* MKRBaseCacheManager.m */; };
+		58AAA42A1604FB4A4E41CC50 /* MKRAuthCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAAC46CB1A8FFBC966A88 /* MKRAuthCredentials.m */; };
+		58AAA42DAD0D9F5C954556A2 /* UIWindows+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAC5E876BDF703EA0FF39 /* UIWindows+Additions.m */; };
+		58AAA43FA547535CFA1DCFFF /* MKRAuthService.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA2353942252275BD67C0 /* MKRAuthService.m */; };
+		58AAA44E3E621942F874C2C3 /* MKRLogoutNetworkMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAEC2D8581A0FC1AB30B4 /* MKRLogoutNetworkMethod.m */; };
+		58AAA45319902DC8BAFFB1CE /* MKRUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAA7EC208EC90141CA11C /* MKRUtils.m */; };
+		58AAA45ED8656E294F1A4853 /* MKRAuthCredentialCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA000C7B0096CD0666E6C /* MKRAuthCredentialCacheManager.m */; };
+		58AAA53F3690BE978412B63C /* MKRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA3AD5ED3E63E0F581B06 /* MKRNavigationController.m */; };
+		58AAA56B45C210E2CD3F0EE2 /* MKRAuthSecretKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAF1F65630D3760371CAE /* MKRAuthSecretKey.m */; };
+		58AAA5BAB41887CF04A39492 /* NSError+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA709E7E5519A8859CC9C /* NSError+Extension.m */; };
+		58AAA72BF3FC1D338B1070F8 /* MKRErrorContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAD2DBD326B98490C1159 /* MKRErrorContainer.m */; };
+		58AAA732D353F726897274E5 /* MKRAuthConfirmNetworkMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAEE0634AB145BE7844E0 /* MKRAuthConfirmNetworkMethod.m */; };
+		58AAA7739EFB91024454903B /* MKRBaseNetworkMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAACE5B76A0E83ED9F8E8B /* MKRBaseNetworkMethod.m */; };
+		58AAA7A8A440C58A4732C8B0 /* CALayer+RuntimeAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAADE70D9F0F892DCF9850 /* CALayer+RuntimeAttribute.m */; };
+		58AAA808280843555267CCB8 /* MKRResponseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAB59EE1D2D5117F10397 /* MKRResponseInfo.m */; };
+		58AAA8BA59CAC4ECD55DFB4F /* MKRNetworkConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAABB9765ADC16EF9F129F /* MKRNetworkConfigManager.m */; };
+		58AAA94FF281E4A26104F829 /* MKRServerError.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA04A1DD9CAE29831721B /* MKRServerError.m */; };
+		58AAA95FF82435C79E24BCEC /* UIViewController+Errors.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA6A53830682B824207EF /* UIViewController+Errors.m */; };
+		58AAAC2756EC81DFF06052C1 /* UIFont+MKRFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAFC5B4699736D0F12D27 /* UIFont+MKRFont.m */; };
+		58AAAC91842B28E215471449 /* MKRAppDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA6E3E7D4B7A886854437 /* MKRAppDataProvider.m */; };
+		58AAADACAB0CD23F7AA804D9 /* MKRAuthRequestNetworkMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA387649363A3E614D667 /* MKRAuthRequestNetworkMethod.m */; };
+		58AAAEC16902B906A6735B8D /* UIColor+MKRColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAFB762F1EB0BDD00F75E /* UIColor+MKRColor.m */; };
+		58AAAFF538291F2A1BF04086 /* MKREntityWithId.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAA4E703375BBEE818CC6 /* MKREntityWithId.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3A50DCBA1D90DA9D00FE1A76 /* rostel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rostel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A50DCBE1D90DA9D00FE1A76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3A50DCC01D90DA9D00FE1A76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3A50DCC11D90DA9D00FE1A76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3A50DCC31D90DA9D00FE1A76 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3A50DCC41D90DA9D00FE1A76 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3A50DCC71D90DA9D00FE1A76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A50DCC91D90DA9D00FE1A76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A50DCCC1D90DA9D00FE1A76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A50DCCE1D90DA9D00FE1A76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58AAA000C7B0096CD0666E6C /* MKRAuthCredentialCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRAuthCredentialCacheManager.m; sourceTree = "<group>"; };
+		58AAA04A1DD9CAE29831721B /* MKRServerError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRServerError.m; sourceTree = "<group>"; };
+		58AAA0AAFF7662E80168A0D4 /* MKRAuthCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRAuthCredentials.h; sourceTree = "<group>"; };
+		58AAA0CEBA75BB40D5013385 /* MKRLogoutNetworkMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRLogoutNetworkMethod.h; sourceTree = "<group>"; };
+		58AAA1609B4BC8F283709118 /* MKRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRNavigationController.h; sourceTree = "<group>"; };
+		58AAA1784254A7609743D38B /* MKRErrorContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRErrorContainer.h; sourceTree = "<group>"; };
+		58AAA2353942252275BD67C0 /* MKRAuthService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRAuthService.m; sourceTree = "<group>"; };
+		58AAA2C61CC7D8E3F24BB5AD /* MKRConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRConsts.h; sourceTree = "<group>"; };
+		58AAA387649363A3E614D667 /* MKRAuthRequestNetworkMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRAuthRequestNetworkMethod.m; sourceTree = "<group>"; };
+		58AAA3AD5ED3E63E0F581B06 /* MKRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRNavigationController.m; sourceTree = "<group>"; };
+		58AAA5363F62D9890B4814BB /* MKRLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRLabel.m; sourceTree = "<group>"; };
+		58AAA563699F95590F48E9F6 /* UIFont+MKRFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MKRFont.h"; sourceTree = "<group>"; };
+		58AAA694AEE1F05B5D79CD3F /* MKRBaseCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRBaseCacheManager.m; sourceTree = "<group>"; };
+		58AAA6A53830682B824207EF /* UIViewController+Errors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Errors.m"; sourceTree = "<group>"; };
+		58AAA6B7B76C14EBEADEA9FF /* MKRServerError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRServerError.h; sourceTree = "<group>"; };
+		58AAA6E3E7D4B7A886854437 /* MKRAppDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRAppDataProvider.m; sourceTree = "<group>"; };
+		58AAA6FC290DC934BBC55FF1 /* MKRAuthConfirmNetworkMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRAuthConfirmNetworkMethod.h; sourceTree = "<group>"; };
+		58AAA709E7E5519A8859CC9C /* NSError+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Extension.m"; sourceTree = "<group>"; };
+		58AAA7B86283F6637538E74A /* MKRAppDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRAppDataProvider.h; sourceTree = "<group>"; };
+		58AAA7B93AEF1A0F37695DFB /* MKRAuthCredentialCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRAuthCredentialCacheManager.h; sourceTree = "<group>"; };
+		58AAA7F590458B7A5CFF0C50 /* MKRBaseCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRBaseCacheManager.h; sourceTree = "<group>"; };
+		58AAA80DA7FB05226A275944 /* MKRResponseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRResponseInfo.h; sourceTree = "<group>"; };
+		58AAA811086FD041BA5444B9 /* MKRLocalizableConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRLocalizableConsts.h; sourceTree = "<group>"; };
+		58AAA92DCE44DC937AF47BCD /* MKRGlobalErrorsObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRGlobalErrorsObserver.m; sourceTree = "<group>"; };
+		58AAA9841CF180E2F7AFD130 /* MKRUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRUtils.h; sourceTree = "<group>"; };
+		58AAAA15CB9F4CFA1700219F /* MKRAuthRequestNetworkMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRAuthRequestNetworkMethod.h; sourceTree = "<group>"; };
+		58AAAA4E703375BBEE818CC6 /* MKREntityWithId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKREntityWithId.m; sourceTree = "<group>"; };
+		58AAAA7EC208EC90141CA11C /* MKRUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRUtils.m; sourceTree = "<group>"; };
+		58AAAAC46CB1A8FFBC966A88 /* MKRAuthCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRAuthCredentials.m; sourceTree = "<group>"; };
+		58AAAB150AB9B30D0A8C8183 /* MKRBaseNetworkMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRBaseNetworkMethod.h; sourceTree = "<group>"; };
+		58AAAB59EE1D2D5117F10397 /* MKRResponseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRResponseInfo.m; sourceTree = "<group>"; };
+		58AAAB5FAD1B70BC5DF4D9F0 /* UIColor+MKRColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MKRColor.h"; sourceTree = "<group>"; };
+		58AAABB9765ADC16EF9F129F /* MKRNetworkConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRNetworkConfigManager.m; sourceTree = "<group>"; };
+		58AAAC5E876BDF703EA0FF39 /* UIWindows+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindows+Additions.m"; sourceTree = "<group>"; };
+		58AAAC95664D0C52BC965044 /* MKRLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRLabel.h; sourceTree = "<group>"; };
+		58AAAC99EE4B59B5A3ADBA0C /* MKRAuthService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRAuthService.h; sourceTree = "<group>"; };
+		58AAACDD911BDFB29616FE1D /* MKRAuthSecretKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRAuthSecretKey.h; sourceTree = "<group>"; };
+		58AAACE5B76A0E83ED9F8E8B /* MKRBaseNetworkMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRBaseNetworkMethod.m; sourceTree = "<group>"; };
+		58AAAD2DBD326B98490C1159 /* MKRErrorContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRErrorContainer.m; sourceTree = "<group>"; };
+		58AAAD4B9912FB988F4B0DD3 /* MKRGlobalErrorsObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRGlobalErrorsObserver.h; sourceTree = "<group>"; };
+		58AAADE70D9F0F892DCF9850 /* CALayer+RuntimeAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+RuntimeAttribute.m"; sourceTree = "<group>"; };
+		58AAAE558B4D51ED09B42170 /* UIWindows+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindows+Additions.h"; sourceTree = "<group>"; };
+		58AAAEC2D8581A0FC1AB30B4 /* MKRLogoutNetworkMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRLogoutNetworkMethod.m; sourceTree = "<group>"; };
+		58AAAEC66A099124DA276FEC /* MKREntityWithId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKREntityWithId.h; sourceTree = "<group>"; };
+		58AAAEE0634AB145BE7844E0 /* MKRAuthConfirmNetworkMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRAuthConfirmNetworkMethod.m; sourceTree = "<group>"; };
+		58AAAEE6468985C315FE17DE /* UIViewController+Errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Errors.h"; sourceTree = "<group>"; };
+		58AAAF17B3006DF384181B35 /* CALayer+RuntimeAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+RuntimeAttribute.h"; sourceTree = "<group>"; };
+		58AAAF1F65630D3760371CAE /* MKRAuthSecretKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRAuthSecretKey.m; sourceTree = "<group>"; };
+		58AAAF5659DD3A6459B11F92 /* NSError+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Extension.h"; sourceTree = "<group>"; };
+		58AAAFB10D8DBA7AEEDDDD1D /* MKRNetworkConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRNetworkConfigManager.h; sourceTree = "<group>"; };
+		58AAAFB762F1EB0BDD00F75E /* UIColor+MKRColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MKRColor.m"; sourceTree = "<group>"; };
+		58AAAFC5B4699736D0F12D27 /* UIFont+MKRFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MKRFont.m"; sourceTree = "<group>"; };
+		8C7213B989BA63949FC458B0 /* Pods-rostel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rostel.release.xcconfig"; path = "Pods/Target Support Files/Pods-rostel/Pods-rostel.release.xcconfig"; sourceTree = "<group>"; };
+		BAECC5DF7CA97FF3F08E0A09 /* Pods-rostel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rostel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rostel/Pods-rostel.debug.xcconfig"; sourceTree = "<group>"; };
+		DEA0D13DA0BB1AB30FB784D5 /* libPods-rostel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rostel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A50DCB71D90DA9D00FE1A76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ADA42C495B9B9C859ADEA98 /* libPods-rostel.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		101212CE4E941E2DC66650F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEA0D13DA0BB1AB30FB784D5 /* libPods-rostel.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A50DCB11D90DA9D00FE1A76 = {
+			isa = PBXGroup;
+			children = (
+				3A50DCBC1D90DA9D00FE1A76 /* rostel */,
+				3A50DCBB1D90DA9D00FE1A76 /* Products */,
+				5C080137E19DDF32918E95FA /* Pods */,
+				101212CE4E941E2DC66650F7 /* Frameworks */,
+				58AAAEBE53AEB97FA373B5DA /* rostelSources */,
+				58AAA4B9C63CA49F0C0C5F70 /* rostelResources */,
+			);
+			sourceTree = "<group>";
+		};
+		3A50DCBB1D90DA9D00FE1A76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A50DCBA1D90DA9D00FE1A76 /* rostel.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A50DCBC1D90DA9D00FE1A76 /* rostel */ = {
+			isa = PBXGroup;
+			children = (
+				3A50DCC01D90DA9D00FE1A76 /* AppDelegate.h */,
+				3A50DCC11D90DA9D00FE1A76 /* AppDelegate.m */,
+				3A50DCC31D90DA9D00FE1A76 /* ViewController.h */,
+				3A50DCC41D90DA9D00FE1A76 /* ViewController.m */,
+				3A50DCC61D90DA9D00FE1A76 /* Main.storyboard */,
+				3A50DCC91D90DA9D00FE1A76 /* Assets.xcassets */,
+				3A50DCCB1D90DA9D00FE1A76 /* LaunchScreen.storyboard */,
+				3A50DCCE1D90DA9D00FE1A76 /* Info.plist */,
+				3A50DCBD1D90DA9D00FE1A76 /* Supporting Files */,
+			);
+			path = rostel;
+			sourceTree = "<group>";
+		};
+		3A50DCBD1D90DA9D00FE1A76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A50DCBE1D90DA9D00FE1A76 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		58AAA23670B9AFFFA338049B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				58AAA7F590458B7A5CFF0C50 /* MKRBaseCacheManager.h */,
+				58AAA694AEE1F05B5D79CD3F /* MKRBaseCacheManager.m */,
+				58AAAB150AB9B30D0A8C8183 /* MKRBaseNetworkMethod.h */,
+				58AAACE5B76A0E83ED9F8E8B /* MKRBaseNetworkMethod.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		58AAA2CFCA726376EC7DF167 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				58AAAC99EE4B59B5A3ADBA0C /* MKRAuthService.h */,
+				58AAA2353942252275BD67C0 /* MKRAuthService.m */,
+				58AAA0CEBA75BB40D5013385 /* MKRLogoutNetworkMethod.h */,
+				58AAAEC2D8581A0FC1AB30B4 /* MKRLogoutNetworkMethod.m */,
+				58AAA6FC290DC934BBC55FF1 /* MKRAuthConfirmNetworkMethod.h */,
+				58AAAEE0634AB145BE7844E0 /* MKRAuthConfirmNetworkMethod.m */,
+				58AAAA15CB9F4CFA1700219F /* MKRAuthRequestNetworkMethod.h */,
+				58AAA387649363A3E614D667 /* MKRAuthRequestNetworkMethod.m */,
+				58AAA7B93AEF1A0F37695DFB /* MKRAuthCredentialCacheManager.h */,
+				58AAA000C7B0096CD0666E6C /* MKRAuthCredentialCacheManager.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		58AAA33A401ED5E4E6923864 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				58AAAC95664D0C52BC965044 /* MKRLabel.h */,
+				58AAA5363F62D9890B4814BB /* MKRLabel.m */,
+				58AAA563699F95590F48E9F6 /* UIFont+MKRFont.h */,
+				58AAAFC5B4699736D0F12D27 /* UIFont+MKRFont.m */,
+				58AAAB5FAD1B70BC5DF4D9F0 /* UIColor+MKRColor.h */,
+				58AAAFB762F1EB0BDD00F75E /* UIColor+MKRColor.m */,
+				58AAAF17B3006DF384181B35 /* CALayer+RuntimeAttribute.h */,
+				58AAADE70D9F0F892DCF9850 /* CALayer+RuntimeAttribute.m */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		58AAA4438A57F58DC39A514B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				58AAA6B7B76C14EBEADEA9FF /* MKRServerError.h */,
+				58AAA04A1DD9CAE29831721B /* MKRServerError.m */,
+				58AAAEC66A099124DA276FEC /* MKREntityWithId.h */,
+				58AAAA4E703375BBEE818CC6 /* MKREntityWithId.m */,
+				58AAA80DA7FB05226A275944 /* MKRResponseInfo.h */,
+				58AAAB59EE1D2D5117F10397 /* MKRResponseInfo.m */,
+				58AAA1784254A7609743D38B /* MKRErrorContainer.h */,
+				58AAAD2DBD326B98490C1159 /* MKRErrorContainer.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		58AAA4B9C63CA49F0C0C5F70 /* rostelResources */ = {
+			isa = PBXGroup;
+			children = (
+				58AAA811086FD041BA5444B9 /* MKRLocalizableConsts.h */,
+			);
+			path = rostelResources;
+			sourceTree = "<group>";
+		};
+		58AAA4D5D2367509B95CE9D4 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				58AAACDD911BDFB29616FE1D /* MKRAuthSecretKey.h */,
+				58AAAF1F65630D3760371CAE /* MKRAuthSecretKey.m */,
+				58AAA0AAFF7662E80168A0D4 /* MKRAuthCredentials.h */,
+				58AAAAC46CB1A8FFBC966A88 /* MKRAuthCredentials.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		58AAA69586E15D39AD066208 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				58AAACABB7F73B461AD02272 /* Base */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		58AAA95D8DC29A4CF137F2B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				58AAACB88012F30668665A87 /* Auth */,
+				58AAAA7BCE5AF74BC78BE40F /* Base */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		58AAAA7BCE5AF74BC78BE40F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				58AAA23670B9AFFFA338049B /* Services */,
+				58AAA4438A57F58DC39A514B /* Entities */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		58AAACABB7F73B461AD02272 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				58AAA1609B4BC8F283709118 /* MKRNavigationController.h */,
+				58AAA3AD5ED3E63E0F581B06 /* MKRNavigationController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		58AAACB88012F30668665A87 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				58AAA4D5D2367509B95CE9D4 /* Entities */,
+				58AAA2CFCA726376EC7DF167 /* Services */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		58AAAEAE040A6A1171FF8DA9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				58AAA33A401ED5E4E6923864 /* Design */,
+				58AAABB9765ADC16EF9F129F /* MKRNetworkConfigManager.m */,
+				58AAA6A53830682B824207EF /* UIViewController+Errors.m */,
+				58AAAF5659DD3A6459B11F92 /* NSError+Extension.h */,
+				58AAA2C61CC7D8E3F24BB5AD /* MKRConsts.h */,
+				58AAA709E7E5519A8859CC9C /* NSError+Extension.m */,
+				58AAAEE6468985C315FE17DE /* UIViewController+Errors.h */,
+				58AAA92DCE44DC937AF47BCD /* MKRGlobalErrorsObserver.m */,
+				58AAAA7EC208EC90141CA11C /* MKRUtils.m */,
+				58AAAD4B9912FB988F4B0DD3 /* MKRGlobalErrorsObserver.h */,
+				58AAAE558B4D51ED09B42170 /* UIWindows+Additions.h */,
+				58AAA9841CF180E2F7AFD130 /* MKRUtils.h */,
+				58AAAC5E876BDF703EA0FF39 /* UIWindows+Additions.m */,
+				58AAAFB10D8DBA7AEEDDDD1D /* MKRNetworkConfigManager.h */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		58AAAEBE53AEB97FA373B5DA /* rostelSources */ = {
+			isa = PBXGroup;
+			children = (
+				58AAA69586E15D39AD066208 /* Controllers */,
+				58AAA95D8DC29A4CF137F2B5 /* Models */,
+				58AAAEAE040A6A1171FF8DA9 /* Helpers */,
+				58AAA7B86283F6637538E74A /* MKRAppDataProvider.h */,
+				58AAA6E3E7D4B7A886854437 /* MKRAppDataProvider.m */,
+			);
+			path = rostelSources;
+			sourceTree = "<group>";
+		};
+		5C080137E19DDF32918E95FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BAECC5DF7CA97FF3F08E0A09 /* Pods-rostel.debug.xcconfig */,
+				8C7213B989BA63949FC458B0 /* Pods-rostel.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A50DCB91D90DA9D00FE1A76 /* rostel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A50DCD11D90DA9D00FE1A76 /* Build configuration list for PBXNativeTarget "rostel" */;
+			buildPhases = (
+				B04A14AB4E704813F01A23D4 /* [CP] Check Pods Manifest.lock */,
+				3A50DCB61D90DA9D00FE1A76 /* Sources */,
+				3A50DCB71D90DA9D00FE1A76 /* Frameworks */,
+				3A50DCB81D90DA9D00FE1A76 /* Resources */,
+				CB312472417AC9586E36B7B3 /* [CP] Embed Pods Frameworks */,
+				671884D4AAB934D841B06C9A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = rostel;
+			productName = rostel;
+			productReference = 3A50DCBA1D90DA9D00FE1A76 /* rostel.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A50DCB21D90DA9D00FE1A76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MKR;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = mayak;
+				TargetAttributes = {
+					3A50DCB91D90DA9D00FE1A76 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 44FPHB4323;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3A50DCB51D90DA9D00FE1A76 /* Build configuration list for PBXProject "rostel" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A50DCB11D90DA9D00FE1A76;
+			productRefGroup = 3A50DCBB1D90DA9D00FE1A76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A50DCB91D90DA9D00FE1A76 /* rostel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A50DCB81D90DA9D00FE1A76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A50DCCD1D90DA9D00FE1A76 /* LaunchScreen.storyboard in Resources */,
+				3A50DCCA1D90DA9D00FE1A76 /* Assets.xcassets in Resources */,
+				3A50DCC81D90DA9D00FE1A76 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		671884D4AAB934D841B06C9A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rostel/Pods-rostel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B04A14AB4E704813F01A23D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CB312472417AC9586E36B7B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rostel/Pods-rostel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A50DCB61D90DA9D00FE1A76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A50DCC51D90DA9D00FE1A76 /* ViewController.m in Sources */,
+				3A50DCC21D90DA9D00FE1A76 /* AppDelegate.m in Sources */,
+				3A50DCBF1D90DA9D00FE1A76 /* main.m in Sources */,
+				58AAAC91842B28E215471449 /* MKRAppDataProvider.m in Sources */,
+				58AAA56B45C210E2CD3F0EE2 /* MKRAuthSecretKey.m in Sources */,
+				58AAA42A1604FB4A4E41CC50 /* MKRAuthCredentials.m in Sources */,
+				58AAA43FA547535CFA1DCFFF /* MKRAuthService.m in Sources */,
+				58AAA44E3E621942F874C2C3 /* MKRLogoutNetworkMethod.m in Sources */,
+				58AAA732D353F726897274E5 /* MKRAuthConfirmNetworkMethod.m in Sources */,
+				58AAADACAB0CD23F7AA804D9 /* MKRAuthRequestNetworkMethod.m in Sources */,
+				58AAA45ED8656E294F1A4853 /* MKRAuthCredentialCacheManager.m in Sources */,
+				58AAA278BAA52676102C029C /* MKRLabel.m in Sources */,
+				58AAAC2756EC81DFF06052C1 /* UIFont+MKRFont.m in Sources */,
+				58AAAEC16902B906A6735B8D /* UIColor+MKRColor.m in Sources */,
+				58AAA7A8A440C58A4732C8B0 /* CALayer+RuntimeAttribute.m in Sources */,
+				58AAA8BA59CAC4ECD55DFB4F /* MKRNetworkConfigManager.m in Sources */,
+				58AAA95FF82435C79E24BCEC /* UIViewController+Errors.m in Sources */,
+				58AAA5BAB41887CF04A39492 /* NSError+Extension.m in Sources */,
+				58AAA08FBA70AC81E42E357C /* MKRGlobalErrorsObserver.m in Sources */,
+				58AAA45319902DC8BAFFB1CE /* MKRUtils.m in Sources */,
+				58AAA42DAD0D9F5C954556A2 /* UIWindows+Additions.m in Sources */,
+				58AAA2848307B934F76E73BB /* MKRBaseCacheManager.m in Sources */,
+				58AAA7739EFB91024454903B /* MKRBaseNetworkMethod.m in Sources */,
+				58AAA94FF281E4A26104F829 /* MKRServerError.m in Sources */,
+				58AAAFF538291F2A1BF04086 /* MKREntityWithId.m in Sources */,
+				58AAA808280843555267CCB8 /* MKRResponseInfo.m in Sources */,
+				58AAA72BF3FC1D338B1070F8 /* MKRErrorContainer.m in Sources */,
+				58AAA53F3690BE978412B63C /* MKRNavigationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3A50DCC61D90DA9D00FE1A76 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A50DCC71D90DA9D00FE1A76 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3A50DCCB1D90DA9D00FE1A76 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A50DCCC1D90DA9D00FE1A76 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A50DCCF1D90DA9D00FE1A76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3A50DCD01D90DA9D00FE1A76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A50DCD21D90DA9D00FE1A76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAECC5DF7CA97FF3F08E0A09 /* Pods-rostel.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 44FPHB4323;
+				INFOPLIST_FILE = rostel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mayak.rostel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3A50DCD31D90DA9D00FE1A76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C7213B989BA63949FC458B0 /* Pods-rostel.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 44FPHB4323;
+				INFOPLIST_FILE = rostel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mayak.rostel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A50DCB51D90DA9D00FE1A76 /* Build configuration list for PBXProject "rostel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A50DCCF1D90DA9D00FE1A76 /* Debug */,
+				3A50DCD01D90DA9D00FE1A76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A50DCD11D90DA9D00FE1A76 /* Build configuration list for PBXNativeTarget "rostel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A50DCD21D90DA9D00FE1A76 /* Debug */,
+				3A50DCD31D90DA9D00FE1A76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A50DCB21D90DA9D00FE1A76 /* Project object */;
+}

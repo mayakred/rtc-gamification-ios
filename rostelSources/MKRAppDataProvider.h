@@ -1,0 +1,26 @@
+//
+// Created by Anton Zlotnikov on 10.02.16.
+// Copyright (c) 2016 MAYAK RED. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "MKRAuthService.h"
+#import "MKRGlobalErrorsObserver.h"
+
+@interface MKRAppDataProvider : NSObject
+
+@property (nonatomic, strong, readonly) MKRAuthService *authService;
+@property (nonatomic, strong, readonly) MKRGlobalErrorsObserver *globalErrorsObserver;
+
++ (MKRAppDataProvider *)shared;
+
+//need to call this in AppDelegate first
+- (void)extraInit;
+
+// clue for improper use (produces compile time error)
++ (instancetype)alloc __attribute__((unavailable("alloc not available, call shared instead")));
+- (instancetype)init __attribute__((unavailable("init not available, call shared instead")));
++ (instancetype)new __attribute__((unavailable("new not available, call shared instead")));
+
+
+@end
