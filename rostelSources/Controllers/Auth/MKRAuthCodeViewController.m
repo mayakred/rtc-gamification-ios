@@ -20,6 +20,8 @@
 
 @end
 
+static NSString *const kMKRSplashSegueIdentifier = @"splashSegue";
+
 @implementation MKRAuthCodeViewController {
     BOOL keyboardShown;
     NSString *phone;
@@ -81,24 +83,22 @@
 }
 
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:kMKRSplashSegueIdentifier]) {
+
+    }
 }
-*/
+
 
 - (IBAction)sendCodeClick:(id)sender {
     [self.view endEditing:YES];
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     [[[MKRAppDataProvider shared] authService] authWithPhone:phone andCode:[self.codeInputView getCode] success:^(BOOL isFirstAuth) {
         [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
-//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//        MKRMapViewController *mapViewController = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([MKRMapViewController class])];
-//        [[[UIApplication sharedApplication] keyWindow] setRootViewController:mapViewController animated:YES];
+        [self performSegueWithIdentifier:kMKRSplashSegueIdentifier sender:self];
     } failure:^(MKRErrorContainer *errorContainer) {
         [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
         [self showErrorForErrorContainer:errorContainer];

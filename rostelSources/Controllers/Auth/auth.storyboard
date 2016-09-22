@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -167,11 +168,51 @@
                         <outlet property="codeInputView" destination="yG3-EA-ZoO" id="5IU-4U-aia"/>
                         <outlet property="sendCodeButton" destination="H5V-8S-9nc" id="pHD-D7-Zp4"/>
                         <outlet property="sendCodeButtonBottomConstraint" destination="JEQ-Mo-Fdz" id="WNq-65-ffa"/>
+                        <segue destination="atY-na-JXF" kind="presentation" identifier="splashSegue" id="e1D-vy-veW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qrj-qe-j6L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1668" y="-54.422788605697157"/>
+        </scene>
+        <!--Auth Splash View Controller-->
+        <scene sceneID="FQJ-8p-520">
+            <objects>
+                <viewController id="atY-na-JXF" customClass="MKRAuthSplashViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6d5-es-h4q"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jw1-JU-bfC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XCy-No-08v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch-logo" translatesAutoresizingMaskIntoConstraints="NO" id="EDj-XQ-z2b">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EDj-XQ-z2b" secondAttribute="height" multiplier="375:239" id="olk-75-3yS"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="je7-9B-xRa">
+                                <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="mUe-6T-7Tt"/>
+                                    <constraint firstAttribute="width" constant="20" id="pfe-Ub-dfk"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="je7-9B-xRa" firstAttribute="centerX" secondItem="XCy-No-08v" secondAttribute="centerX" id="C7m-pt-Kr2"/>
+                            <constraint firstItem="EDj-XQ-z2b" firstAttribute="centerY" secondItem="XCy-No-08v" secondAttribute="centerY" id="QU6-mp-FRa"/>
+                            <constraint firstItem="je7-9B-xRa" firstAttribute="top" secondItem="EDj-XQ-z2b" secondAttribute="bottom" constant="17" id="S2T-nX-ZZy"/>
+                            <constraint firstAttribute="trailing" secondItem="EDj-XQ-z2b" secondAttribute="trailing" id="dYa-h2-NSw"/>
+                            <constraint firstItem="EDj-XQ-z2b" firstAttribute="leading" secondItem="XCy-No-08v" secondAttribute="leading" id="lnf-9K-0vF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yfG-MI-2QV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2504.8000000000002" y="-54.422788605697157"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MLO-td-4i7">
@@ -192,4 +233,7 @@
             <point key="canvasLocation" x="-228" y="-53.523238380809602"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launch-logo" width="354" height="354"/>
+    </resources>
 </document>

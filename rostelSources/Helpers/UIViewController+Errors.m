@@ -52,10 +52,8 @@
 
 - (void)backToLoginController {
     [[MKRAppDataProvider shared].authService setTokenIsInvalid];
-//    MKREnterPhoneLoginViewController *loginController = [[MKREnterPhoneLoginViewController alloc] init];
-//    MKRNavigationController *loginNavController = [[MKRNavigationController alloc] initWithRootViewController:loginController];
-//    [loginNavController setWhiteStyle];
-//    [[[UIApplication sharedApplication] keyWindow] setRootViewController:loginNavController animated:YES];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"auth" bundle:nil];
+    [[[UIApplication sharedApplication] keyWindow] setRootViewController:[storyboard instantiateInitialViewController] animated:YES];
     [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:[[NSBundle mainBundle] bundleIdentifier]];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }

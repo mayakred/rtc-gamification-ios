@@ -10,6 +10,7 @@
 #import "MKRAppDataProvider.h"
 #import "MKRNetworkConfigManager.h"
 #import "UIWindows+Additions.h"
+#import "MKRTabBarController.h"
 
 @interface MKRAppDelegate ()
 
@@ -24,11 +25,11 @@
 
     [self setWindow:[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]];
     [self.window setBackgroundColor:[UIColor whiteColor]];
-//    [[[MKRAppDataProvider shared] authService] setTokenIsInvalid];
+    [[[MKRAppDataProvider shared] authService] setTokenIsInvalid];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"auth" bundle:nil];
     if ([[[MKRAppDataProvider shared] authService] isAuthed]) {
         [MKRNetworkConfigManager setAuthHeaderWithToken:[[[MKRAppDataProvider shared] authService] authToken]];
-//        [self.window setRootViewController:mapViewController animated:YES];
+        [self.window setRootViewController:[[MKRTabBarController alloc] init] animated:YES];
     } else {
         [self.window setRootViewController:[storyboard instantiateInitialViewController] animated:YES];
     }

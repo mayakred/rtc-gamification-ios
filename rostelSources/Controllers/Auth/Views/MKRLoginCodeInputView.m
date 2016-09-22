@@ -53,7 +53,7 @@ static const CGFloat inputOffset = 10.0f;
         CALayer *bottomBorder = [CALayer layer];
         [bottomBorder setBorderColor:[UIColor mkr_blueColor].CGColor];
         [bottomBorder setBorderWidth:1];
-        [bottomBorder setFrame:CGRectMake(0, inputHeight, inputWidth, 1)];
+        [bottomBorder setFrame:CGRectMake(0, inputHeight, inputWidth, 0.5f)];
         [numberLabel.layer addSublayer:bottomBorder];
         [numberLabel setTextAlignment:NSTextAlignmentCenter];
         [numberLabel setTextColor:[UIColor blackColor]];
