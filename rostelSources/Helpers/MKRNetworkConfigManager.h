@@ -8,6 +8,9 @@
 #define API_AUTH_REQUEST                 @"auth/request"
 #define API_AUTH_CONFIRM                 @"auth/confirm"
 #define API_AUTH_LOGOUT                  @"logout"
+#define API_CURRENT_USER                 @"users/me"
+#define API_GET_USER                     @"users/:id/"
+#define API_GET_USER_PATTERN             @"users/%@/"
 
 
 @interface MKRNetworkConfigManager : NSObject
