@@ -10,6 +10,11 @@
 
 @interface MKRUserCacheManager : MKRBaseCacheManager
 - (void)saveUser:(MKRUser *)newUser;
+
+- (void)saveUsersList:(NSArray *)usersList;
+
 - (MKRUser *)userWithId:(NSNumber *)userId;
 - (MKRFullUser *)fullUserWithId:(NSNumber *)userId;
+
+- (NSArray *)loadUsersList;
 @end

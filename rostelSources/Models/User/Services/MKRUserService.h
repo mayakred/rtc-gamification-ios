@@ -8,6 +8,7 @@
 @class MKRErrorContainer;
 @class MKRAuthCredentialCacheManager;
 @class MKRFullUser;
+@class MKRUsersListPresenter;
 
 
 @interface MKRUserService : NSObject
@@ -16,6 +17,8 @@
 - (void)getCurrentUserWithSuccess:(void (^)(MKRFullUser *user))successBlock failure:(void (^)(MKRErrorContainer *errorContainer))failureBlock;
 
 - (void)getUserWithId:(NSNumber *)userId success:(void (^)(MKRFullUser *user))successBlock failure:(void (^)(MKRErrorContainer *errorContainer))failureBlock;
+
+- (void)loadUsersListFromServerWithPresenter:(MKRUsersListPresenter *)presenter;
 
 - (MKRFullUser *)currentUser;
 

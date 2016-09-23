@@ -20,6 +20,13 @@
     [realm commitWriteTransaction];
 }
 
+- (void)saveUsersList:(NSArray *)usersList {
+    RLMRealm *realm = [MKRSecurityManager getRealm];
+    [realm beginWriteTransaction];
+    [realm addOrUpdateObjectsFromArray:usersList];
+    [realm commitWriteTransaction];
+}
+
 - (MKRUser *)userWithId:(NSNumber *)userId {
     RLMRealm *realm = [MKRSecurityManager getRealm];
     return [MKRUser objectInRealm:realm forPrimaryKey:userId];
@@ -30,5 +37,9 @@
     return [MKRFullUser objectInRealm:realm forPrimaryKey:userId];
 }
 
+- (NSArray *)loadUsersList {
+    RLMRealm *realm = [MKRSecurityManager getRealm];
+    return [self RLMResultsToNSArray:[MKRUser allObjectsInRealm:realm]];
+}
 
 @end

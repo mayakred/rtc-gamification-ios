@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    [self loadCurrentUser];
+    [self goToTabBarController];
     [self loadCurrentUser];
 }
 

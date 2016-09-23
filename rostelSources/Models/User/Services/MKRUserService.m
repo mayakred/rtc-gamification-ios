@@ -10,13 +10,16 @@
 #import "MKRUserCacheManager.h"
 #import "MKRFullUser.h"
 #import "MKRGetUserNetworkMethod.h"
+#import "MKRUsersListNetworkMethod.h"
+#import "MKRUsersListPresenter.h"
 
 
 @implementation MKRUserService {
     MKRGetCurrentUserNetworkMethod *getCurrentUserNetworkMethod;
     MKRGetUserNetworkMethod *getUserNetworkMethod;
+    MKRUsersListNetworkMethod *usersListNetworkMethod;
     MKRAuthCredentialCacheManager *authCredentialCacheManager;
-    MKRUserCacheManager *userCacheManager;
+    MKRUserCacheManager *cacheManager;
 }
 
 - (instancetype)initWithCacheManager:(MKRAuthCredentialCacheManager *)credentialCacheManager {
@@ -28,7 +31,8 @@
 
     getCurrentUserNetworkMethod = [[MKRGetCurrentUserNetworkMethod alloc] init];
     getUserNetworkMethod = [[MKRGetUserNetworkMethod alloc] init];
-    userCacheManager = [[MKRUserCacheManager alloc] init];
+    usersListNetworkMethod = [[MKRUsersListNetworkMethod alloc] init];
+    cacheManager = [[MKRUserCacheManager alloc] init];
 
     return self;
 }
@@ -36,7 +40,7 @@
 - (void)getCurrentUserWithSuccess:(void (^)(MKRFullUser *user))successBlock failure:(void (^)(MKRErrorContainer *errorContainer))failureBlock {
     NSLog(@"Start loading current user");
     [getCurrentUserNetworkMethod currentUserWithSuccess:^(MKRFullUser *user) {
-        [userCacheManager saveUser:user];
+        [cacheManager saveUser:user];
         if (successBlock) {
             successBlock(user);
         }
@@ -51,7 +55,7 @@
     NSParameterAssert(userId);
     NSLog(@"Start loading user with id %@", userId);
     [getUserNetworkMethod currentUserWithId:userId success:^(MKRFullUser *user) {
-        [userCacheManager saveUser:user];
+        [cacheManager saveUser:user];
         if (successBlock) {
             successBlock(user);
         }
@@ -62,10 +66,24 @@
     }];
 }
 
+- (void)loadUsersListFromServerWithPresenter:(MKRUsersListPresenter *)presenter {
+    NSLog(@"Start loading users list");
+    [presenter serviceWillUpdateUsersList];
+    [usersListNetworkMethod usersListWithSuccess:^(NSArray *usersList) {
+        NSLog(@"Success loading users list");
+        [cacheManager saveUsersList:usersList];
+        [presenter serviceUpdatedUsersListSuccessfully];
+    } failure:^(NSError *error, NSArray *serverErrors) {
+        NSLog(@"Error loading users list Description:\n%@", error.description);
+        [presenter serviceUpdatedUsersListWithError:[MKRErrorContainer errorContainerWithError:error andServerErrors:serverErrors]];
+    }];
+}
+
+
 
 
 - (MKRFullUser *)currentUser {
-    return [userCacheManager fullUserWithId:[authCredentialCacheManager userId]];
+    return [cacheManager fullUserWithId:[authCredentialCacheManager userId]];
 }
 
 

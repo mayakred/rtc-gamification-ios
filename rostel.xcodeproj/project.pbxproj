@@ -31,8 +31,8 @@
 		58AAA30B6D94C7D4F0D7C697 /* MKRMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA5885B56854CAF26A35E /* MKRMetric.m */; };
 		58AAA38AB697BDC68F0014E6 /* MKRFullTournament.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA201A3B1C00AEB51A88B /* MKRFullTournament.m */; };
 		58AAA42A1604FB4A4E41CC50 /* MKRAuthCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAAC46CB1A8FFBC966A88 /* MKRAuthCredentials.m */; };
-		58AAA42DAD0D9F5C954556A2 /* UIWindows+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAC5E876BDF703EA0FF39 /* UIWindows+Additions.m */; };
 		58AAA43FA547535CFA1DCFFF /* MKRAuthService.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA2353942252275BD67C0 /* MKRAuthService.m */; };
+		58AAA44C6DFF2A5880ED0F83 /* MKRUsersListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA8B6FFD1B86EB0225EF2 /* MKRUsersListPresenter.m */; };
 		58AAA44E3E621942F874C2C3 /* MKRLogoutNetworkMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAEC2D8581A0FC1AB30B4 /* MKRLogoutNetworkMethod.m */; };
 		58AAA45319902DC8BAFFB1CE /* MKRUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAA7EC208EC90141CA11C /* MKRUtils.m */; };
 		58AAA45ED8656E294F1A4853 /* MKRAuthCredentialCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA000C7B0096CD0666E6C /* MKRAuthCredentialCacheManager.m */; };
@@ -49,6 +49,8 @@
 		58AAA8BA59CAC4ECD55DFB4F /* MKRNetworkConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAABB9765ADC16EF9F129F /* MKRNetworkConfigManager.m */; };
 		58AAA94FF281E4A26104F829 /* MKRServerError.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA04A1DD9CAE29831721B /* MKRServerError.m */; };
 		58AAA95FF82435C79E24BCEC /* UIViewController+Errors.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA6A53830682B824207EF /* UIViewController+Errors.m */; };
+		58AAAA35FA75AAF40E92095F /* MKRUsersListNetworkMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA55961A42D970960E85B /* MKRUsersListNetworkMethod.m */; };
+		58AAAA513FA27A845F6A2B7E /* UIWindows+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA273FAE20ED2A1D9A230 /* UIWindows+Additions.m */; };
 		58AAABAF06A57D17DD13E86E /* MKRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA7772ED24FBB4A755FC8 /* MKRUser.m */; };
 		58AAABB331DAC5D8C014F702 /* MKRTournament.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA5F34C7BBAE3F23A155D /* MKRTournament.m */; };
 		58AAABB7495B5A709F0DBC69 /* MKRUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAABFD2B9ABEB3E2F7889E /* MKRUserService.m */; };
@@ -95,7 +97,10 @@
 		58AAA2353942252275BD67C0 /* MKRAuthService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRAuthService.m; sourceTree = "<group>"; };
 		58AAA23C72E6908F41CFBCCC /* MKRParticipantStatisticElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRParticipantStatisticElement.h; sourceTree = "<group>"; };
 		58AAA24870CFA05E4AA021F8 /* MKRDepartment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRDepartment.m; sourceTree = "<group>"; };
+		58AAA273FAE20ED2A1D9A230 /* UIWindows+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindows+Additions.m"; sourceTree = "<group>"; };
 		58AAA2C61CC7D8E3F24BB5AD /* MKRConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRConsts.h; sourceTree = "<group>"; };
+		58AAA34A9DA513574BE488B6 /* MKRUsersListPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRUsersListPresenter.h; sourceTree = "<group>"; };
+		58AAA34DFD5A27AB907AB8B6 /* MKRUsersListNetworkMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRUsersListNetworkMethod.h; sourceTree = "<group>"; };
 		58AAA387649363A3E614D667 /* MKRAuthRequestNetworkMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRAuthRequestNetworkMethod.m; sourceTree = "<group>"; };
 		58AAA3AD5ED3E63E0F581B06 /* MKRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRNavigationController.m; sourceTree = "<group>"; };
 		58AAA3DB3E5D073E53E4E50F /* MKRFullTournament.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRFullTournament.h; sourceTree = "<group>"; };
@@ -103,6 +108,7 @@
 		58AAA43803261BF34F01960B /* MKRTeamStatisticElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRTeamStatisticElement.h; sourceTree = "<group>"; };
 		58AAA4618BDAB50E1535A020 /* MKRAchievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRAchievement.m; sourceTree = "<group>"; };
 		58AAA5363F62D9890B4814BB /* MKRLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRLabel.m; sourceTree = "<group>"; };
+		58AAA55961A42D970960E85B /* MKRUsersListNetworkMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRUsersListNetworkMethod.m; sourceTree = "<group>"; };
 		58AAA563699F95590F48E9F6 /* UIFont+MKRFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MKRFont.h"; sourceTree = "<group>"; };
 		58AAA56E21CB4C330DF38685 /* MKRGetUserNetworkMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRGetUserNetworkMethod.m; sourceTree = "<group>"; };
 		58AAA5885B56854CAF26A35E /* MKRMetric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRMetric.m; sourceTree = "<group>"; };
@@ -126,10 +132,12 @@
 		58AAA7B86283F6637538E74A /* MKRAppDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRAppDataProvider.h; sourceTree = "<group>"; };
 		58AAA7B93AEF1A0F37695DFB /* MKRAuthCredentialCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRAuthCredentialCacheManager.h; sourceTree = "<group>"; };
 		58AAA7F590458B7A5CFF0C50 /* MKRBaseCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRBaseCacheManager.h; sourceTree = "<group>"; };
+		58AAA7FE8D9538619101A5CF /* UIWindows+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindows+Additions.h"; sourceTree = "<group>"; };
 		58AAA80DA7FB05226A275944 /* MKRResponseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRResponseInfo.h; sourceTree = "<group>"; };
 		58AAA811086FD041BA5444B9 /* MKRLocalizableConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRLocalizableConsts.h; sourceTree = "<group>"; };
 		58AAA868E4EFD22F2A1E9827 /* MKRFullUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRFullUser.m; sourceTree = "<group>"; };
 		58AAA8A526F5DCAF9E0CCE4D /* MKRMetric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRMetric.h; sourceTree = "<group>"; };
+		58AAA8B6FFD1B86EB0225EF2 /* MKRUsersListPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRUsersListPresenter.m; sourceTree = "<group>"; };
 		58AAA92DCE44DC937AF47BCD /* MKRGlobalErrorsObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRGlobalErrorsObserver.m; sourceTree = "<group>"; };
 		58AAA93620144DDDFC7F594F /* MKRLoginCodeInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRLoginCodeInputView.h; sourceTree = "<group>"; };
 		58AAA93A0A772C8976DE4E7B /* MKRPushService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRPushService.m; sourceTree = "<group>"; };
@@ -153,7 +161,6 @@
 		58AAABDA0BB82F44D56FB4D7 /* MKRGetCurrentUserNetworkMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRGetCurrentUserNetworkMethod.h; sourceTree = "<group>"; };
 		58AAABFD2B9ABEB3E2F7889E /* MKRUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRUserService.m; sourceTree = "<group>"; };
 		58AAAC292D858E167AD88E6D /* MKRGetUserNetworkMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRGetUserNetworkMethod.h; sourceTree = "<group>"; };
-		58AAAC5E876BDF703EA0FF39 /* UIWindows+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindows+Additions.m"; sourceTree = "<group>"; };
 		58AAAC95664D0C52BC965044 /* MKRLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRLabel.h; sourceTree = "<group>"; };
 		58AAAC99EE4B59B5A3ADBA0C /* MKRAuthService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRAuthService.h; sourceTree = "<group>"; };
 		58AAACDD911BDFB29616FE1D /* MKRAuthSecretKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRAuthSecretKey.h; sourceTree = "<group>"; };
@@ -167,7 +174,6 @@
 		58AAAE0C9D16E965AAC9F22A /* MKRParticipant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRParticipant.h; sourceTree = "<group>"; };
 		58AAAE17B8877CD0AC11CED5 /* MKRCodeField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRCodeField.m; sourceTree = "<group>"; };
 		58AAAE483D881D3E48C54439 /* MKRParticipant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRParticipant.m; sourceTree = "<group>"; };
-		58AAAE558B4D51ED09B42170 /* UIWindows+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindows+Additions.h"; sourceTree = "<group>"; };
 		58AAAE799CF584F85074A5BC /* MKRUserCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRUserCacheManager.m; sourceTree = "<group>"; };
 		58AAAEC2D8581A0FC1AB30B4 /* MKRLogoutNetworkMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRLogoutNetworkMethod.m; sourceTree = "<group>"; };
 		58AAAEC66A099124DA276FEC /* MKREntityWithId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKREntityWithId.h; sourceTree = "<group>"; };
@@ -419,6 +425,15 @@
 			path = Participant;
 			sourceTree = "<group>";
 		};
+		58AAA5D9AA90C1F58234C47F /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				58AAA8B6FFD1B86EB0225EF2 /* MKRUsersListPresenter.m */,
+				58AAA34A9DA513574BE488B6 /* MKRUsersListPresenter.h */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
 		58AAA631CBBDAF6CA522410F /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,6 +481,8 @@
 				58AAABD4302D71707044B8C3 /* MKRGetCurrentUserNetworkMethod.m */,
 				58AAA56E21CB4C330DF38685 /* MKRGetUserNetworkMethod.m */,
 				58AAAC292D858E167AD88E6D /* MKRGetUserNetworkMethod.h */,
+				58AAA55961A42D970960E85B /* MKRUsersListNetworkMethod.m */,
+				58AAA34DFD5A27AB907AB8B6 /* MKRUsersListNetworkMethod.h */,
 			);
 			path = Methods;
 			sourceTree = "<group>";
@@ -500,6 +517,7 @@
 				58AAAE67C0F058DC52106C8C /* Entities */,
 				58AAA79584AA30B684B1DAEA /* Methods */,
 				58AAA18E90E97517E6C92500 /* Services */,
+				58AAA5D9AA90C1F58234C47F /* Presenters */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -630,12 +648,12 @@
 				58AAA92DCE44DC937AF47BCD /* MKRGlobalErrorsObserver.m */,
 				58AAAA7EC208EC90141CA11C /* MKRUtils.m */,
 				58AAAD4B9912FB988F4B0DD3 /* MKRGlobalErrorsObserver.h */,
-				58AAAE558B4D51ED09B42170 /* UIWindows+Additions.h */,
 				58AAA9841CF180E2F7AFD130 /* MKRUtils.h */,
-				58AAAC5E876BDF703EA0FF39 /* UIWindows+Additions.m */,
 				58AAAFB10D8DBA7AEEDDDD1D /* MKRNetworkConfigManager.h */,
 				58AAA58B41DB21D8FE296260 /* MKRSecurityManager.m */,
 				58AAA6684E8B76B65DDC1F53 /* MKRSecurityManager.h */,
+				58AAA7FE8D9538619101A5CF /* UIWindows+Additions.h */,
+				58AAA273FAE20ED2A1D9A230 /* UIWindows+Additions.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -830,7 +848,6 @@
 				58AAA5BAB41887CF04A39492 /* NSError+Extension.m in Sources */,
 				58AAA08FBA70AC81E42E357C /* MKRGlobalErrorsObserver.m in Sources */,
 				58AAA45319902DC8BAFFB1CE /* MKRUtils.m in Sources */,
-				58AAA42DAD0D9F5C954556A2 /* UIWindows+Additions.m in Sources */,
 				58AAA2848307B934F76E73BB /* MKRBaseCacheManager.m in Sources */,
 				58AAA7739EFB91024454903B /* MKRBaseNetworkMethod.m in Sources */,
 				58AAA94FF281E4A26104F829 /* MKRServerError.m in Sources */,
@@ -861,6 +878,9 @@
 				58AAABB7495B5A709F0DBC69 /* MKRUserService.m in Sources */,
 				58AAA282F0059D9BCD1A1675 /* MKRUserCacheManager.m in Sources */,
 				58AAAF0A3C3409FDB7ABA414 /* MKRSecurityManager.m in Sources */,
+				58AAAA35FA75AAF40E92095F /* MKRUsersListNetworkMethod.m in Sources */,
+				58AAA44C6DFF2A5880ED0F83 /* MKRUsersListPresenter.m in Sources */,
+				58AAAA513FA27A845F6A2B7E /* UIWindows+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

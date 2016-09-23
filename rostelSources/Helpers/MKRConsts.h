@@ -4,7 +4,7 @@
 #define ISDEV
 
 #ifdef ISDEV
-    #define SERVER_URL @"http://bootstrap.mayakdev.ru/api/mobile/v1/"
+    #define SERVER_URL @"http://rostelecom.mayakdev.ru/api/mobile/v1/"
 #else
     #define SERVER_URL @"http://echeep.com/api"
 #endif
