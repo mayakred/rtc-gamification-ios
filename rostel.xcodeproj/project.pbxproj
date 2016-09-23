@@ -26,6 +26,7 @@
 		58AAA21DF3474E05A6E03C49 /* MKRGetUserNetworkMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA56E21CB4C330DF38685 /* MKRGetUserNetworkMethod.m */; };
 		58AAA24EEEB5FC7C3893B6FF /* MKRAchievement.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA4618BDAB50E1535A020 /* MKRAchievement.m */; };
 		58AAA278BAA52676102C029C /* MKRLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA5363F62D9890B4814BB /* MKRLabel.m */; };
+		58AAA282F0059D9BCD1A1675 /* MKRUserCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAE799CF584F85074A5BC /* MKRUserCacheManager.m */; };
 		58AAA2848307B934F76E73BB /* MKRBaseCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA694AEE1F05B5D79CD3F /* MKRBaseCacheManager.m */; };
 		58AAA30B6D94C7D4F0D7C697 /* MKRMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA5885B56854CAF26A35E /* MKRMetric.m */; };
 		58AAA38AB697BDC68F0014E6 /* MKRFullTournament.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA201A3B1C00AEB51A88B /* MKRFullTournament.m */; };
@@ -50,6 +51,7 @@
 		58AAA95FF82435C79E24BCEC /* UIViewController+Errors.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA6A53830682B824207EF /* UIViewController+Errors.m */; };
 		58AAABAF06A57D17DD13E86E /* MKRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA7772ED24FBB4A755FC8 /* MKRUser.m */; };
 		58AAABB331DAC5D8C014F702 /* MKRTournament.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA5F34C7BBAE3F23A155D /* MKRTournament.m */; };
+		58AAABB7495B5A709F0DBC69 /* MKRUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAABFD2B9ABEB3E2F7889E /* MKRUserService.m */; };
 		58AAABD78502685B4B0E70A2 /* MKRTeamStatisticElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA974E67EEDC5DAE87357 /* MKRTeamStatisticElement.m */; };
 		58AAAC2756EC81DFF06052C1 /* UIFont+MKRFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAFC5B4699736D0F12D27 /* UIFont+MKRFont.m */; };
 		58AAAC91842B28E215471449 /* MKRAppDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA6E3E7D4B7A886854437 /* MKRAppDataProvider.m */; };
@@ -60,6 +62,7 @@
 		58AAADA0F73EB7E18C272474 /* MKRRegisterPushNotificationsNetworkMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAF8AF28F952D99FC304E /* MKRRegisterPushNotificationsNetworkMethod.m */; };
 		58AAADACAB0CD23F7AA804D9 /* MKRAuthRequestNetworkMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA387649363A3E614D667 /* MKRAuthRequestNetworkMethod.m */; };
 		58AAAEC16902B906A6735B8D /* UIColor+MKRColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAFB762F1EB0BDD00F75E /* UIColor+MKRColor.m */; };
+		58AAAF0A3C3409FDB7ABA414 /* MKRSecurityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA58B41DB21D8FE296260 /* MKRSecurityManager.m */; };
 		58AAAFF538291F2A1BF04086 /* MKREntityWithId.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAA4E703375BBEE818CC6 /* MKREntityWithId.m */; };
 /* End PBXBuildFile section */
 
@@ -103,11 +106,13 @@
 		58AAA563699F95590F48E9F6 /* UIFont+MKRFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MKRFont.h"; sourceTree = "<group>"; };
 		58AAA56E21CB4C330DF38685 /* MKRGetUserNetworkMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRGetUserNetworkMethod.m; sourceTree = "<group>"; };
 		58AAA5885B56854CAF26A35E /* MKRMetric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRMetric.m; sourceTree = "<group>"; };
+		58AAA58B41DB21D8FE296260 /* MKRSecurityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRSecurityManager.m; sourceTree = "<group>"; };
 		58AAA5D4BE5C11D6625EADE2 /* MKRLoginCodeInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRLoginCodeInputView.m; sourceTree = "<group>"; };
 		58AAA5F1EB9CF7F5EF99783D /* MKRParticipantStatisticElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRParticipantStatisticElement.m; sourceTree = "<group>"; };
 		58AAA5F34C7BBAE3F23A155D /* MKRTournament.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRTournament.m; sourceTree = "<group>"; };
 		58AAA5FF68ADF64BD523ABC0 /* MKRTeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRTeam.m; sourceTree = "<group>"; };
 		58AAA61F1B364C05BCC2D2D9 /* MKRCodeField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRCodeField.h; sourceTree = "<group>"; };
+		58AAA6684E8B76B65DDC1F53 /* MKRSecurityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRSecurityManager.h; sourceTree = "<group>"; };
 		58AAA694AEE1F05B5D79CD3F /* MKRBaseCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRBaseCacheManager.m; sourceTree = "<group>"; };
 		58AAA6A53830682B824207EF /* UIViewController+Errors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Errors.m"; sourceTree = "<group>"; };
 		58AAA6B4BDD2869E5DA9BAE6 /* MKRImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRImage.m; sourceTree = "<group>"; };
@@ -128,6 +133,7 @@
 		58AAA92DCE44DC937AF47BCD /* MKRGlobalErrorsObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRGlobalErrorsObserver.m; sourceTree = "<group>"; };
 		58AAA93620144DDDFC7F594F /* MKRLoginCodeInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRLoginCodeInputView.h; sourceTree = "<group>"; };
 		58AAA93A0A772C8976DE4E7B /* MKRPushService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRPushService.m; sourceTree = "<group>"; };
+		58AAA956B129152C02119AF6 /* MKRUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRUserService.h; sourceTree = "<group>"; };
 		58AAA974E67EEDC5DAE87357 /* MKRTeamStatisticElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRTeamStatisticElement.m; sourceTree = "<group>"; };
 		58AAA9841CF180E2F7AFD130 /* MKRUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRUtils.h; sourceTree = "<group>"; };
 		58AAAA15CB9F4CFA1700219F /* MKRAuthRequestNetworkMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRAuthRequestNetworkMethod.h; sourceTree = "<group>"; };
@@ -136,6 +142,7 @@
 		58AAAA4E703375BBEE818CC6 /* MKREntityWithId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKREntityWithId.m; sourceTree = "<group>"; };
 		58AAAA7EC208EC90141CA11C /* MKRUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRUtils.m; sourceTree = "<group>"; };
 		58AAAAC46CB1A8FFBC966A88 /* MKRAuthCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRAuthCredentials.m; sourceTree = "<group>"; };
+		58AAAAF55FF91A860159377A /* MKRUserCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRUserCacheManager.h; sourceTree = "<group>"; };
 		58AAAB150AB9B30D0A8C8183 /* MKRBaseNetworkMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRBaseNetworkMethod.h; sourceTree = "<group>"; };
 		58AAAB1DF255977BE4535DD4 /* MKRFullUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRFullUser.h; sourceTree = "<group>"; };
 		58AAAB1E150F3083646D6A98 /* MKRRegisterPushNotificationsNetworkMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRRegisterPushNotificationsNetworkMethod.h; sourceTree = "<group>"; };
@@ -144,6 +151,7 @@
 		58AAABB9765ADC16EF9F129F /* MKRNetworkConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRNetworkConfigManager.m; sourceTree = "<group>"; };
 		58AAABD4302D71707044B8C3 /* MKRGetCurrentUserNetworkMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRGetCurrentUserNetworkMethod.m; sourceTree = "<group>"; };
 		58AAABDA0BB82F44D56FB4D7 /* MKRGetCurrentUserNetworkMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRGetCurrentUserNetworkMethod.h; sourceTree = "<group>"; };
+		58AAABFD2B9ABEB3E2F7889E /* MKRUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRUserService.m; sourceTree = "<group>"; };
 		58AAAC292D858E167AD88E6D /* MKRGetUserNetworkMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRGetUserNetworkMethod.h; sourceTree = "<group>"; };
 		58AAAC5E876BDF703EA0FF39 /* UIWindows+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindows+Additions.m"; sourceTree = "<group>"; };
 		58AAAC95664D0C52BC965044 /* MKRLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRLabel.h; sourceTree = "<group>"; };
@@ -160,6 +168,7 @@
 		58AAAE17B8877CD0AC11CED5 /* MKRCodeField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRCodeField.m; sourceTree = "<group>"; };
 		58AAAE483D881D3E48C54439 /* MKRParticipant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRParticipant.m; sourceTree = "<group>"; };
 		58AAAE558B4D51ED09B42170 /* UIWindows+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindows+Additions.h"; sourceTree = "<group>"; };
+		58AAAE799CF584F85074A5BC /* MKRUserCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRUserCacheManager.m; sourceTree = "<group>"; };
 		58AAAEC2D8581A0FC1AB30B4 /* MKRLogoutNetworkMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRLogoutNetworkMethod.m; sourceTree = "<group>"; };
 		58AAAEC66A099124DA276FEC /* MKREntityWithId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKREntityWithId.h; sourceTree = "<group>"; };
 		58AAAEE0634AB145BE7844E0 /* MKRAuthConfirmNetworkMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRAuthConfirmNetworkMethod.m; sourceTree = "<group>"; };
@@ -261,6 +270,17 @@
 				58AAAEB90F3B4B490FCFFC2C /* Entities */,
 			);
 			path = Metric;
+			sourceTree = "<group>";
+		};
+		58AAA18E90E97517E6C92500 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				58AAA956B129152C02119AF6 /* MKRUserService.h */,
+				58AAABFD2B9ABEB3E2F7889E /* MKRUserService.m */,
+				58AAAAF55FF91A860159377A /* MKRUserCacheManager.h */,
+				58AAAE799CF584F85074A5BC /* MKRUserCacheManager.m */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		58AAA23670B9AFFFA338049B /* Services */ = {
@@ -479,6 +499,7 @@
 			children = (
 				58AAAE67C0F058DC52106C8C /* Entities */,
 				58AAA79584AA30B684B1DAEA /* Methods */,
+				58AAA18E90E97517E6C92500 /* Services */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -613,6 +634,8 @@
 				58AAA9841CF180E2F7AFD130 /* MKRUtils.h */,
 				58AAAC5E876BDF703EA0FF39 /* UIWindows+Additions.m */,
 				58AAAFB10D8DBA7AEEDDDD1D /* MKRNetworkConfigManager.h */,
+				58AAA58B41DB21D8FE296260 /* MKRSecurityManager.m */,
+				58AAA6684E8B76B65DDC1F53 /* MKRSecurityManager.h */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -835,6 +858,9 @@
 				58AAADA0F73EB7E18C272474 /* MKRRegisterPushNotificationsNetworkMethod.m in Sources */,
 				58AAA1916BF0F02D731DFA5C /* MKRPushService.m in Sources */,
 				58AAA24EEEB5FC7C3893B6FF /* MKRAchievement.m in Sources */,
+				58AAABB7495B5A709F0DBC69 /* MKRUserService.m in Sources */,
+				58AAA282F0059D9BCD1A1675 /* MKRUserCacheManager.m in Sources */,
+				58AAAF0A3C3409FDB7ABA414 /* MKRSecurityManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
