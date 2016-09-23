@@ -12,7 +12,6 @@
 #import "MKRErrorContainer.h"
 #import "UIWindows+Additions.h"
 #import "MKRNavigationController.h"
-
 @implementation UIViewController (Errors)
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -52,6 +51,7 @@
 
 - (void)backToLoginController {
     [[MKRAppDataProvider shared].authService setTokenIsInvalid];
+    [[MKRAppDataProvider shared].pushService unregisterForPushNotifications];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"auth" bundle:nil];
     [[[UIApplication sharedApplication] keyWindow] setRootViewController:[storyboard instantiateInitialViewController] animated:YES];
     [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:[[NSBundle mainBundle] bundleIdentifier]];

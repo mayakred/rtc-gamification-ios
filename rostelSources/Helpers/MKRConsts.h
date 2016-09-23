@@ -16,6 +16,8 @@
 #define APP_DOMAIN @"com.mayak.rostel"
 #define PLATFORM @"ios"
 
+#define ONE_SIGNAL_APP_ID @"9fc59e0b-0783-461c-8644-b04a03b4c79a"
+
 enum {
     MKRNetworkError = 1001,
 };

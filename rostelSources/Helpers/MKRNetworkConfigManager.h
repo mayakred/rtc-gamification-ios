@@ -11,6 +11,7 @@
 #define API_CURRENT_USER                 @"users/me"
 #define API_GET_USER                     @"users/:id/"
 #define API_GET_USER_PATTERN             @"users/%@/"
+#define API_REGISTER_PLAYER_ID           @"users/me/players"
 
 
 @interface MKRNetworkConfigManager : NSObject

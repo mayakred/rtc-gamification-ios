@@ -5,11 +5,13 @@
 
 #import <Foundation/Foundation.h>
 #import "MKRAuthService.h"
+#import "MKRPushService.h"
 #import "MKRGlobalErrorsObserver.h"
 
 @interface MKRAppDataProvider : NSObject
 
 @property (nonatomic, strong, readonly) MKRAuthService *authService;
+@property (nonatomic, strong, readonly) MKRPushService *pushService;
 @property (nonatomic, strong, readonly) MKRGlobalErrorsObserver *globalErrorsObserver;
 
 + (MKRAppDataProvider *)shared;

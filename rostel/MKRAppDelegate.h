@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <OneSignal/OneSignal.h>
 
 @interface MKRAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) OneSignal *oneSignal;
 
 @end
 

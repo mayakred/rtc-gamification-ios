@@ -10,6 +10,7 @@
 @interface MKRAppDataProvider()
 
 @property (nonatomic, readwrite) MKRAuthService *authService;
+@property (nonatomic, readwrite) MKRPushService *pushService;
 @property (nonatomic, readwrite) MKRGlobalErrorsObserver *globalErrorsObserver;
 
 @end
@@ -43,6 +44,7 @@
     credentialCacheManager = [[MKRAuthCredentialCacheManager alloc] init];
 
     [self setAuthService:[[MKRAuthService alloc] initWithCredentialManager:credentialCacheManager]];
+    [self setPushService:[[MKRPushService alloc] init]];
     [self setGlobalErrorsObserver:[[MKRGlobalErrorsObserver alloc] init]];
 
 }

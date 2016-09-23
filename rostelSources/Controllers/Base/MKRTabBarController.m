@@ -8,6 +8,7 @@
 
 #import "MKRTabBarController.h"
 #import "UIColor+MKRColor.h"
+#import "MKRAppDataProvider.h"
 
 @interface MKRTabBarController ()
 
@@ -56,7 +57,7 @@
 //            subscriptionsNavigationController,
 //            settingsNavigationController
 //    ]];
-//    [[MKRAppDataProvider shared].pushService registerForPushNotifications];
+    [[MKRAppDataProvider shared].pushService registerForPushNotifications];
 }
 
 @end

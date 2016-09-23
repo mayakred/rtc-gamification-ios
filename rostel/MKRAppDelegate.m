@@ -11,6 +11,7 @@
 #import "MKRNetworkConfigManager.h"
 #import "UIWindows+Additions.h"
 #import "MKRTabBarController.h"
+#import "MKRConsts.h"
 
 @interface MKRAppDelegate ()
 
@@ -22,6 +23,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSLog(@"Application launched");
     [[MKRAppDataProvider shared] extraInit];
+    // OneSignal
+    self.oneSignal = [[OneSignal alloc] initWithLaunchOptions:launchOptions appId:ONE_SIGNAL_APP_ID
+                                           handleNotification:^(NSString *message, NSDictionary *additionalData, BOOL isActive) {
+                                               if (additionalData) {
+//                                                   [self handlePushWithUserInfo:additionalData isActive:isActive];
+                                               }
+                                           } autoRegister:NO];
+    
+    [self.oneSignal enableInAppAlertNotification:YES];
 
     [self setWindow:[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]];
     [self.window setBackgroundColor:[UIColor whiteColor]];
