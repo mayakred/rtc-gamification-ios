@@ -9,6 +9,7 @@
 @class MKRAuthCredentialCacheManager;
 @class MKRFullUser;
 @class MKRUsersListPresenter;
+@class MKRUser;
 
 
 @interface MKRUserService : NSObject
@@ -22,4 +23,9 @@
 
 - (MKRFullUser *)currentUser;
 
+- (NSArray *)usersIdsWithComparator:(NSComparator)comparator;
+
+- (MKRFullUser *)fullUserWithId:(NSNumber *)userId;
+
+- (MKRUser *)userWithId:(NSNumber *)userId;
 @end

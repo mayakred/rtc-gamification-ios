@@ -11,9 +11,9 @@
 
 @protocol MKRUsersListDataDelegate <NSObject>
 @required
-- (void)citiesListDidUpdateSuccess;
-- (void)citiesListDidUpdateWithError:(MKRErrorContainer *)errorContainer;
-- (void)citiesListWillUpdate;
+- (void)usersListDidUpdateSuccess;
+- (void)usersListDidUpdateWithError:(MKRErrorContainer *)errorContainer;
+- (void)usersListWillUpdate;
 @end
 
 @interface MKRUsersListPresenter : NSObject
@@ -21,7 +21,7 @@
 @property (nonatomic, weak) id <MKRUsersListDataDelegate> delegate;
 
 - (void)updateUsers;
-- (MKRUser *)usersWithIndex:(NSUInteger)index;
+- (MKRUser *)userWithIndex:(NSUInteger)index;
 - (NSUInteger)usersCount;
 
 - (void)serviceUpdatedUsersListSuccessfully;

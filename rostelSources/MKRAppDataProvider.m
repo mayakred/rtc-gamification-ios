@@ -45,8 +45,8 @@
     credentialCacheManager = [[MKRAuthCredentialCacheManager alloc] init];
 
     [self setAuthService:[[MKRAuthService alloc] initWithCredentialManager:credentialCacheManager]];
+    [self setUserService:[[MKRUserService alloc] initWithCacheManager:credentialCacheManager]];
     [self setPushService:[[MKRPushService alloc] init]];
-    [self setUserService:[[MKRUserService alloc] init]];
     [self setGlobalErrorsObserver:[[MKRGlobalErrorsObserver alloc] init]];
 
 }

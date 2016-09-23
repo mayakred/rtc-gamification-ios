@@ -12,6 +12,8 @@
 #import "MKRGetUserNetworkMethod.h"
 #import "MKRUsersListNetworkMethod.h"
 #import "MKRUsersListPresenter.h"
+#import "MKRUserDataSource.h"
+#import "MKRUser.h"
 
 
 @implementation MKRUserService {
@@ -19,6 +21,7 @@
     MKRGetUserNetworkMethod *getUserNetworkMethod;
     MKRUsersListNetworkMethod *usersListNetworkMethod;
     MKRAuthCredentialCacheManager *authCredentialCacheManager;
+    MKRUserDataSource *dataSource;
     MKRUserCacheManager *cacheManager;
 }
 
@@ -32,6 +35,7 @@
     getCurrentUserNetworkMethod = [[MKRGetCurrentUserNetworkMethod alloc] init];
     getUserNetworkMethod = [[MKRGetUserNetworkMethod alloc] init];
     usersListNetworkMethod = [[MKRUsersListNetworkMethod alloc] init];
+    dataSource = [[MKRUserDataSource alloc] init];
     cacheManager = [[MKRUserCacheManager alloc] init];
 
     return self;
@@ -79,13 +83,21 @@
     }];
 }
 
-
-
-
 - (MKRFullUser *)currentUser {
     return [cacheManager fullUserWithId:[authCredentialCacheManager userId]];
 }
 
+- (NSArray *)usersIdsWithComparator:(NSComparator)comparator {
+    return [dataSource usersIdsWithComparator:comparator];
+}
+
+- (MKRFullUser *)fullUserWithId:(NSNumber *)userId {
+    return [cacheManager fullUserWithId:userId];
+}
+
+- (MKRUser *)userWithId:(NSNumber *)userId {
+    return [cacheManager userWithId:userId];
+}
 
 
 @end

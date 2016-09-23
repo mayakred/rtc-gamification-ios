@@ -5,33 +5,66 @@
 
 #import "MKRUsersListPresenter.h"
 #import "MKRErrorContainer.h"
+#import "MKRAppDataProvider.h"
 
 
 @implementation MKRUsersListPresenter {
-
-}
-- (void)updateUsers {
-
+    NSArray *usersIds;
 }
 
-- (MKRUser *)usersWithIndex:(NSUInteger)index {
+- (instancetype)init {
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    [self loadUsersIds];
+
+    return self;
+}
+
+- (NSComparator)getComparatorSort {
+//    return ^NSComparisonResult(MKRUser *a, MKRUser* b) {
+//        return [a.name compare:b.name];
+//    };
     return nil;
 }
 
+- (void)loadUsersIds {
+    usersIds = [[MKRAppDataProvider shared].userService usersIdsWithComparator:[self getComparatorSort]];
+}
+
+- (void)updateUsers {
+    [[MKRAppDataProvider shared].userService loadUsersListFromServerWithPresenter:self];
+}
+
+- (MKRUser *)userWithIndex:(NSUInteger)index {
+    if (index >= [usersIds count]) {
+        return nil;
+    }
+    return [[MKRAppDataProvider shared].userService userWithId:usersIds[index]];
+}
+
 - (NSUInteger)usersCount {
-    return 0;
+    return [usersIds count];
 }
 
 - (void)serviceUpdatedUsersListSuccessfully {
-
+    [self loadUsersIds];
+    if (self.delegate) {
+        [self.delegate usersListDidUpdateSuccess];
+    }
 }
 
 - (void)serviceUpdatedUsersListWithError:(MKRErrorContainer *)errorContainer {
-
+    if (self.delegate) {
+        [self.delegate usersListDidUpdateWithError:errorContainer];
+    }
 }
 
 - (void)serviceWillUpdateUsersList {
-
+    if (self.delegate) {
+        [self.delegate usersListWillUpdate];
+    }
 }
 
 @end
