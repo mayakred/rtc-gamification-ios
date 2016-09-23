@@ -24,6 +24,7 @@
 		58AAA1D1D32A4C2B3DCFA19B /* MKRGetCurrentUserNetworkMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAABD4302D71707044B8C3 /* MKRGetCurrentUserNetworkMethod.m */; };
 		58AAA1D2DA8E0FB75F5C0BCB /* MKRDuel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA743FECFEE8BA6725AF8 /* MKRDuel.m */; };
 		58AAA21DF3474E05A6E03C49 /* MKRGetUserNetworkMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA56E21CB4C330DF38685 /* MKRGetUserNetworkMethod.m */; };
+		58AAA24EEEB5FC7C3893B6FF /* MKRAchievement.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA4618BDAB50E1535A020 /* MKRAchievement.m */; };
 		58AAA278BAA52676102C029C /* MKRLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA5363F62D9890B4814BB /* MKRLabel.m */; };
 		58AAA2848307B934F76E73BB /* MKRBaseCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA694AEE1F05B5D79CD3F /* MKRBaseCacheManager.m */; };
 		58AAA30B6D94C7D4F0D7C697 /* MKRMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA5885B56854CAF26A35E /* MKRMetric.m */; };
@@ -86,6 +87,7 @@
 		58AAA0CEBA75BB40D5013385 /* MKRLogoutNetworkMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRLogoutNetworkMethod.h; sourceTree = "<group>"; };
 		58AAA1609B4BC8F283709118 /* MKRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRNavigationController.h; sourceTree = "<group>"; };
 		58AAA1784254A7609743D38B /* MKRErrorContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRErrorContainer.h; sourceTree = "<group>"; };
+		58AAA17C98D0CF99B740FE23 /* MKRAchievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRAchievement.h; sourceTree = "<group>"; };
 		58AAA201A3B1C00AEB51A88B /* MKRFullTournament.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRFullTournament.m; sourceTree = "<group>"; };
 		58AAA2353942252275BD67C0 /* MKRAuthService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRAuthService.m; sourceTree = "<group>"; };
 		58AAA23C72E6908F41CFBCCC /* MKRParticipantStatisticElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRParticipantStatisticElement.h; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		58AAA3DB3E5D073E53E4E50F /* MKRFullTournament.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRFullTournament.h; sourceTree = "<group>"; };
 		58AAA3ED6B6B0BF452998608 /* MKRTeam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRTeam.h; sourceTree = "<group>"; };
 		58AAA43803261BF34F01960B /* MKRTeamStatisticElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRTeamStatisticElement.h; sourceTree = "<group>"; };
+		58AAA4618BDAB50E1535A020 /* MKRAchievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRAchievement.m; sourceTree = "<group>"; };
 		58AAA5363F62D9890B4814BB /* MKRLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRLabel.m; sourceTree = "<group>"; };
 		58AAA563699F95590F48E9F6 /* UIFont+MKRFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MKRFont.h"; sourceTree = "<group>"; };
 		58AAA56E21CB4C330DF38685 /* MKRGetUserNetworkMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRGetUserNetworkMethod.m; sourceTree = "<group>"; };
@@ -351,6 +354,15 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		58AAA459F09674DB0E568204 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				58AAA4618BDAB50E1535A020 /* MKRAchievement.m */,
+				58AAA17C98D0CF99B740FE23 /* MKRAchievement.h */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		58AAA4B9C63CA49F0C0C5F70 /* rostelResources */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,6 +498,7 @@
 				58AAA0F621D926B16F85BD10 /* Team */,
 				58AAA3C04E2C247308242FBB /* Duel */,
 				58AAAB8E7D1471CD48689E96 /* Push */,
+				58AAAE8D6B8E7DECD0E0F954 /* Achievement */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -573,6 +586,14 @@
 				58AAAB1DF255977BE4535DD4 /* MKRFullUser.h */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		58AAAE8D6B8E7DECD0E0F954 /* Achievement */ = {
+			isa = PBXGroup;
+			children = (
+				58AAA459F09674DB0E568204 /* Entities */,
+			);
+			path = Achievement;
 			sourceTree = "<group>";
 		};
 		58AAAEAE040A6A1171FF8DA9 /* Helpers */ = {
@@ -813,6 +834,7 @@
 				58AAA21DF3474E05A6E03C49 /* MKRGetUserNetworkMethod.m in Sources */,
 				58AAADA0F73EB7E18C272474 /* MKRRegisterPushNotificationsNetworkMethod.m in Sources */,
 				58AAA1916BF0F02D731DFA5C /* MKRPushService.m in Sources */,
+				58AAA24EEEB5FC7C3893B6FF /* MKRAchievement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
