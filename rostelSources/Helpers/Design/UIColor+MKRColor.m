@@ -35,4 +35,9 @@
     return [UIColor redColor];
 }
 
++ (UIColor *)mkr_emptyDataSetColor {
+//    return [UIColor colorWithRed:244.f/255.f green:244.f/255.f blue:244.f/255.f alpha:1];
+    return [UIColor whiteColor];
+}
+
 @end

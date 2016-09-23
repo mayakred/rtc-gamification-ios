@@ -12,6 +12,7 @@
 #import "UIViewController+Errors.h"
 #import "MKRAppDataProvider.h"
 #import "MKRAuthCodeViewController.h"
+#import "MKRNavigationController.h"
 
 @interface MKRAuthPhoneViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet SHSPhoneTextField *phoneTextField;
@@ -29,6 +30,8 @@ static NSString *const kMKRSendCodeSegueIndentifer = @"sendCodeSegue";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [(MKRNavigationController *)self.navigationController setWhiteStyle];
+    [self setNeedsStatusBarAppearanceUpdate];
     keyboardShown = NO;
     [self.sendCodeButton setEnabled:NO];
     [self.phoneTextField.formatter setDefaultOutputPattern:@"(###) ###-##-##"];

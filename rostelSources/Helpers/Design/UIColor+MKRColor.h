@@ -19,4 +19,6 @@
 + (UIColor *)mkr_greenColor;
 
 + (UIColor *)mkr_redColor;
+
++ (UIColor *)mkr_emptyDataSetColor;
 @end

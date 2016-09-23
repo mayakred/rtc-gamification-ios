@@ -11,6 +11,7 @@
 #import "UIViewController+Errors.h"
 #import "MKRLoginCodeInputView.h"
 #import "MKRAppDataProvider.h"
+#import "MKRNavigationController.h"
 
 @interface MKRAuthCodeViewController () <MKRLoginCodeInputDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *sendCodeButton;

@@ -34,7 +34,7 @@
     topBorder.frame = CGRectMake(0.0f, self.navigationBar.frame.size.height, self.view.frame.size.width, 0.5f);
     topBorder.backgroundColor = [[UIColor mkr_blueColor] CGColor];
     [self.navigationBar.layer addSublayer:topBorder];
-    [self setWhiteStyle];
+    [self setBlueStyle];
     // Do any additional setup after loading the view.
 }
 

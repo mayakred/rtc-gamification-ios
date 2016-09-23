@@ -17,4 +17,6 @@
 - (MKRFullUser *)fullUserWithId:(NSNumber *)userId;
 
 - (NSArray *)loadUsersList;
+
+- (void)clearAllCache;
 @end

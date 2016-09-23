@@ -164,7 +164,7 @@
                             <constraint firstItem="72z-nh-K7S" firstAttribute="centerX" secondItem="Lxa-LV-VOX" secondAttribute="centerX" id="yD8-R2-z97"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="N38-oz-kfz"/>
+                    <navigationItem key="navigationItem" title="Код авторизации" id="N38-oz-kfz"/>
                     <connections>
                         <outlet property="codeInputView" destination="yG3-EA-ZoO" id="5IU-4U-aia"/>
                         <outlet property="sendCodeButton" destination="H5V-8S-9nc" id="pHD-D7-Zp4"/>

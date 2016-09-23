@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A146A3B1D952D910001F56D /* rating.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A146A3A1D952D910001F56D /* rating.storyboard */; };
+		3A146A3E1D9535570001F56D /* MKRRatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A146A3D1D9535570001F56D /* MKRRatingViewController.m */; };
 		3A50DCBF1D90DA9D00FE1A76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A50DCBE1D90DA9D00FE1A76 /* main.m */; };
 		3A50DCC21D90DA9D00FE1A76 /* MKRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A50DCC11D90DA9D00FE1A76 /* MKRAppDelegate.m */; };
 		3A50DCCA1D90DA9D00FE1A76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A50DCC91D90DA9D00FE1A76 /* Assets.xcassets */; };
@@ -71,6 +73,9 @@
 
 /* Begin PBXFileReference section */
 		3A00A1831D94C34F009CFA1A /* rostel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = rostel.entitlements; sourceTree = "<group>"; };
+		3A146A3A1D952D910001F56D /* rating.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = rating.storyboard; sourceTree = "<group>"; };
+		3A146A3C1D9535570001F56D /* MKRRatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRRatingViewController.h; sourceTree = "<group>"; };
+		3A146A3D1D9535570001F56D /* MKRRatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRRatingViewController.m; sourceTree = "<group>"; };
 		3A50DCBA1D90DA9D00FE1A76 /* rostel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rostel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A50DCBE1D90DA9D00FE1A76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A50DCC01D90DA9D00FE1A76 /* MKRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKRAppDelegate.h; sourceTree = "<group>"; };
@@ -455,6 +460,7 @@
 			children = (
 				58AAACABB7F73B461AD02272 /* Base */,
 				58AAA7E8AE600FC00377C84A /* Auth */,
+				58AAAF26671CC7916C955DC5 /* Rating */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -693,6 +699,16 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		58AAAF26671CC7916C955DC5 /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				3A146A3A1D952D910001F56D /* rating.storyboard */,
+				3A146A3C1D9535570001F56D /* MKRRatingViewController.h */,
+				3A146A3D1D9535570001F56D /* MKRRatingViewController.m */,
+			);
+			path = Rating;
+			sourceTree = "<group>";
+		};
 		5C080137E19DDF32918E95FA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -771,6 +787,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A50DCD51D90E4B600FE1A76 /* auth.storyboard in Resources */,
+				3A146A3B1D952D910001F56D /* rating.storyboard in Resources */,
 				3A50DCCD1D90DA9D00FE1A76 /* LaunchScreen.storyboard in Resources */,
 				3A50DCCA1D90DA9D00FE1A76 /* Assets.xcassets in Resources */,
 			);
@@ -867,6 +884,7 @@
 				58AAA4FA3DF57601D620545B /* MKRDepartment.m in Sources */,
 				58AAABB331DAC5D8C014F702 /* MKRTournament.m in Sources */,
 				58AAABAF06A57D17DD13E86E /* MKRUser.m in Sources */,
+				3A146A3E1D9535570001F56D /* MKRRatingViewController.m in Sources */,
 				58AAAC990F834DEEB2D9CCC9 /* MKRFullUser.m in Sources */,
 				58AAA01549B96F5EB7502FEC /* MKRParticipant.m in Sources */,
 				58AAA30B6D94C7D4F0D7C697 /* MKRMetric.m in Sources */,

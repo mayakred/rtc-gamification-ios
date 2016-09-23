@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xcf-3z-gHC">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Empty Data Set Delegate-->
+        <scene sceneID="aTn-27-7WG">
+            <objects>
+                <viewController id="rTr-AS-vRI" customClass="MKRRatingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gKI-xY-GvA"/>
+                        <viewControllerLayoutGuide type="bottom" id="AHm-XM-29o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BF2-aK-sOi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIb-gO-Trx">
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="otj-51-2vH">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="pfT-y6-CTz"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Общий рейтинг"/>
+                                            <segment title="Командный рейтинг"/>
+                                        </segments>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="listTypeSegmentChange:" destination="rTr-AS-vRI" eventType="valueChanged" id="4QY-M3-x5W"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.66666666666666663" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="otj-51-2vH" firstAttribute="leading" secondItem="OIb-gO-Trx" secondAttribute="leading" constant="16" id="0Hc-J3-EiA"/>
+                                    <constraint firstAttribute="height" constant="35" id="EoT-TR-dyK"/>
+                                    <constraint firstItem="otj-51-2vH" firstAttribute="top" secondItem="OIb-gO-Trx" secondAttribute="top" id="GcD-4L-1xt"/>
+                                    <constraint firstAttribute="trailing" secondItem="otj-51-2vH" secondAttribute="trailing" constant="16" id="c4m-ys-IHR"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="las-U9-oPi">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="rTr-AS-vRI" id="vGR-Lo-Mt6"/>
+                                    <outlet property="delegate" destination="rTr-AS-vRI" id="EyY-tX-gVu"/>
+                                    <outlet property="emptyDataSetDelegate" destination="rTr-AS-vRI" id="Wo4-BZ-o30"/>
+                                    <outlet property="emptyDataSetSource" destination="rTr-AS-vRI" id="xi9-6d-CjS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OIb-gO-Trx" secondAttribute="trailing" id="26O-4h-uaP"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="las-U9-oPi" secondAttribute="bottom" id="3eb-8O-N0z"/>
+                            <constraint firstItem="las-U9-oPi" firstAttribute="top" secondItem="OIb-gO-Trx" secondAttribute="bottom" id="4gk-9I-KmE"/>
+                            <constraint firstAttribute="trailing" secondItem="las-U9-oPi" secondAttribute="trailing" id="ATm-4I-1oy"/>
+                            <constraint firstItem="OIb-gO-Trx" firstAttribute="top" secondItem="gKI-xY-GvA" secondAttribute="bottom" id="UEi-dH-4ly"/>
+                            <constraint firstItem="OIb-gO-Trx" firstAttribute="leading" secondItem="BF2-aK-sOi" secondAttribute="leading" id="xOK-hW-sGX"/>
+                            <constraint firstItem="las-U9-oPi" firstAttribute="leading" secondItem="BF2-aK-sOi" secondAttribute="leading" id="zWC-Yb-ulX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Рейтинг пользователей" id="2Mz-VI-FZg"/>
+                    <connections>
+                        <outlet property="listTypeSegment" destination="otj-51-2vH" id="BPd-Df-OLY"/>
+                        <outlet property="tableView" destination="las-U9-oPi" id="Uf7-dc-aHe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ruK-f0-GYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="134.48275862068968"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C2a-WD-JOd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xcf-3z-gHC" customClass="MKRNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8IO-xJ-yny">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rTr-AS-vRI" kind="relationship" relationship="rootViewController" id="sQo-Cj-H2m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T4L-rR-y9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71.200000000000003" y="134.48275862068968"/>
+        </scene>
+    </scenes>
+</document>

@@ -35,7 +35,7 @@
 
     [self setWindow:[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]];
     [self.window setBackgroundColor:[UIColor whiteColor]];
-    [[[MKRAppDataProvider shared] authService] setTokenIsInvalid];
+//    [[[MKRAppDataProvider shared] authService] setTokenIsInvalid];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"auth" bundle:nil];
     if ([[[MKRAppDataProvider shared] authService] isAuthed]) {
         [MKRNetworkConfigManager setAuthHeaderWithToken:[[[MKRAppDataProvider shared] authService] authToken]];
