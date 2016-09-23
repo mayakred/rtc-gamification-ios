@@ -73,7 +73,7 @@ static NSString *const kMKRRatingCellIdentifier = @"ratingCell";
         }];
         [self.curUserFullNameLabel setText:[user fullName]];
         [self.curUserDepartmentLabel setText:user.department.name];
-        [self.curUserPositionLabel setText:[NSString stringWithFormat:@"%d", [presenter getPosForUserWithId:user.itemId]]];
+        [self.curUserPositionLabel setText:[NSString stringWithFormat:@"%d", [presenter getPosForUserWithId:user.itemId] + 1]];
     } else {
         [self.curUserView setHidden:YES];
     }
@@ -91,6 +91,21 @@ static NSString *const kMKRRatingCellIdentifier = @"ratingCell";
     [cell setData:user];
     [cell.positionNumberlabel setText:[NSString stringWithFormat:@"%d", indexPath.row + 1]];
     return cell;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (isLoadingUsers) {
+        return;
+    }
+    int p = 0;
+    for (MKRRatingTableViewCell *cell in self.tableView.visibleCells) {
+        if (p != [self.tableView.visibleCells count] - 1 && [cell.userId isEqualToNumber:[MKRAppDataProvider shared].userService.currentUser.itemId]) {
+            [self.curUserView setHidden:YES];
+            return;
+        }
+        p++;
+    }
+    [self.curUserView setHidden:NO];
 }
 
 #pragma mark - DZNEmptyDataSet delegate

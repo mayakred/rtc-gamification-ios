@@ -11,6 +11,7 @@
 @class MKRUser;
 
 @interface MKRRatingTableViewCell : UITableViewCell
+@property (strong) NSNumber *userId;
 @property (weak, nonatomic) IBOutlet UILabel *positionNumberlabel;
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *fullNameLabel;

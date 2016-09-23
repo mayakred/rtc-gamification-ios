@@ -30,6 +30,7 @@
     }];
     [self.fullNameLabel setText:[user fullName]];
     [self.departmentLabel setText:user.department.name];
+    [self setUserId:user.itemId];
 
 }
 
