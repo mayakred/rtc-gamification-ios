@@ -10,10 +10,10 @@
 @interface MKRParticipantStatisticElement : RLMObject
 
 
-@property (nonatomic, strong) NSNumber<RLMDouble> *participantValue;
-@property (nonatomic, strong) NSNumber<RLMDouble> *teamValue;
-@property (nonatomic, strong) NSNumber<RLMDouble> *thresholdValue;
-@property (nonatomic, strong) NSNumber<RLMDouble> *winnerValue;
+@property (nonatomic, copy) NSNumber<RLMDouble> *participantValue;
+@property (nonatomic, copy) NSNumber<RLMDouble> *teamValue;
+@property (nonatomic, copy) NSNumber<RLMDouble> *thresholdValue;
+@property (nonatomic, copy) NSNumber<RLMDouble> *winnerValue;
 @property (nonatomic) MKRMetric *metric;
 
 + (RKObjectMapping *)mapping;

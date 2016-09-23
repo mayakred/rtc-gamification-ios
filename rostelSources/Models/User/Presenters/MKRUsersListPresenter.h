@@ -20,6 +20,8 @@
 
 @property (nonatomic, weak) id <MKRUsersListDataDelegate> delegate;
 
+- (void)applyDepartmentCode:(NSString *)newDep;
+
 - (void)updateUsers;
 - (MKRUser *)userWithIndex:(NSUInteger)index;
 - (NSUInteger)usersCount;

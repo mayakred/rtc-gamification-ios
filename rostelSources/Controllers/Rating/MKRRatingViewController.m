@@ -11,6 +11,9 @@
 #import "MKRUsersListPresenter.h"
 #import "UIViewController+Errors.h"
 #import "UIColor+MKRColor.h"
+#import "MKRRatingTableViewCell.h"
+#import "MKRAppDataProvider.h"
+#import "MKRFullUser.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 
 @interface MKRRatingViewController () <UITableViewDataSource, UITableViewDelegate,
@@ -21,6 +24,7 @@
 
 @end
 
+static NSString *const kMKRRatingCellIdentifier = @"ratingCell";
 
 @implementation MKRRatingViewController {
     BOOL isLoadingUsers;
@@ -39,7 +43,7 @@
     [self.tableView sendSubviewToBack:refreshControl];
     presenter = [[MKRUsersListPresenter alloc] init];
     [presenter setDelegate:self];
-//    [presenter updateUsers];
+    [presenter updateUsers];
 }
 
 - (void)refreshTriggered {
@@ -50,11 +54,15 @@
 #pragma mark - TableView DataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [presenter usersCount];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    MKRRatingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kMKRRatingCellIdentifier forIndexPath:indexPath];
+    MKRUser *user = [presenter userWithIndex:indexPath.row];
+    [cell setData:user];
+    [cell.positionNumberlabel setText:[NSString stringWithFormat:@"%d", indexPath.row + 1]];
+    return cell;
 }
 
 #pragma mark - DZNEmptyDataSet delegate
@@ -121,6 +129,11 @@
 #pragma mark - User Actions
 
 - (IBAction)listTypeSegmentChange:(id)sender {
+    if (self.listTypeSegment.selectedSegmentIndex == 1) {
+        [presenter applyDepartmentCode:[MKRAppDataProvider shared].userService.currentUser.department.code];
+    } else {
+        [presenter applyDepartmentCode:nil];
+    }
 }
 
 

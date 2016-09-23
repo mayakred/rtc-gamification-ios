@@ -23,7 +23,7 @@
 
 - (MKRFullUser *)currentUser;
 
-- (NSArray *)usersIdsWithComparator:(NSComparator)comparator;
+- (NSArray *)usersIdsWithDepartmentCode:(NSString *)departmentCode andComparator:(NSComparator)comparator;
 
 - (MKRFullUser *)fullUserWithId:(NSNumber *)userId;
 

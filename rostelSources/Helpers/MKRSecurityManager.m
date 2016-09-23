@@ -12,6 +12,7 @@
 }
 
 + (RLMRealm *)getRealm {
+    return [RLMRealm defaultRealm];
     @autoreleasepool {
         RLMRealmConfiguration *configuration = [RLMRealmConfiguration defaultConfiguration];
         configuration.encryptionKey = [MKRSecurityManager getRealmKey];

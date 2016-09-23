@@ -15,9 +15,12 @@
     [achMapping addAttributeMappingsFromDictionary:@{
             @"id"              : @"itemId",
             @"name"            : @"name",
+            @"max_value"       : @"maxValue",
     }];
     RKRelationshipMapping *imgMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"image" toKeyPath:@"image" withMapping:[MKRImage mapping]];
     [achMapping addPropertyMapping:imgMapping];
+    RKRelationshipMapping *metricMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"metric" toKeyPath:@"metric" withMapping:[MKRMetric mapping]];
+    [achMapping addPropertyMapping:metricMapping];
     return achMapping;
 }
 

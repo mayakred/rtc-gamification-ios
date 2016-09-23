@@ -10,6 +10,7 @@
 
 @implementation MKRUsersListPresenter {
     NSArray *usersIds;
+    NSString *departmentCode;
 }
 
 - (instancetype)init {
@@ -17,9 +18,15 @@
     if (!self) {
         return nil;
     }
+    departmentCode = nil;
     [self loadUsersIds];
 
     return self;
+}
+
+- (void)applyDepartmentCode:(NSString *)newDep {
+    departmentCode = newDep;
+    [self serviceUpdatedUsersListSuccessfully];
 }
 
 - (NSComparator)getComparatorSort {
@@ -30,7 +37,7 @@
 }
 
 - (void)loadUsersIds {
-    usersIds = [[MKRAppDataProvider shared].userService usersIdsWithComparator:[self getComparatorSort]];
+    usersIds = [[MKRAppDataProvider shared].userService usersIdsWithDepartmentCode:departmentCode andComparator:[self getComparatorSort]];
 }
 
 - (void)updateUsers {

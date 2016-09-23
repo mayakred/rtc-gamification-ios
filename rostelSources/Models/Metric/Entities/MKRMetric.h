@@ -10,9 +10,9 @@
 
 @interface MKRMetric : RLMObject
 
-@property (nonatomic, strong) NSString *code;
-@property (nonatomic, strong) NSString *unitType;
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, copy) NSString *code;
+@property (nonatomic, copy) NSString *unitType;
+@property (nonatomic, copy) NSString *name;
 
 + (RKObjectMapping *)mapping;
 

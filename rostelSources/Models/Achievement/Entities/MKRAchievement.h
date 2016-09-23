@@ -6,13 +6,16 @@
 #import <Foundation/Foundation.h>
 #import "MKREntityWithId.h"
 #import "MKRImage.h"
+#import "MKRMetric.h"
 
 @class RKObjectMapping;
 
 @interface MKRAchievement : MKREntityWithId
 
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSNumber<RLMDouble> *maxValue;
 @property (nonatomic) MKRImage *image;
+@property (nonatomic) MKRMetric *metric;
 
 + (RKObjectMapping *)mapping;
 

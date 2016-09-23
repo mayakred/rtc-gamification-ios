@@ -23,7 +23,7 @@
 
 - (void)usersListWithSuccess:(void (^)(NSArray *usersList))successBlock
                       failure:(MKRFailBlockHandler)failureBlock {
-    [[RKObjectManager sharedManager] postObject:nil path:self.url parameters:nil
+    [[RKObjectManager sharedManager] getObjectsAtPath:self.url parameters:nil
                                         success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                             [self basicSuccessBlockHandlerWithOperation:operation andMappingResult:mappingResult success:successBlock failure:failureBlock];
                                         } failure:^(RKObjectRequestOperation *operation, NSError *error) {

@@ -16,8 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self loadCurrentUser];
-    [self goToTabBarController];
     [self loadCurrentUser];
 }
 
@@ -28,6 +26,7 @@
 
 - (void)loadCurrentUser {
     [[MKRAppDataProvider shared].userService getCurrentUserWithSuccess:^(MKRFullUser *user) {
+        NSLog(@"%@", user);
         [self goToTabBarController];
     } failure:^(MKRErrorContainer *errorContainer) {
         UIAlertController *loadErrorView = [UIAlertController alertControllerWithTitle:@"Не удалось загрузить данные"

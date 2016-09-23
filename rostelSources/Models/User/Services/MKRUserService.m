@@ -35,8 +35,8 @@
     getCurrentUserNetworkMethod = [[MKRGetCurrentUserNetworkMethod alloc] init];
     getUserNetworkMethod = [[MKRGetUserNetworkMethod alloc] init];
     usersListNetworkMethod = [[MKRUsersListNetworkMethod alloc] init];
-    dataSource = [[MKRUserDataSource alloc] init];
     cacheManager = [[MKRUserCacheManager alloc] init];
+    dataSource = [[MKRUserDataSource alloc] initWithCacheManager:cacheManager];
 
     return self;
 }
@@ -88,8 +88,8 @@
     return [cacheManager fullUserWithId:[authCredentialCacheManager userId]];
 }
 
-- (NSArray *)usersIdsWithComparator:(NSComparator)comparator {
-    return [dataSource usersIdsWithComparator:comparator];
+- (NSArray *)usersIdsWithDepartmentCode:(NSString *)departmentCode andComparator:(NSComparator)comparator {
+    return [dataSource usersIdsWithDepartmentCode:departmentCode andComparator:comparator];
 }
 
 - (MKRFullUser *)fullUserWithId:(NSNumber *)userId {

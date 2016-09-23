@@ -31,12 +31,14 @@
     return [cacheManager fullUserWithId:itemId];
 }
 
-- (NSArray *)usersIdsWithComparator:(NSComparator)comparator {
+- (NSArray *)usersIdsWithDepartmentCode:(NSString *)departmentCode andComparator:(NSComparator)comparator {
     NSArray *users = [cacheManager loadUsersList];
     NSMutableArray *result = [NSMutableArray new];
     NSArray *usersCopy = comparator ? [users sortedArrayUsingComparator:comparator] : users;
     for (MKRUser *user in usersCopy) {
-        [result addObject:user.itemId];
+        if (!departmentCode || ([user.department.code isEqualToString:departmentCode])) {
+            [result addObject:user.itemId];
+        }
     }
     return [NSArray arrayWithArray:result];
 }

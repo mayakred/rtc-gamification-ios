@@ -14,11 +14,7 @@
     RKObjectMapping *userMapping = [MKRFullUser mappingForClass:[self class]];
     [userMapping addAttributeMappingsFromDictionary:@{
             @"phone"             : @"phone",
-            @"top_position"      : @"topPosition",
-            @"rating"            : @"rating",
     }];
-    RKRelationshipMapping *depMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"department" toKeyPath:@"department" withMapping:[MKRDepartment mapping]];
-    [userMapping addPropertyMapping:depMapping];
     return userMapping;
 
 }

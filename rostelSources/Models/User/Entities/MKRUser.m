@@ -16,11 +16,17 @@
             @"id"          : @"itemId",
             @"first_name"  : @"firstName",
             @"middle_name" : @"middleName",
-            @"last_name"   : @"lastName",
+            @"second_name"   : @"lastName",
             @"gender"      : @"gender",
+            @"top_position"      : @"topPosition",
+            @"rating"            : @"rating",
     }];
     RKRelationshipMapping *avatarMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"avatar" toKeyPath:@"avatar" withMapping:[MKRImage mapping]];
     [userMapping addPropertyMapping:avatarMapping];
+    RKRelationshipMapping *achMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"achievements" toKeyPath:@"achievements" withMapping:[MKRUserAchievement mapping]];
+    [userMapping addPropertyMapping:achMapping];
+    RKRelationshipMapping *depMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"department" toKeyPath:@"department" withMapping:[MKRDepartment mapping]];
+    [userMapping addPropertyMapping:depMapping];
 
     return userMapping;
 }

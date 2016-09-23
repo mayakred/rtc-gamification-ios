@@ -17,5 +17,5 @@
 
 - (MKRFullUser *)fullUserWithId:(NSNumber *)itemId;
 
-- (NSArray *)usersIdsWithComparator:(NSComparator)comparator;
+- (NSArray *)usersIdsWithDepartmentCode:(NSString *)department andComparator:(NSComparator)comparator;
 @end
