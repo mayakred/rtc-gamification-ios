@@ -24,6 +24,17 @@
     return self;
 }
 
+- (NSInteger)getPosForUserWithId:(NSNumber *)userId {
+    int r = 0;
+    for (NSNumber *uId in usersIds) {
+        if ([uId isEqualToNumber:userId]) {
+            return r;
+        }
+        r++;
+    }
+    return -1;
+}
+
 - (void)applyDepartmentCode:(NSString *)newDep {
     departmentCode = newDep;
     [self serviceUpdatedUsersListSuccessfully];

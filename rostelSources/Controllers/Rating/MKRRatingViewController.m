@@ -15,10 +15,17 @@
 #import "MKRAppDataProvider.h"
 #import "MKRFullUser.h"
 #import <MBProgressHUD/MBProgressHUD.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface MKRRatingViewController () <UITableViewDataSource, UITableViewDelegate,
         DZNEmptyDataSetDelegate, DZNEmptyDataSetSource, MKRUsersListDataDelegate>
 @property (weak, nonatomic) IBOutlet UISegmentedControl *listTypeSegment;
+@property (weak, nonatomic) IBOutlet UIView *curUserView;
+@property (weak, nonatomic) IBOutlet UIVisualEffectView *curUserBlurView;
+@property (weak, nonatomic) IBOutlet UILabel *curUserPositionLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *curUserAvatarImageView;
+@property (weak, nonatomic) IBOutlet UILabel *curUserDepartmentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *curUserFullNameLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)listTypeSegmentChange:(id)sender;
 
@@ -30,6 +37,7 @@ static NSString *const kMKRRatingCellIdentifier = @"ratingCell";
     BOOL isLoadingUsers;
     UIRefreshControl *refreshControl;
     MKRUsersListPresenter *presenter;
+    UITableViewCell *curUserCell;
 }
 
 - (void)viewDidLoad {
@@ -44,11 +52,31 @@ static NSString *const kMKRRatingCellIdentifier = @"ratingCell";
     presenter = [[MKRUsersListPresenter alloc] init];
     [presenter setDelegate:self];
     [presenter updateUsers];
+    [self.curUserBlurView setEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight]];
+    [self reloadCurUser];
+    [self.tableView setContentInset:UIEdgeInsetsMake(0,0,100,0)];
+    [self.tableView setScrollIndicatorInsets:UIEdgeInsetsMake(0,0,100,0)];
 }
 
 - (void)refreshTriggered {
     [refreshControl endRefreshing];
     [presenter updateUsers];
+}
+
+- (void)reloadCurUser {
+    MKRUser *user = [[MKRAppDataProvider shared].userService userWithId:[MKRAppDataProvider shared].userService.currentUser.itemId];
+    if (user) {
+        [self.curUserView setHidden:NO];
+        NSURL *headerUrl = [NSURL URLWithString:user.avatar.standard];
+        [self.curUserAvatarImageView sd_setImageWithURL:headerUrl placeholderImage:nil options:SDWebImageRetryFailed completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            //
+        }];
+        [self.curUserFullNameLabel setText:[user fullName]];
+        [self.curUserDepartmentLabel setText:user.department.name];
+        [self.curUserPositionLabel setText:[NSString stringWithFormat:@"%d", [presenter getPosForUserWithId:user.itemId]]];
+    } else {
+        [self.curUserView setHidden:YES];
+    }
 }
 
 #pragma mark - TableView DataSource
@@ -108,6 +136,7 @@ static NSString *const kMKRRatingCellIdentifier = @"ratingCell";
     [MBProgressHUD hideHUDForView:self.view animated:YES];
     dispatch_async(dispatch_get_main_queue(), ^(){
         [self.tableView reloadData];
+        [self reloadCurUser];
     });
 }
 

@@ -20,6 +20,8 @@
 
 @property (nonatomic, weak) id <MKRUsersListDataDelegate> delegate;
 
+- (NSInteger)getPosForUserWithId:(NSNumber *)userId;
+
 - (void)applyDepartmentCode:(NSString *)newDep;
 
 - (void)updateUsers;
