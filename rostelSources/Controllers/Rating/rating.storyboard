@@ -38,7 +38,7 @@
                                 <constraints>
                                     <constraint firstItem="otj-51-2vH" firstAttribute="leading" secondItem="OIb-gO-Trx" secondAttribute="leading" constant="16" id="0Hc-J3-EiA"/>
                                     <constraint firstAttribute="height" constant="35" id="EoT-TR-dyK"/>
-                                    <constraint firstItem="otj-51-2vH" firstAttribute="top" secondItem="OIb-gO-Trx" secondAttribute="top" id="GcD-4L-1xt"/>
+                                    <constraint firstItem="otj-51-2vH" firstAttribute="top" secondItem="OIb-gO-Trx" secondAttribute="top" constant="1" id="GcD-4L-1xt"/>
                                     <constraint firstAttribute="trailing" secondItem="otj-51-2vH" secondAttribute="trailing" constant="16" id="c4m-ys-IHR"/>
                                 </constraints>
                             </view>
@@ -188,9 +188,10 @@
                             <constraint firstAttribute="trailing" secondItem="las-U9-oPi" secondAttribute="trailing" id="ATm-4I-1oy"/>
                             <constraint firstItem="3Ka-hC-ar9" firstAttribute="leading" secondItem="BF2-aK-sOi" secondAttribute="leading" id="IEk-uf-w9w"/>
                             <constraint firstItem="AHm-XM-29o" firstAttribute="top" secondItem="las-U9-oPi" secondAttribute="bottom" id="Kgk-Kj-Mm9"/>
-                            <constraint firstItem="AHm-XM-29o" firstAttribute="top" secondItem="3Ka-hC-ar9" secondAttribute="bottom" id="MaM-rE-JIp"/>
+                            <constraint firstItem="AHm-XM-29o" firstAttribute="top" secondItem="3Ka-hC-ar9" secondAttribute="bottom" priority="750" id="MaM-rE-JIp"/>
                             <constraint firstItem="OIb-gO-Trx" firstAttribute="top" secondItem="gKI-xY-GvA" secondAttribute="bottom" id="UEi-dH-4ly"/>
                             <constraint firstAttribute="trailing" secondItem="3Ka-hC-ar9" secondAttribute="trailing" id="cMS-wM-rJI"/>
+                            <constraint firstItem="3Ka-hC-ar9" firstAttribute="top" secondItem="OIb-gO-Trx" secondAttribute="bottom" priority="250" id="du2-gu-3IE"/>
                             <constraint firstItem="OIb-gO-Trx" firstAttribute="leading" secondItem="BF2-aK-sOi" secondAttribute="leading" id="xOK-hW-sGX"/>
                             <constraint firstItem="las-U9-oPi" firstAttribute="leading" secondItem="BF2-aK-sOi" secondAttribute="leading" id="zWC-Yb-ulX"/>
                         </constraints>
@@ -199,9 +200,11 @@
                     <connections>
                         <outlet property="curUserAvatarImageView" destination="alb-Js-6dO" id="yDX-3y-ojK"/>
                         <outlet property="curUserBlurView" destination="3qb-7Q-Prv" id="I9U-3Z-Jn0"/>
+                        <outlet property="curUserBottomConstraint" destination="MaM-rE-JIp" id="QIv-n6-wnG"/>
                         <outlet property="curUserDepartmentLabel" destination="pxL-4E-4d4" id="23f-u8-YSh"/>
                         <outlet property="curUserFullNameLabel" destination="jO0-rP-5MS" id="tbl-qL-0du"/>
                         <outlet property="curUserPositionLabel" destination="KOO-Jl-er3" id="h9h-ZF-2h8"/>
+                        <outlet property="curUserTopConstraint" destination="du2-gu-3IE" id="M37-nU-9Ck"/>
                         <outlet property="curUserView" destination="3Ka-hC-ar9" id="4KO-7C-soh"/>
                         <outlet property="listTypeSegment" destination="otj-51-2vH" id="BPd-Df-OLY"/>
                         <outlet property="tableView" destination="las-U9-oPi" id="Uf7-dc-aHe"/>

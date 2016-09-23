@@ -26,6 +26,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *curUserAvatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *curUserDepartmentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *curUserFullNameLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *curUserTopConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *curUserBottomConstraint;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)listTypeSegmentChange:(id)sender;
 
@@ -99,8 +101,16 @@ static NSString *const kMKRRatingCellIdentifier = @"ratingCell";
     }
     int p = 0;
     for (MKRRatingTableViewCell *cell in self.tableView.visibleCells) {
-        if (p != [self.tableView.visibleCells count] - 1 && [cell.userId isEqualToNumber:[MKRAppDataProvider shared].userService.currentUser.itemId]) {
+        if (p != [self.tableView.visibleCells count] - 1 && p != 0 && [cell.userId isEqualToNumber:[MKRAppDataProvider shared].userService.currentUser.itemId]) {
             [self.curUserView setHidden:YES];
+            if (p == 1) {
+                [self.curUserTopConstraint setPriority:UILayoutPriorityDefaultHigh];
+                [self.curUserBottomConstraint setPriority:UILayoutPriorityDefaultLow];
+            } else {
+                [self.curUserTopConstraint setPriority:UILayoutPriorityDefaultLow];
+                [self.curUserBottomConstraint setPriority:UILayoutPriorityDefaultHigh];
+            }
+            [self.view setNeedsLayout];
             return;
         }
         p++;
