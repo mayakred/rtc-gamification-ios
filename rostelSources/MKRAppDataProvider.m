@@ -11,6 +11,7 @@
 
 @property (nonatomic, readwrite) MKRAuthService *authService;
 @property (nonatomic, readwrite) MKRPushService *pushService;
+@property (nonatomic, readwrite) MKRUserService *userService;
 @property (nonatomic, readwrite) MKRGlobalErrorsObserver *globalErrorsObserver;
 
 @end
@@ -45,6 +46,7 @@
 
     [self setAuthService:[[MKRAuthService alloc] initWithCredentialManager:credentialCacheManager]];
     [self setPushService:[[MKRPushService alloc] init]];
+    [self setUserService:[[MKRUserService alloc] init]];
     [self setGlobalErrorsObserver:[[MKRGlobalErrorsObserver alloc] init]];
 
 }

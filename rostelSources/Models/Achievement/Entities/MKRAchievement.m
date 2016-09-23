@@ -16,7 +16,7 @@
             @"id"              : @"itemId",
             @"name"            : @"name",
     }];
-    RKRelationshipMapping *imgMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"image" toKeyPath:@"image" withMapping:[MKRUser mapping]];
+    RKRelationshipMapping *imgMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"image" toKeyPath:@"image" withMapping:[MKRImage mapping]];
     [achMapping addPropertyMapping:imgMapping];
     return achMapping;
 }
