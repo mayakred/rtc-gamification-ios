@@ -27,6 +27,8 @@
 }
 
 - (void)setData:(MKRDuel *)duel {
+    NSLog(@"Duel: %@", duel);
+    NSLog(@"CurUser: %@", [MKRAppDataProvider shared].userService.currentUser);
     MKRUser *user = duel.initiator;
     if ([user.itemId isEqualToNumber:[MKRAppDataProvider shared].userService.currentUser.itemId]) {
         user = duel.victim;
