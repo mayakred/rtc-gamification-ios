@@ -181,7 +181,7 @@ static NSString * const reuseIdentifier = @"achievementCell";
 
 - (IBAction)statTypeSegmentChange:(id)sender {
     [statsPresenter setIsIndividual:self.statTypeSegment.selectedSegmentIndex == 0];
-    [statsPresenter loadDuelsIds];
+    [statsPresenter loadStatsIds];
     [self.tableView reloadData];
 }
 @end

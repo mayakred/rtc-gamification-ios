@@ -22,7 +22,7 @@
     }
     userId = uId;
     isIndividual = ind;
-    [self loadDuelsIds];
+    [self loadStatsIds];
     return self;
 }
 
@@ -41,7 +41,7 @@
 //    };
 }
 
-- (void)loadDuelsIds {
+- (void)loadStatsIds {
     statsIds = [[MKRAppDataProvider shared].statsService statsIdsWithUserId:userId andIsIndividual:isIndividual andComparator:[self getComparatorSort]];
 }
 
@@ -58,7 +58,7 @@
 }
 
 - (void)serviceUpdatedStatsListSuccessfully {
-    [self loadDuelsIds];
+    [self loadStatsIds];
     if (self.delegate) {
         [self.delegate statsListDidUpdateSuccess];
     }

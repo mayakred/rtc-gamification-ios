@@ -25,7 +25,7 @@
 
 - (void)setIsIndividual:(BOOL)ind;
 
-- (void)loadDuelsIds;
+- (void)loadStatsIds;
 
 - (void)updateStats;
 

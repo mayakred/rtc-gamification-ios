@@ -9,7 +9,7 @@
         <!--Empty Data Set Delegate-->
         <scene sceneID="htC-uY-3vz">
             <objects>
-                <tableViewController id="ibA-DV-AWW" customClass="MKRProfileViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MKRProfileViewController" id="ibA-DV-AWW" customClass="MKRProfileViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zcz-Qs-EEp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

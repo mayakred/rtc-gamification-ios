@@ -14,6 +14,8 @@
 #import "MKRRatingTableViewCell.h"
 #import "MKRAppDataProvider.h"
 #import "MKRFullUser.h"
+#import "MKRNavigationController.h"
+#import "MKRProfileViewController.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
@@ -94,6 +96,15 @@ static NSString *const kMKRRatingCellIdentifier = @"ratingCell";
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 70;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    MKRUser *user = [presenter userWithIndex:indexPath.row];
+    UIStoryboard *profileStoryboard = [UIStoryboard storyboardWithName:@"profile" bundle:nil];
+    MKRProfileViewController *profileController = [profileStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([MKRProfileViewController class])];
+    [profileController setUserId:user.itemId];
+    [self.navigationController pushViewController:profileController animated:YES];
+
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
