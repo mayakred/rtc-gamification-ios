@@ -17,4 +17,5 @@
 
 - (NSArray *)statsIdsWithUserId:(NSNumber *)userId andIsIndividual:(BOOL)ind andComparator:(NSComparator)comparator;
 
+- (void)clearAllCache;
 @end
