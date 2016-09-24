@@ -115,8 +115,8 @@ static NSString *const kMKRRatingCellIdentifier = @"ratingCell";
             } else {
                 [self.curUserTopConstraint setPriority:UILayoutPriorityDefaultLow];
                 [self.curUserBottomConstraint setPriority:UILayoutPriorityDefaultHigh];
-                [self.tableView setContentInset:UIEdgeInsetsMake(0,0,100,0)];
-                [self.tableView setScrollIndicatorInsets:UIEdgeInsetsMake(0,0,100,0)];
+                [self.tableView setContentInset:UIEdgeInsetsMake(0,0,70,0)];
+                [self.tableView setScrollIndicatorInsets:UIEdgeInsetsMake(0,0,70,0)];
             }
             [self.view setNeedsLayout];
             return;
