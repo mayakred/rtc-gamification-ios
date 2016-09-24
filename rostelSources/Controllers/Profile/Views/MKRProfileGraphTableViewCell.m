@@ -59,8 +59,13 @@
     
     [firstLabel setText:[NSString stringWithFormat:@"%d", (int)first]];
     [secondLabel setText:[NSString stringWithFormat:@"%d", (int)second]];
+
+    float r = 0;
+    if (second != 0) {
+        r = first / second;
+    }
     
-    [firstLabelLeftOffset setConstant:(progressView.frame.size.width - 20) * first/second];
+    [firstLabelLeftOffset setConstant:(progressView.frame.size.width - 20) * r];
 }
 
 @end

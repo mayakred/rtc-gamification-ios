@@ -10,6 +10,6 @@
 
 @interface MKRProfileViewController : UITableViewController
 
-- (void)reloadData;
+@property (nonatomic, copy) NSNumber *userId;
 
 @end

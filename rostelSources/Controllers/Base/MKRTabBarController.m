@@ -10,6 +10,8 @@
 #import "UIColor+MKRColor.h"
 #import "MKRAppDataProvider.h"
 #import "MKRNavigationController.h"
+#import "MKRProfileViewController.h"
+#import "MKRFullUser.h"
 
 @interface MKRTabBarController ()
 
@@ -31,6 +33,7 @@
 - (void)initControllers {
     UIStoryboard *profileStoryboard = [UIStoryboard storyboardWithName:@"profile" bundle:nil];
     MKRNavigationController *profileNavController = [profileStoryboard instantiateInitialViewController];
+    [(MKRProfileViewController *)profileNavController.visibleViewController setUserId:[MKRAppDataProvider shared].userService.currentUser.itemId];
     [profileNavController.tabBarItem setImage:[UIImage imageNamed:@"profile-ico"]];
     [profileNavController.tabBarItem setTitle:@"Профиль"];
     

@@ -52,7 +52,11 @@
 }
 
 - (void)setFirstNumber:(float)first secondNumber:(float)second {
-    [firstView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:backView withMultiplier:first / second];
+    float r = 0;
+    if (second != 0) {
+        r = first / second;
+    }
+    [firstView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:backView withMultiplier:r];
 }
 
 @end
