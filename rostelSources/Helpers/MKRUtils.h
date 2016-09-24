@@ -17,4 +17,7 @@
 + (NSString *)humanReadableTimeDate:(NSDate *)date;
 
 + (NSString *)humanReadableTimeDate:(NSDate *)date cutToday:(BOOL)cutToday;
+
++ (NSString *)bytesToString:(NSInteger)bytes;
+
 @end

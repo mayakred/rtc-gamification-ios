@@ -63,4 +63,12 @@
     return s;
 }
 
++ (NSString *)bytesToString:(NSInteger)bytes {
+    NSArray *units = @[@"б",@"Кб",@"Мб",@"Гб", @"Тб"];
+    NSInteger pow = MAX(0, MIN(floor(log(bytes)/log(1024)), [units count] - 1));
+    double b = bytes / powf(1024, pow);
+    
+    return [NSString stringWithFormat:@"%.1f %@", b, units[pow]];
+}
+
 @end

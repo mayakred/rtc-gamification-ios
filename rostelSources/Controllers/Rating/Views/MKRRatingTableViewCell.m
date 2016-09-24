@@ -8,6 +8,7 @@
 
 #import "MKRRatingTableViewCell.h"
 #import "MKRUser.h"
+#import "MKRUtils.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @implementation MKRRatingTableViewCell
@@ -49,7 +50,7 @@
         [self.placeImage setImage:[UIImage imageNamed:@"bronze-place"]];
     }
     
-    [self.mmrLabel setText:[NSString stringWithFormat:@"%ld б", [user.rating longValue]]];
+    [self.mmrLabel setText:[MKRUtils bytesToString:[user.rating integerValue]]];
     
 }
 
