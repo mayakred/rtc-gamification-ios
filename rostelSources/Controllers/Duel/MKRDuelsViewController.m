@@ -15,6 +15,7 @@
 #import "MKRDuel.h"
 #import "MKRAppDataProvider.h"
 #import "MKRFullUser.h"
+#import "MKRProfileViewController.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 
 @interface MKRDuelsViewController () <MKRDuelsListDataDelegate, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource, MGSwipeTableCellDelegate>
@@ -122,6 +123,18 @@ static NSString *const kMKRDuelCellIdentifier = @"duelCell";
         [cell setLeftButtons:nil];
     }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    MKRDuel *duel = [presenter duelWithIndex:indexPath.row];
+    MKRUser *user = duel.initiator;
+    if ([user.itemId isEqualToNumber:[MKRAppDataProvider shared].userService.currentUser.itemId]) {
+        user = duel.victim;
+    }
+    UIStoryboard *profileStoryboard = [UIStoryboard storyboardWithName:@"profile" bundle:nil];
+    MKRProfileViewController *profileController = [profileStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([MKRProfileViewController class])];
+    [profileController setUserId:user.itemId];
+    [self.navigationController pushViewController:profileController animated:YES];
 }
 
 #pragma mark - DZNEmptyDataSet delegate

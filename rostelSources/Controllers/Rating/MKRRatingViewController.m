@@ -104,7 +104,6 @@ static NSString *const kMKRRatingCellIdentifier = @"ratingCell";
     MKRProfileViewController *profileController = [profileStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([MKRProfileViewController class])];
     [profileController setUserId:user.itemId];
     [self.navigationController pushViewController:profileController animated:YES];
-
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
