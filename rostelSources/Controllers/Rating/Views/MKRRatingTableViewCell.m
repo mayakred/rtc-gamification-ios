@@ -61,23 +61,25 @@
     [self.firstAchivIMage setHidden:YES];
     [self.secondAchivImage setHidden:YES];
     [self.thirdAchivImage setHidden:YES];
-    
-    if ([user.achievements count] > 0) {
-        [self.firstAchivIMage sd_setImageWithURL:[NSURL URLWithString:((MKRUserAchievement *)user.achievements[0]).achievement.image.thumbnail] placeholderImage:nil options:SDWebImageRetryFailed completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+
+    NSArray *orderedAchs = [user orderedAchievements];
+
+    if ([orderedAchs count] > 0) {
+        [self.firstAchivIMage sd_setImageWithURL:[NSURL URLWithString:((MKRUserAchievement *)orderedAchs[0]).achievement.image.thumbnail] placeholderImage:nil options:SDWebImageRetryFailed completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
             //
         }];
         [self.firstAchivIMage setHidden:NO];
     }
     
-    if ([user.achievements count] > 1) {
-        [self.secondAchivImage sd_setImageWithURL:[NSURL URLWithString:((MKRUserAchievement *)user.achievements[1]).achievement.image.thumbnail] placeholderImage:nil options:SDWebImageRetryFailed completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    if ([orderedAchs count] > 1) {
+        [self.secondAchivImage sd_setImageWithURL:[NSURL URLWithString:((MKRUserAchievement *)orderedAchs[1]).achievement.image.thumbnail] placeholderImage:nil options:SDWebImageRetryFailed completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
             //
         }];
         [self.secondAchivImage setHidden:NO];
     }
     
-    if ([user.achievements count] > 2) {
-        [self.thirdAchivImage sd_setImageWithURL:[NSURL URLWithString:((MKRUserAchievement *)user.achievements[2]).achievement.image.thumbnail] placeholderImage:nil options:SDWebImageRetryFailed completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    if ([orderedAchs count] > 2) {
+        [self.thirdAchivImage sd_setImageWithURL:[NSURL URLWithString:((MKRUserAchievement *)orderedAchs[2]).achievement.image.thumbnail] placeholderImage:nil options:SDWebImageRetryFailed completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
             //
         }];
         [self.thirdAchivImage setHidden:NO];
