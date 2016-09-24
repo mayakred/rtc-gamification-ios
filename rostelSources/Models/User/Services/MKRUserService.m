@@ -75,7 +75,7 @@
     [presenter serviceWillUpdateUsersList];
     [usersListNetworkMethod usersListWithSuccess:^(NSArray *usersList) {
         NSLog(@"Success loading users list");
-        [cacheManager clearAllCache];
+        [cacheManager clearUsersListCache];
         [cacheManager saveUsersList:usersList];
         [presenter serviceUpdatedUsersListSuccessfully];
     } failure:^(NSError *error, NSArray *serverErrors) {
@@ -98,6 +98,10 @@
 
 - (MKRUser *)userWithId:(NSNumber *)userId {
     return [cacheManager userWithId:userId];
+}
+
+- (void)clearAllCache {
+    [cacheManager clearAllCache];
 }
 
 

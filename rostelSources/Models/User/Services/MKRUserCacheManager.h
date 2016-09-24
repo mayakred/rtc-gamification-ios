@@ -18,5 +18,7 @@
 
 - (NSArray *)loadUsersList;
 
+- (void)clearUsersListCache;
+
 - (void)clearAllCache;
 @end

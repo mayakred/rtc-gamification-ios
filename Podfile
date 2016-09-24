@@ -10,4 +10,5 @@ target 'rostel' do
   pod 'OneSignal'
   pod 'CNPPopupController'
   pod 'PureLayout'
+  pod 'MGSwipeTableCell'
 end

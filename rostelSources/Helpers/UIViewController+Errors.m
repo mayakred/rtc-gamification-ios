@@ -52,6 +52,8 @@
 - (void)backToLoginController {
     [[MKRAppDataProvider shared].authService setTokenIsInvalid];
     [[MKRAppDataProvider shared].pushService unregisterForPushNotifications];
+    [[MKRAppDataProvider shared].userService clearAllCache];
+    [[MKRAppDataProvider shared].duelsService clearAllCache];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"auth" bundle:nil];
     [[[UIApplication sharedApplication] keyWindow] setRootViewController:[storyboard instantiateInitialViewController] animated:YES];
     [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:[[NSBundle mainBundle] bundleIdentifier]];

@@ -15,6 +15,10 @@
     return [UIColor colorWithRed:0/255.f green:170.f/255.f blue:231.f/255.f alpha:1];
 }
 
++ (UIColor *)mkr_orangeColor {
+    return [UIColor colorWithRed:244.f/255.f green:123.f/255.f blue:32.f/255.f alpha:1];
+}
+
 + (UIColor *)mkr_greyColor {
     return [UIColor lightGrayColor];
 }

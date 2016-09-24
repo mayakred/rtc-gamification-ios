@@ -12,9 +12,12 @@
 #import "UIScrollView+EmptyDataSet.h"
 #import "UIColor+MKRColor.h"
 #import "UIViewController+Errors.h"
+#import "MKRDuel.h"
+#import "MKRAppDataProvider.h"
+#import "MKRFullUser.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 
-@interface MKRDuelsViewController () <MKRDuelsListDataDelegate, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource>
+@interface MKRDuelsViewController () <MKRDuelsListDataDelegate, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource, MGSwipeTableCellDelegate>
 
 @end
 
@@ -69,6 +72,43 @@ static NSString *const kMKRDuelCellIdentifier = @"duelCell";
     MKRDuelTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kMKRDuelCellIdentifier forIndexPath:indexPath];
     MKRDuel *duel = [presenter duelWithIndex:indexPath.row];
     [cell setData:duel];
+    [cell setDelegate:self]; //optional
+    if ([duel.status isEqualToString:DUEL_STATUS_WAITING_VICTIM] && [duel.victim.itemId isEqualToNumber:[MKRAppDataProvider shared].userService.currentUser.itemId]) {
+        //configure left buttons
+        [cell setLeftButtons:@[[MGSwipeButton buttonWithTitle:@"Отказаться" backgroundColor:[UIColor mkr_orangeColor] callback:^BOOL(MGSwipeTableCell *sender) {
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.tableView animated:YES];
+            [hud.bezelView setStyle:MBProgressHUDBackgroundStyleSolidColor];
+            [[MKRAppDataProvider shared].duelsService declineDuelWithId:duel.itemId success:^{
+                [MBProgressHUD hideHUDForView:self.tableView animated:YES];
+                dispatch_async(dispatch_get_main_queue(), ^(){
+                    [self.tableView reloadData];
+                });
+            } failure:^(MKRErrorContainer *errorContainer) {
+                [self showErrorForErrorContainer:errorContainer];
+            }];
+            return YES;
+        }]]];
+        [cell.leftSwipeSettings setTransition:MGSwipeTransitionStatic];
+
+        //configure right buttons
+        [cell setRightButtons:@[[MGSwipeButton buttonWithTitle:@"Принять" backgroundColor:[UIColor mkr_blueColor] callback:^BOOL(MGSwipeTableCell *sender) {
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.tableView animated:YES];
+            [hud.bezelView setStyle:MBProgressHUDBackgroundStyleSolidColor];
+            [[MKRAppDataProvider shared].duelsService acceptDuelWithId:duel.itemId success:^{
+                [MBProgressHUD hideHUDForView:self.tableView animated:YES];
+                dispatch_async(dispatch_get_main_queue(), ^(){
+                    [self.tableView reloadData];
+                });
+            } failure:^(MKRErrorContainer *errorContainer) {
+                [self showErrorForErrorContainer:errorContainer];
+            }];
+            return YES;
+        }]]];
+        [cell.rightSwipeSettings setTransition:MGSwipeTransitionStatic];
+    } else {
+        [cell setRightButtons:nil];
+        [cell setLeftButtons:nil];
+    }
     return cell;
 }
 
@@ -112,7 +152,7 @@ static NSString *const kMKRDuelCellIdentifier = @"duelCell";
 
 - (void)duelsListDidUpdateSuccess {
     isLoadingDuels = NO;
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    [MBProgressHUD hideHUDForView:self.tableView animated:YES];
     dispatch_async(dispatch_get_main_queue(), ^(){
         [self.tableView reloadData];
         [self updateDuelsStats];
@@ -121,7 +161,7 @@ static NSString *const kMKRDuelCellIdentifier = @"duelCell";
 
 - (void)duelsListDidUpdateWithError:(MKRErrorContainer *)errorContainer {
     isLoadingDuels = NO;
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    [MBProgressHUD hideHUDForView:self.tableView animated:YES];
     dispatch_async(dispatch_get_main_queue(), ^(){
         [self.tableView reloadData];
     });
@@ -130,7 +170,7 @@ static NSString *const kMKRDuelCellIdentifier = @"duelCell";
 
 - (void)duelsListWillUpdate {
     isLoadingDuels = YES;
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.tableView animated:YES];
     [hud.bezelView setStyle:MBProgressHUDBackgroundStyleSolidColor];
 }
 

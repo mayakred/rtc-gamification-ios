@@ -62,6 +62,7 @@ static NSString *const kMKRAchievementsSegueIdentitifer = @"achievementsSegue";
     [self.ratingLabel setText:[ratingStr componentsSeparatedByString:@" "][0]];
     [self.ratingTypeLabel setText:[ratingStr componentsSeparatedByString:@" "][1]];
     [achievementsController setAchievements:user.achievements];
+    [achievementsController reloadData];
 }
 
 #pragma mark - Table view data source

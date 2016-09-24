@@ -42,10 +42,18 @@
     return [self RLMResultsToNSArray:[MKRUser allObjectsInRealm:realm]];
 }
 
+- (void)clearUsersListCache {
+    RLMRealm *realm = [MKRSecurityManager getRealm];
+    [realm beginWriteTransaction];
+    [realm deleteObjects:[self loadUsersList]];
+    [realm commitWriteTransaction];
+}
+
 - (void)clearAllCache {
     RLMRealm *realm = [MKRSecurityManager getRealm];
     [realm beginWriteTransaction];
     [realm deleteObjects:[self loadUsersList]];
+    [realm deleteObjects:[MKRFullUser allObjectsInRealm:realm]];
     [realm commitWriteTransaction];
 }
 

@@ -28,4 +28,6 @@
 - (MKRFullUser *)fullUserWithId:(NSNumber *)userId;
 
 - (MKRUser *)userWithId:(NSNumber *)userId;
+
+- (void)clearAllCache;
 @end

@@ -5,6 +5,7 @@ PODS:
   - ISO8601DateFormatterValueTransformer (0.6.1):
     - RKValueTransformers (~> 1.1.0)
   - MBProgressHUD (1.0.0)
+  - MGSwipeTableCell (1.5.5)
   - OneSignal (1.13.3)
   - PureLayout (3.0.2)
   - Realm (1.0.2):
@@ -41,6 +42,7 @@ DEPENDENCIES:
   - CocoaSecurity
   - DZNEmptyDataSet
   - MBProgressHUD
+  - MGSwipeTableCell
   - OneSignal
   - PureLayout
   - Realm
@@ -54,6 +56,7 @@ SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   ISO8601DateFormatterValueTransformer: 52da467d6ec899d6aedda8e48280ac92e8ee97e6
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MGSwipeTableCell: bafeb5f351124544c9364ecbdf24c7b06a37d340
   OneSignal: 434facae3389cb0d4d3fc57b9a6cf66db685205e
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
@@ -64,6 +67,6 @@ SPEC CHECKSUMS:
   SOCKit: c7376ac262bea9115b8f749358f762522a47d392
   TransitionKit: 9ceccda4cd0cdc0a05ef85eb235e5a3292c3c250
 
-PODFILE CHECKSUM: 0885fe13d7f86e364ae32cad3ac7a1e7d9dd1177
+PODFILE CHECKSUM: 1b563031d5672cd63d0d259544a075e05fcc4fc4
 
 COCOAPODS: 1.1.0.rc.2
