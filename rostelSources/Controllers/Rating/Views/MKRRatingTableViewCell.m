@@ -24,7 +24,7 @@
     // Configure the view for the selected state
 }
 
-- (void)setData:(MKRUser *)user {
+- (void)setData:(MKRUser *)user andPosition:(NSInteger)position {
     NSURL *headerUrl = [NSURL URLWithString:user.avatar.standard];
     [self.avatarImageView sd_setImageWithURL:headerUrl placeholderImage:nil options:SDWebImageRetryFailed completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         //
@@ -33,20 +33,20 @@
     [self.departmentLabel setText:user.department.name];
     [self setUserId:user.itemId];
     
-    if ([user.topPosition integerValue] < 4) {
+    if (position < 4) {
         [self.positionNumberlabel setHidden:YES];
         [self.placeImage setHidden:NO];
     } else {
         [self.positionNumberlabel setHidden:NO];
         [self.placeImage setHidden:YES];
-        [self.positionNumberlabel setText:[NSString stringWithFormat:@"%@", user.topPosition]];
+        [self.positionNumberlabel setText:[NSString stringWithFormat:@"%d", position]];
     }
     
-    if ([user.topPosition integerValue] == 1) {
+    if (position == 1) {
         [self.placeImage setImage:[UIImage imageNamed:@"gold-place"]];
-    } else if ([user.topPosition integerValue] == 2) {
+    } else if (position == 2) {
         [self.placeImage setImage:[UIImage imageNamed:@"silver-place"]];
-    } else if ([user.topPosition integerValue] == 3) {
+    } else if (position == 3) {
         [self.placeImage setImage:[UIImage imageNamed:@"bronze-place"]];
     }
     

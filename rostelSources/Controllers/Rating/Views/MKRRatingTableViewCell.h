@@ -19,6 +19,6 @@
 @property (strong, nonatomic) IBOutlet UIImageView *placeImage;
 @property (strong, nonatomic) IBOutlet UILabel *mmrLabel;
 
-- (void)setData:(MKRUser *)user;
+- (void)setData:(MKRUser *)user andPosition:(NSInteger)position;
 
 @end

@@ -76,7 +76,7 @@ static NSString *const kMKRRatingCellIdentifier = @"ratingCell";
         }];
         [self.curUserFullNameLabel setText:[user fullName]];
         [self.curUserDepartmentLabel setText:user.department.name];
-        [self.curUserPositionLabel setText:[NSString stringWithFormat:@"%@", user.topPosition]];
+        [self.curUserPositionLabel setText:[NSString stringWithFormat:@"%d", [presenter getPosForUserWithId:user.itemId]]];
     } else {
         [self.curUserView setHidden:YES];
     }
@@ -91,7 +91,7 @@ static NSString *const kMKRRatingCellIdentifier = @"ratingCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MKRRatingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kMKRRatingCellIdentifier forIndexPath:indexPath];
     MKRUser *user = [presenter userWithIndex:indexPath.row];
-    [cell setData:user];
+    [cell setData:user andPosition:indexPath.row + 1];
     return cell;
 }
 
