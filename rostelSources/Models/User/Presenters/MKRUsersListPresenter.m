@@ -44,7 +44,6 @@
     return ^NSComparisonResult(MKRUser *a, MKRUser* b) {
         return [a.topPosition compare:b.topPosition];
     };
-    return nil;
 }
 
 - (void)loadUsersIds {

@@ -17,6 +17,9 @@
             @"code"       : @"code",
             @"name"       : @"name",
             @"unit_type"  : @"unitType",
+            @"available_for_individual_tournaments"  : @"availableForIndividualTournaments",
+            @"available_for_team_tournaments"  : @"availableForTeamTournaments",
+            @"available_for_duel"  : @"availableForDuel",
     }];
     return metricMapping;
 }

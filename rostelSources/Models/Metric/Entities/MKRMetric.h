@@ -13,6 +13,9 @@
 @property (nonatomic, copy) NSString *code;
 @property (nonatomic, copy) NSString *unitType;
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSNumber<RLMBool> *availableForIndividualTournaments;
+@property (nonatomic, copy) NSNumber<RLMBool> *availableForTeamTournaments;
+@property (nonatomic, copy) NSNumber<RLMBool> *availableForDuel;
 
 + (RKObjectMapping *)mapping;
 

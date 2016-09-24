@@ -7,6 +7,7 @@
 #import "MKRAuthService.h"
 #import "MKRPushService.h"
 #import "MKRUserService.h"
+#import "MKRDuelsService.h"
 #import "MKRGlobalErrorsObserver.h"
 
 @interface MKRAppDataProvider : NSObject
@@ -14,6 +15,7 @@
 @property (nonatomic, strong, readonly) MKRAuthService *authService;
 @property (nonatomic, strong, readonly) MKRUserService *userService;
 @property (nonatomic, strong, readonly) MKRPushService *pushService;
+@property (nonatomic, strong, readonly) MKRDuelsService *duelsService;
 @property (nonatomic, strong, readonly) MKRGlobalErrorsObserver *globalErrorsObserver;
 
 + (MKRAppDataProvider *)shared;

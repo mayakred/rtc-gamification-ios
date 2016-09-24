@@ -39,9 +39,15 @@
     [profileNavController.tabBarItem setImage:nil];
     [profileNavController.tabBarItem setTitle:@"Профиль"];
 
+    UIStoryboard *duelStoryboard = [UIStoryboard storyboardWithName:@"duel" bundle:nil];
+    MKRNavigationController *duelNavController = [duelStoryboard instantiateInitialViewController];
+    [duelNavController.tabBarItem setImage:nil];
+    [duelNavController.tabBarItem setTitle:@"Дуэли"];
+
     [self setViewControllers:@[
             profileNavController,
             ratingNavController,
+            duelNavController
     ]];
     [[MKRAppDataProvider shared].pushService registerForPushNotifications];
 }

@@ -13,6 +13,7 @@
 #define API_GET_USER_PATTERN             @"users/%@/"
 #define API_REGISTER_PLAYER_ID           @"users/me/players"
 #define API_USERS_LIST                   @"users"
+#define API_DUELS_LIST                   @"users/me/duels"
 
 
 @interface MKRNetworkConfigManager : NSObject

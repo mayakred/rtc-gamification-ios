@@ -39,7 +39,6 @@ static NSString *const kMKRRatingCellIdentifier = @"ratingCell";
     BOOL isLoadingUsers;
     UIRefreshControl *refreshControl;
     MKRUsersListPresenter *presenter;
-    UITableViewCell *curUserCell;
 }
 
 - (void)viewDidLoad {
@@ -56,8 +55,6 @@ static NSString *const kMKRRatingCellIdentifier = @"ratingCell";
     [presenter updateUsers];
     [self.curUserBlurView setEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight]];
     [self reloadCurUser];
-    [self.tableView setContentInset:UIEdgeInsetsMake(0,0,100,0)];
-    [self.tableView setScrollIndicatorInsets:UIEdgeInsetsMake(0,0,100,0)];
     [self.tableView setRowHeight:UITableViewAutomaticDimension];
 }
 
@@ -76,7 +73,7 @@ static NSString *const kMKRRatingCellIdentifier = @"ratingCell";
         }];
         [self.curUserFullNameLabel setText:[user fullName]];
         [self.curUserDepartmentLabel setText:user.department.name];
-        [self.curUserPositionLabel setText:[NSString stringWithFormat:@"%d", [presenter getPosForUserWithId:user.itemId]]];
+        [self.curUserPositionLabel setText:[NSString stringWithFormat:@"%d", [presenter getPosForUserWithId:user.itemId] + 1]];
     } else {
         [self.curUserView setHidden:YES];
     }
