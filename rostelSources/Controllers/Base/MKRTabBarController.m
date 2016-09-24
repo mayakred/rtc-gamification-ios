@@ -29,26 +29,39 @@
 }
 
 - (void)initControllers {
-    UIStoryboard *ratingStoryboard = [UIStoryboard storyboardWithName:@"rating" bundle:nil];
-    MKRNavigationController *ratingNavController = [ratingStoryboard instantiateInitialViewController];
-    [ratingNavController.tabBarItem setImage:nil];
-    [ratingNavController.tabBarItem setTitle:@"Рейтинг"];
-
     UIStoryboard *profileStoryboard = [UIStoryboard storyboardWithName:@"profile" bundle:nil];
     MKRNavigationController *profileNavController = [profileStoryboard instantiateInitialViewController];
-    [profileNavController.tabBarItem setImage:nil];
+    [profileNavController.tabBarItem setImage:[UIImage imageNamed:@"profile-ico"]];
     [profileNavController.tabBarItem setTitle:@"Профиль"];
+    
+    UIStoryboard *ratingStoryboard = [UIStoryboard storyboardWithName:@"rating" bundle:nil];
+    MKRNavigationController *ratingNavController = [ratingStoryboard instantiateInitialViewController];
+    [ratingNavController.tabBarItem setImage:[UIImage imageNamed:@"raiting-bar-icon"]];
+    [ratingNavController.tabBarItem setTitle:@"Рейтинг"];
 
     UIStoryboard *duelStoryboard = [UIStoryboard storyboardWithName:@"duel" bundle:nil];
     MKRNavigationController *duelNavController = [duelStoryboard instantiateInitialViewController];
-    [duelNavController.tabBarItem setImage:nil];
+    [duelNavController.tabBarItem setImage:[UIImage imageNamed:@"fight-icon"]];
     [duelNavController.tabBarItem setTitle:@"Дуэли"];
+    
+    UIStoryboard *achievementStoryboard = [UIStoryboard storyboardWithName:@"rating" bundle:nil];
+    MKRNavigationController *achievementNavController = [achievementStoryboard instantiateInitialViewController];
+    [achievementNavController.tabBarItem setImage:[UIImage imageNamed:@"achiv-icon"]];
+    [achievementNavController.tabBarItem setTitle:@"Достижения"];
+    
+    UIStoryboard *settingsStoryboard = [UIStoryboard storyboardWithName:@"rating" bundle:nil];
+    MKRNavigationController *settingsNavController = [settingsStoryboard instantiateInitialViewController];
+    [settingsNavController.tabBarItem setImage:[UIImage imageNamed:@"settings-icon"]];
+    [settingsNavController.tabBarItem setTitle:@"Настройки"];
 
     [self setViewControllers:@[
             profileNavController,
             ratingNavController,
-            duelNavController
+            duelNavController,
+            achievementNavController,
+            settingsNavController
     ]];
+    
     [[MKRAppDataProvider shared].pushService registerForPushNotifications];
 }
 
