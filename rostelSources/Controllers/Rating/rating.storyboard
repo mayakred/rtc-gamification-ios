@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="AHm-XM-29o"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BF2-aK-sOi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIb-gO-Trx">
@@ -47,10 +47,10 @@
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ratingCell" rowHeight="100" id="m0i-A5-15d" customClass="MKRRatingTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="100"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m0i-A5-15d" id="CR2-Gr-UAI">
-                                            <frame key="frameInset" width="320" height="99"/>
+                                            <frame key="frameInset" width="375" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9Q-bc-teb">
@@ -77,7 +77,7 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrd-tP-DKk">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrd-tP-DKk">
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -191,10 +191,14 @@
                                         <connections>
                                             <outlet property="avatarImageView" destination="hKF-4d-fns" id="bfm-BO-lsl"/>
                                             <outlet property="departmentLabel" destination="0d9-Vb-4zD" id="fia-DZ-bCi"/>
+                                            <outlet property="firstAchivIMage" destination="SkQ-ja-LaH" id="i8z-EN-agE"/>
                                             <outlet property="fullNameLabel" destination="Rrd-tP-DKk" id="PM0-br-bgQ"/>
                                             <outlet property="mmrLabel" destination="Dmq-cs-UGV" id="hfX-gF-4vw"/>
+                                            <outlet property="otherCountAchiv" destination="uci-RR-oWR" id="fxD-9U-clL"/>
                                             <outlet property="placeImage" destination="FkB-Kd-gvM" id="FMr-hZ-Z8j"/>
                                             <outlet property="positionNumberlabel" destination="i9Q-bc-teb" id="C7T-dr-056"/>
+                                            <outlet property="secondAchivImage" destination="cQf-YB-DIn" id="u7B-du-uJe"/>
+                                            <outlet property="thirdAchivImage" destination="QTb-MU-eXM" id="TGR-fs-9Wv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
