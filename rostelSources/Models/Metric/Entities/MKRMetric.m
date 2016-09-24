@@ -14,6 +14,7 @@
 + (RKObjectMapping *)mapping {
     RKObjectMapping *metricMapping = [RKObjectMapping mappingForClass:[self class]];
     [metricMapping addAttributeMappingsFromDictionary:@{
+            @"id"         : @"itemId",
             @"code"       : @"code",
             @"name"       : @"name",
             @"unit_type"  : @"unitType",
@@ -23,10 +24,5 @@
     }];
     return metricMapping;
 }
-
-//+ (NSString *)primaryKey {
-//    return @"original";
-//}
-
 
 @end

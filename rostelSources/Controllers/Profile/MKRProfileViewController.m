@@ -108,6 +108,7 @@ static NSString * const reuseIdentifier = @"achievementCell";
     [[MKRAppDataProvider shared].userService getUserWithId:self.userId success:^(MKRFullUser *user) {
         [MBProgressHUD hideHUDForView:self.tableView animated:YES];
         [self showUserInfo:user];
+        [statsPresenter updateStats];
     } failure:^(MKRErrorContainer *errorContainer) {
         [MBProgressHUD hideHUDForView:self.tableView animated:YES];
         [self showErrorForErrorContainer:errorContainer];

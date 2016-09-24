@@ -38,7 +38,7 @@
     [presenter serviceWillUpdateStatsList];
     [statsNetworkMethod statsWithUserId:userId success:^(NSArray *statsList) {
         NSLog(@"Success loading stats list");
-        [cacheManager clearAllCache];
+//        [cacheManager clearCacheForUserId:userId];
         [cacheManager saveStatsList:statsList];
         [presenter serviceUpdatedStatsListSuccessfully];
     } failure:^(NSError *error, NSArray *serverErrors) {
@@ -53,6 +53,10 @@
 
 - (NSArray *)statsIdsWithUserId:(NSNumber *)userId andIsIndividual:(BOOL)ind andComparator:(NSComparator)comparator {
     return [dataSource statsIdsWithUserId:userId andIsIndividual:(BOOL)ind andComparator:comparator];
+}
+
+- (void)clearAllCache {
+    [cacheManager clearAllCache];
 }
 
 @end

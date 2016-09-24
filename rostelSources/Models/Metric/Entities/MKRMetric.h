@@ -4,11 +4,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Realm/Realm.h>
+#import "MKREntityWithId.h"
 
 @class RKObjectMapping;
 
-@interface MKRMetric : RLMObject
+@interface MKRMetric : MKREntityWithId
 
 @property (nonatomic, copy) NSString *code;
 @property (nonatomic, copy) NSString *unitType;
