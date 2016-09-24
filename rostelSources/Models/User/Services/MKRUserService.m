@@ -75,7 +75,7 @@
     [presenter serviceWillUpdateUsersList];
     [usersListNetworkMethod usersListWithSuccess:^(NSArray *usersList) {
         NSLog(@"Success loading users list");
-        [cacheManager clearUsersListCache];
+//        [cacheManager clearUsersListCache];
         [cacheManager saveUsersList:usersList];
         [presenter serviceUpdatedUsersListSuccessfully];
     } failure:^(NSError *error, NSArray *serverErrors) {

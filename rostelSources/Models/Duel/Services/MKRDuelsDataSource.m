@@ -32,6 +32,7 @@
 - (NSInteger)wonDuelsCount {
     NSInteger result = 0;
     NSNumber *curUserId = [MKRAppDataProvider shared].userService.currentUser.itemId;
+//    NSNumber *curUserId = @1;
     NSArray *duels = [cacheManager loadDuelsList];
     for (MKRDuel *duel in duels) {
         if ([duel.status isEqualToString:DUEL_STATUS_INITIATOR_WIN] && [curUserId isEqualToNumber:duel.initiator.itemId]) {
@@ -59,6 +60,7 @@
 - (NSInteger)lostDuelsCount {
     NSInteger result = 0;
     NSNumber *curUserId = [MKRAppDataProvider shared].userService.currentUser.itemId;
+//    NSNumber *curUserId = @1;
     NSArray *duels = [cacheManager loadDuelsList];
     for (MKRDuel *duel in duels) {
         if ([duel.status isEqualToString:DUEL_STATUS_INITIATOR_WIN] && [curUserId isEqualToNumber:duel.victim.itemId]) {
