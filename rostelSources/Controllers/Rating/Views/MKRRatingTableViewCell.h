@@ -18,6 +18,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *departmentLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *placeImage;
 @property (strong, nonatomic) IBOutlet UILabel *mmrLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *firstAchivIMage;
+@property (strong, nonatomic) IBOutlet UIImageView *secondAchivImage;
+@property (strong, nonatomic) IBOutlet UIImageView *thirdAchivImage;
+@property (strong, nonatomic) IBOutlet UILabel *otherCountAchiv;
 
 - (void)setData:(MKRUser *)user andPosition:(NSInteger)position;
 
