@@ -20,4 +20,6 @@
 - (MKRDuel *)duelWithId:(NSNumber *)itemId;
 
 - (NSArray *)duelsIdsWithComparator:(NSComparator)comparator;
+
+- (void)clearAllCache;
 @end

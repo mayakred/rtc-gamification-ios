@@ -46,6 +46,7 @@
     RLMRealm *realm = [MKRSecurityManager getRealm];
     [realm beginWriteTransaction];
     [realm deleteObjects:[self loadUsersList]];
+    [realm deleteObjects:[MKRFullUser allObjectsInRealm:realm]];
     [realm commitWriteTransaction];
 }
 

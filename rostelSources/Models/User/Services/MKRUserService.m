@@ -100,5 +100,9 @@
     return [cacheManager userWithId:userId];
 }
 
+- (void)clearAllCache {
+    [cacheManager clearAllCache];
+}
+
 
 @end

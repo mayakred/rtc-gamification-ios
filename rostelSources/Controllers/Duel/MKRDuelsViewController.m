@@ -14,7 +14,7 @@
 #import "UIViewController+Errors.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 
-@interface MKRDuelsViewController () <MKRDuelsListDataDelegate, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource>
+@interface MKRDuelsViewController () <MKRDuelsListDataDelegate, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource, MGSwipeTableCellDelegate>
 
 @end
 
@@ -69,6 +69,14 @@ static NSString *const kMKRDuelCellIdentifier = @"duelCell";
     MKRDuelTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kMKRDuelCellIdentifier forIndexPath:indexPath];
     MKRDuel *duel = [presenter duelWithIndex:indexPath.row];
     [cell setData:duel];
+    [cell setDelegate:self]; //optional
+    //configure left buttons
+    [cell setLeftButtons:@[[MGSwipeButton buttonWithTitle:@"Отказаться" backgroundColor:[UIColor mkr_orangeColor]]]];
+    [cell.leftSwipeSettings setTransition:MGSwipeTransitionStatic];
+
+    //configure right buttons
+    [cell setRightButtons:@[[MGSwipeButton buttonWithTitle:@"Принять" backgroundColor:[UIColor mkr_blueColor]]]];
+    [cell.rightSwipeSettings setTransition:MGSwipeTransitionStatic];
     return cell;
 }
 

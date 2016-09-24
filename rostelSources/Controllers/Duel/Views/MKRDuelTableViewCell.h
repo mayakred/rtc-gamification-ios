@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MGSwipeTableCell/MGSwipeTableCell.h>
 
 @class MKRDuel;
 
-@interface MKRDuelTableViewCell : UITableViewCell
+@interface MKRDuelTableViewCell : MGSwipeTableCell
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *fullNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *metricNameLabel;

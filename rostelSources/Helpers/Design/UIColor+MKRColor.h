@@ -12,6 +12,8 @@
 
 + (UIColor *)mkr_blueColor;
 
++ (UIColor *)mkr_orangeColor;
+
 + (UIColor *)mkr_greyColor;
 + (UIColor *)mkr_lightGreyColor;
 + (UIColor *)mkr_darkGreyColor;

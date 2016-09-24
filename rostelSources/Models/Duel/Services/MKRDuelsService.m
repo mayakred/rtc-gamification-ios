@@ -86,5 +86,8 @@
     return [dataSource duelsIdsWithComparator:comparator];
 }
 
+- (void)clearAllCache {
+    [cacheManager clearAllCache];
+}
 
 @end
