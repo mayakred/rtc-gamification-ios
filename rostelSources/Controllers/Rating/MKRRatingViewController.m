@@ -58,6 +58,7 @@ static NSString *const kMKRRatingCellIdentifier = @"ratingCell";
     [self reloadCurUser];
     [self.tableView setContentInset:UIEdgeInsetsMake(0,0,100,0)];
     [self.tableView setScrollIndicatorInsets:UIEdgeInsetsMake(0,0,100,0)];
+    [self.tableView setRowHeight:UITableViewAutomaticDimension];
 }
 
 - (void)refreshTriggered {
@@ -92,6 +93,10 @@ static NSString *const kMKRRatingCellIdentifier = @"ratingCell";
     MKRUser *user = [presenter userWithIndex:indexPath.row];
     [cell setData:user];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 70;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
