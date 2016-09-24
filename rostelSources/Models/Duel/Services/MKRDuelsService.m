@@ -13,8 +13,7 @@
 #import "MKRDuelsListPresenter.h"
 #import "MKRAcceptDuelNetworkMethod.h"
 #import "MKRDeclineDuelNetworkMethod.h"
-
-
+#import "MKRSecurityManager.h"
 
 
 @implementation MKRDuelsService {
@@ -57,6 +56,11 @@
 - (void)acceptDuelWithId:(NSNumber *)duelId success:(void (^)())successBlock failure:(void (^)(MKRErrorContainer *errorContainer))failureBlock {
     NSLog(@"Start accepting duel with id: %@", duelId);
     [acceptDuelNetworkMethod acceptDuelWithId:duelId success:^() {
+        RLMRealm *realm = [MKRSecurityManager getRealm];
+        MKRDuel *duel = [self duelWithId:duelId];
+        [realm beginWriteTransaction];
+        [duel setStatus:DUEL_STATUS_IN_PROGRESS];
+        [realm commitWriteTransaction];
         if (successBlock) {
             successBlock();
         }
@@ -70,6 +74,11 @@
 - (void)declineDuelWithId:(NSNumber *)duelId success:(void (^)())successBlock failure:(void (^)(MKRErrorContainer *errorContainer))failureBlock {
     NSLog(@"Start declining duel with id: %@", duelId);
     [declineDuelNetworkMethod declineDuelWithId:duelId success:^() {
+        RLMRealm *realm = [MKRSecurityManager getRealm];
+        MKRDuel *duel = [self duelWithId:duelId];
+        [realm beginWriteTransaction];
+        [duel setStatus:DUEL_STATUS_REJECTED_BY_VICTIM];
+        [realm commitWriteTransaction];
         if (successBlock) {
             successBlock();
         }
