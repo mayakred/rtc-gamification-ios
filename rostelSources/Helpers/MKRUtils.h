@@ -8,6 +8,8 @@
 
 @interface MKRUtils : NSObject
 
++ (UIImage *)grayscaleImage:(UIImage *)image;
+
 + (NSString *)deviceId;
 
 + (NSString *)humanReadableDate:(NSDate *)date;

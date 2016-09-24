@@ -16,6 +16,7 @@
 
 + (RKObjectMapping *)mapping;
 
+- (BOOL)isDone;
 @end
 
 RLM_ARRAY_TYPE(MKRUserAchievement)

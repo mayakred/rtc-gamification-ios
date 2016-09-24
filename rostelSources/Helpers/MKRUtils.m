@@ -11,6 +11,13 @@
 
 }
 
++ (UIImage *)grayscaleImage:(UIImage *)image {
+    CIImage *ciImage = [[CIImage alloc] initWithImage:image];
+    CIImage *grayscale = [ciImage imageByApplyingFilter:@"CIColorControls"
+                                    withInputParameters: @{kCIInputSaturationKey : @0.0}];
+    return [UIImage imageWithCIImage:grayscale];
+}
+
 + (NSString *)deviceId {
     return [[[UIDevice currentDevice] identifierForVendor] UUIDString];
 }

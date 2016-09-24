@@ -19,6 +19,7 @@
 #import "MKRUserAchievement.h"
 #import "MKRStrangeObject.h"
 #import <MBProgressHUD/MBProgressHUD.h>
+#import "CALayer+RuntimeAttribute.h"
 
 @interface MKRProfileViewController () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, MKRStatsListDataDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -142,7 +143,9 @@ static NSString * const reuseIdentifier = @"achievementCell";
     NSLog(@"%@", userAchievement);
     NSURL *headerUrl = [NSURL URLWithString:userAchievement.achievement.image.standard];
     [cell.achievementImageView sd_setImageWithURL:headerUrl placeholderImage:nil options:SDWebImageRetryFailed completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        //
+        if (![userAchievement isDone]) {
+            [cell.achievementImageView setImage:[MKRUtils grayscaleImage:image]];
+        }
     }];
     
     return cell;

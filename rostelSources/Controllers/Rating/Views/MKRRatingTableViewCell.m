@@ -66,21 +66,27 @@
 
     if ([orderedAchs count] > 0) {
         [self.firstAchivIMage sd_setImageWithURL:[NSURL URLWithString:((MKRUserAchievement *)orderedAchs[0]).achievement.image.thumbnail] placeholderImage:nil options:SDWebImageRetryFailed completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            //
+            if (![(MKRUserAchievement *)orderedAchs[0] isDone]) {
+                [self.firstAchivIMage setImage:[MKRUtils grayscaleImage:image]];
+            }
         }];
         [self.firstAchivIMage setHidden:NO];
     }
     
     if ([orderedAchs count] > 1) {
         [self.secondAchivImage sd_setImageWithURL:[NSURL URLWithString:((MKRUserAchievement *)orderedAchs[1]).achievement.image.thumbnail] placeholderImage:nil options:SDWebImageRetryFailed completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            //
+            if (![(MKRUserAchievement *)orderedAchs[1] isDone]) {
+                [self.secondAchivImage setImage:[MKRUtils grayscaleImage:image]];
+            }
         }];
         [self.secondAchivImage setHidden:NO];
     }
     
     if ([orderedAchs count] > 2) {
         [self.thirdAchivImage sd_setImageWithURL:[NSURL URLWithString:((MKRUserAchievement *)orderedAchs[2]).achievement.image.thumbnail] placeholderImage:nil options:SDWebImageRetryFailed completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            //
+            if (![(MKRUserAchievement *)orderedAchs[2] isDone]) {
+                [self.thirdAchivImage setImage:[MKRUtils grayscaleImage:image]];
+            }
         }];
         [self.thirdAchivImage setHidden:NO];
     }

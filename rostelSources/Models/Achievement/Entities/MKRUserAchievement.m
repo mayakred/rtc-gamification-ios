@@ -22,5 +22,9 @@
     return uachMapping;
 }
 
+- (BOOL)isDone {
+    return (self.currentValue >= self.achievement.maxValue);
+}
+
 
 @end
