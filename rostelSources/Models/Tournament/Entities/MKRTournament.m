@@ -17,8 +17,10 @@
             @"id"    : @"itemId",
             @"name"  : @"name",
             @"type"  : @"type",
+            @"start_at"  : @"startAt",
     }];
-
+    RKRelationshipMapping *teamsMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"teams" toKeyPath:@"teams" withMapping:[MKRTeam mapping]];
+    [tourMapping addPropertyMapping:teamsMapping];
     return tourMapping;
 }
 

@@ -5,6 +5,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MKREntityWithId.h"
+#import "MKRTeam.h"
 
 @class RKObjectMapping;
 
@@ -12,6 +13,8 @@
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *type;
+@property (nonatomic, copy) NSNumber<RLMInt> *startAt;
+@property (nonatomic) RLMArray<MKRTeam> *teams;
 
 + (RKObjectMapping *)mappingForClass:(Class)mClass;
 
