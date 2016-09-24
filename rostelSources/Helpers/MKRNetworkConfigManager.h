@@ -14,6 +14,10 @@
 #define API_REGISTER_PLAYER_ID           @"users/me/players"
 #define API_USERS_LIST                   @"users"
 #define API_DUELS_LIST                   @"users/me/duels"
+#define API_ACCEPT_DUEL                  @"users/me/duels/:duelId/accept"
+#define API_ACCEPT_DUEL_PATTERN          @"users/me/duels/%@/accept"
+#define API_DECLINE_DUEL                 @"users/me/duels/:duelId/decline"
+#define API_DECLINE_DUEL_PATTERN         @"users/me/duels/%@/decline"
 
 
 @interface MKRNetworkConfigManager : NSObject

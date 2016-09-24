@@ -12,6 +12,13 @@
 
 }
 
+- (void)saveDuel:(MKRDuel *)duel {
+    RLMRealm *realm = [MKRSecurityManager getRealm];
+    [realm beginWriteTransaction];
+    [realm addOrUpdateObject:duel];
+    [realm commitWriteTransaction];
+}
+
 - (void)saveDuelsList:(NSArray *)usersList {
     RLMRealm *realm = [MKRSecurityManager getRealm];
     [realm beginWriteTransaction];

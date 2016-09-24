@@ -11,10 +11,14 @@
 #import "MKRDuelsListPresenter.h"
 #import "MKRErrorContainer.h"
 #import "MKRDuelsListPresenter.h"
+#import "MKRAcceptDuelNetworkMethod.h"
+#import "MKRDeclineDuelNetworkMethod.h"
 
 
 @implementation MKRDuelsService {
     MKRDuelsListNetworkMethod *duelsListNetworkMethod;
+    MKRAcceptDuelNetworkMethod *acceptDuelNetworkMethod;
+    MKRDeclineDuelNetworkMethod *declineDuelNetworkMethod;
     MKRDuelsCacheManager *cacheManager;
     MKRDuelsDataSource *dataSource;
 }
@@ -26,6 +30,8 @@
         return nil;
     }
     duelsListNetworkMethod = [[MKRDuelsListNetworkMethod alloc] init];
+    acceptDuelNetworkMethod = [[MKRAcceptDuelNetworkMethod alloc] init];
+    declineDuelNetworkMethod = [[MKRDeclineDuelNetworkMethod alloc] init];
     cacheManager = [[MKRDuelsCacheManager alloc] init];
     dataSource = [[MKRDuelsDataSource alloc] initWithCacheManager:cacheManager];
 
@@ -43,6 +49,32 @@
     } failure:^(NSError *error, NSArray *serverErrors) {
         NSLog(@"Error loading users duels Description:\n%@", error.description);
         [presenter serviceUpdatedDuelsListWithError:[MKRErrorContainer errorContainerWithError:error andServerErrors:serverErrors]];
+    }];
+}
+
+- (void)acceptDuelWithId:(NSNumber *)duelId success:(void (^)())successBlock failure:(void (^)(MKRErrorContainer *errorContainer))failureBlock {
+    NSLog(@"Start accepting duel with id: %@", duelId);
+    [acceptDuelNetworkMethod acceptDuelWithId:duelId success:^() {
+        if (successBlock) {
+            successBlock();
+        }
+    } failure:^(NSError *error, NSArray *serverErrors) {
+        if (failureBlock) {
+            failureBlock([MKRErrorContainer errorContainerWithError:error andServerErrors:serverErrors]);
+        }
+    }];
+}
+
+- (void)declineDuelWithId:(NSNumber *)duelId success:(void (^)())successBlock failure:(void (^)(MKRErrorContainer *errorContainer))failureBlock {
+    NSLog(@"Start declining duel with id: %@", duelId);
+    [declineDuelNetworkMethod declineDuelWithId:duelId success:^() {
+        if (successBlock) {
+            successBlock();
+        }
+    } failure:^(NSError *error, NSArray *serverErrors) {
+        if (failureBlock) {
+            failureBlock([MKRErrorContainer errorContainerWithError:error andServerErrors:serverErrors]);
+        }
     }];
 }
 
