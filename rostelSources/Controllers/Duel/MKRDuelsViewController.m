@@ -55,6 +55,10 @@ static NSString *const kMKRDuelCellIdentifier = @"duelCell";
     [presenter updateDuels];
 }
 
+- (void)updateDuelsStats {
+    //Update stats here
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -111,6 +115,7 @@ static NSString *const kMKRDuelCellIdentifier = @"duelCell";
     [MBProgressHUD hideHUDForView:self.view animated:YES];
     dispatch_async(dispatch_get_main_queue(), ^(){
         [self.tableView reloadData];
+        [self updateDuelsStats];
     });
 }
 

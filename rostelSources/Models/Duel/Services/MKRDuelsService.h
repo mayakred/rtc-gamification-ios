@@ -7,10 +7,15 @@
 
 @class MKRDuel;
 @class MKRDuelsListPresenter;
+@class MKRErrorContainer;
 
 
 @interface MKRDuelsService : NSObject
 - (void)loadDuelsListFromServerWithPresenter:(MKRDuelsListPresenter *)presenter;
+
+- (void)acceptDuelWithId:(NSNumber *)duelId success:(void (^)())successBlock failure:(void (^)(MKRErrorContainer *errorContainer))failureBlock;
+
+- (void)declineDuelWithId:(NSNumber *)duelId success:(void (^)())successBlock failure:(void (^)(MKRErrorContainer *errorContainer))failureBlock;
 
 - (MKRDuel *)duelWithId:(NSNumber *)itemId;
 

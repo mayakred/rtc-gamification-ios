@@ -10,6 +10,8 @@
 
 
 @interface MKRDuelsCacheManager : MKRBaseCacheManager
+- (void)saveDuel:(MKRDuel *)duel;
+
 - (void)saveDuelsList:(NSArray *)usersList;
 
 - (MKRDuel *)duelWithId:(NSNumber *)duelId;
