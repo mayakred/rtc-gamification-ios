@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *fullNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *departmentLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *placeImage;
+@property (strong, nonatomic) IBOutlet UILabel *mmrLabel;
 
 - (void)setData:(MKRUser *)user;
 
