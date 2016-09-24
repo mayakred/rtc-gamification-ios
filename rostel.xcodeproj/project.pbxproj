@@ -85,6 +85,8 @@
 		58AAAF0A3C3409FDB7ABA414 /* MKRSecurityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA58B41DB21D8FE296260 /* MKRSecurityManager.m */; };
 		58AAAF264295006BF55C1AB9 /* MKRDeclineDuelNetworkMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA8BE81DAB3BA9EEB3EDD /* MKRDeclineDuelNetworkMethod.m */; };
 		58AAAFF538291F2A1BF04086 /* MKREntityWithId.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAA4E703375BBEE818CC6 /* MKREntityWithId.m */; };
+		74233A341D96478F007B3B4D /* MKRProfileGraphTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74233A331D96478E007B3B4D /* MKRProfileGraphTableViewCell.m */; };
+		74233A371D964BF6007B3B4D /* MKRProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74233A361D964BF6007B3B4D /* MKRProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -240,6 +242,10 @@
 		58AAAFB10D8DBA7AEEDDDD1D /* MKRNetworkConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRNetworkConfigManager.h; sourceTree = "<group>"; };
 		58AAAFB762F1EB0BDD00F75E /* UIColor+MKRColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MKRColor.m"; sourceTree = "<group>"; };
 		58AAAFC5B4699736D0F12D27 /* UIFont+MKRFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MKRFont.m"; sourceTree = "<group>"; };
+		74233A321D96478E007B3B4D /* MKRProfileGraphTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRProfileGraphTableViewCell.h; sourceTree = "<group>"; };
+		74233A331D96478E007B3B4D /* MKRProfileGraphTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRProfileGraphTableViewCell.m; sourceTree = "<group>"; };
+		74233A351D964BF6007B3B4D /* MKRProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRProgressView.h; sourceTree = "<group>"; };
+		74233A361D964BF6007B3B4D /* MKRProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRProgressView.m; sourceTree = "<group>"; };
 		8C7213B989BA63949FC458B0 /* Pods-rostel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rostel.release.xcconfig"; path = "Pods/Target Support Files/Pods-rostel/Pods-rostel.release.xcconfig"; sourceTree = "<group>"; };
 		BAECC5DF7CA97FF3F08E0A09 /* Pods-rostel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rostel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rostel/Pods-rostel.debug.xcconfig"; sourceTree = "<group>"; };
 		DEA0D13DA0BB1AB30FB784D5 /* libPods-rostel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rostel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -574,6 +580,10 @@
 			children = (
 				3AB67B061D961084003B4FE0 /* MKRProfileAchievementCollectionViewCell.h */,
 				3AB67B071D961084003B4FE0 /* MKRProfileAchievementCollectionViewCell.m */,
+				74233A321D96478E007B3B4D /* MKRProfileGraphTableViewCell.h */,
+				74233A331D96478E007B3B4D /* MKRProfileGraphTableViewCell.m */,
+				74233A351D964BF6007B3B4D /* MKRProgressView.h */,
+				74233A361D964BF6007B3B4D /* MKRProgressView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1015,6 +1025,7 @@
 				58AAA45319902DC8BAFFB1CE /* MKRUtils.m in Sources */,
 				3AB67B101D9627E7003B4FE0 /* MKRDuelTableViewCell.m in Sources */,
 				58AAA2848307B934F76E73BB /* MKRBaseCacheManager.m in Sources */,
+				74233A341D96478F007B3B4D /* MKRProfileGraphTableViewCell.m in Sources */,
 				58AAA7739EFB91024454903B /* MKRBaseNetworkMethod.m in Sources */,
 				58AAA94FF281E4A26104F829 /* MKRServerError.m in Sources */,
 				58AAAFF538291F2A1BF04086 /* MKREntityWithId.m in Sources */,
@@ -1040,6 +1051,7 @@
 				58AAA38AB697BDC68F0014E6 /* MKRFullTournament.m in Sources */,
 				58AAA1D2DA8E0FB75F5C0BCB /* MKRDuel.m in Sources */,
 				3AB67B081D961084003B4FE0 /* MKRProfileAchievementCollectionViewCell.m in Sources */,
+				74233A371D964BF6007B3B4D /* MKRProgressView.m in Sources */,
 				58AAA1D1D32A4C2B3DCFA19B /* MKRGetCurrentUserNetworkMethod.m in Sources */,
 				58AAA21DF3474E05A6E03C49 /* MKRGetUserNetworkMethod.m in Sources */,
 				58AAADA0F73EB7E18C272474 /* MKRRegisterPushNotificationsNetworkMethod.m in Sources */,

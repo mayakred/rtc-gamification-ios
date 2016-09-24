@@ -12,6 +12,7 @@
 #import "MKRProfileAchievementsCollectionViewController.h"
 #import "MKRUtils.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "MKRProfileGraphTableViewCell.h"
 
 @interface MKRProfileViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
@@ -63,27 +64,25 @@ static NSString *const kMKRAchievementsSegueIdentitifer = @"achievementsSegue";
     [achievementsController setAchievements:user.achievements];
 }
 
-//#pragma mark - Table view data source
-//
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Incomplete implementation, return the number of sections
-//    return 0;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete implementation, return the number of rows
-//    return 0;
-//}
+#pragma mark - Table view data source
 
-/*
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 12;
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    MKRProfileGraphTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"profileGraphIdentifier" forIndexPath:indexPath];
     
-    // Configure the cell...
+    [cell setFirstNumber:(arc4random()%40+10) secondNumber:(arc4random()%40+50) setTypeTitle:@"По бабкам"];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
