@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="F4U-hw-Obe">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="F4U-hw-Obe">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -143,10 +143,13 @@
                                         <constraint firstAttribute="height" constant="28" id="pet-EQ-ZP5"/>
                                     </constraints>
                                     <segments>
-                                        <segment title="First"/>
-                                        <segment title="Second"/>
+                                        <segment title="Индивидуальный рейтинг"/>
+                                        <segment title="Рейтинг в команде"/>
                                     </segments>
                                     <color key="tintColor" red="0.0" green="0.66666666666666663" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="statTypeSegmentChange:" destination="ibA-DV-AWW" eventType="valueChanged" id="MnJ-UQ-WsW"/>
+                                    </connections>
                                 </segmentedControl>
                                 <collectionView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zta-Qr-AMo">
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -266,11 +269,13 @@
                     <navigationItem key="navigationItem" title="Профиль" id="MHs-kW-iLb"/>
                     <connections>
                         <outlet property="avatarImageView" destination="ZTc-AA-aYr" id="Dpg-fE-mJm"/>
+                        <outlet property="collectionView" destination="zta-Qr-AMo" id="Wlz-TA-SYw"/>
                         <outlet property="departmentLabel" destination="YIL-TN-yzd" id="m0Y-JF-zqJ"/>
                         <outlet property="fullNameLabel" destination="67E-AK-PKj" id="mPS-gA-uzm"/>
                         <outlet property="positionLabel" destination="Pbi-qI-dpK" id="bEk-m5-9ia"/>
                         <outlet property="ratingLabel" destination="uDQ-O4-CIH" id="NUC-63-lW4"/>
                         <outlet property="ratingTypeLabel" destination="lyS-w9-NS9" id="WS3-0S-y4S"/>
+                        <outlet property="statTypeSegment" destination="qaZ-pR-bnl" id="RPD-6x-4ml"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8h5-lT-Jmg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -280,9 +285,8 @@
         <!--Empty Data Set Delegate-->
         <scene sceneID="dO0-x3-KGq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cwf-qf-1aM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <collectionViewController id="0rC-vS-Ihb" customClass="MKRProfileAchievementsCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="hHQ-kB-wRX">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="hHQ-kB-wRX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -311,6 +315,7 @@
                         </connections>
                     </collectionView>
                 </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cwf-qf-1aM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1804" y="205"/>
         </scene>
