@@ -19,6 +19,10 @@
 		3A50DCDB1D91072200FE1A76 /* MKRAuthCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A50DCDA1D91072200FE1A76 /* MKRAuthCodeViewController.m */; };
 		3A50DCDE1D91195A00FE1A76 /* MKRTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A50DCDD1D91195A00FE1A76 /* MKRTabBarController.m */; };
 		3A50DCE11D9119EB00FE1A76 /* MKRAuthSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A50DCE01D9119EB00FE1A76 /* MKRAuthSplashViewController.m */; };
+		3AB67AFF1D95FDE5003B4FE0 /* profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB67AFE1D95FDE5003B4FE0 /* profile.storyboard */; };
+		3AB67B021D9604A4003B4FE0 /* MKRProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB67B011D9604A4003B4FE0 /* MKRProfileViewController.m */; };
+		3AB67B051D960E85003B4FE0 /* MKRProfileAchievementsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB67B041D960E85003B4FE0 /* MKRProfileAchievementsCollectionViewController.m */; };
+		3AB67B081D961084003B4FE0 /* MKRProfileAchievementCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB67B071D961084003B4FE0 /* MKRProfileAchievementCollectionViewCell.m */; };
 		3ADA42C495B9B9C859ADEA98 /* libPods-rostel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA0D13DA0BB1AB30FB784D5 /* libPods-rostel.a */; };
 		58AAA01549B96F5EB7502FEC /* MKRParticipant.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAE483D881D3E48C54439 /* MKRParticipant.m */; };
 		58AAA08FBA70AC81E42E357C /* MKRGlobalErrorsObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA92DCE44DC937AF47BCD /* MKRGlobalErrorsObserver.m */; };
@@ -96,6 +100,13 @@
 		3A50DCDD1D91195A00FE1A76 /* MKRTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRTabBarController.m; sourceTree = "<group>"; };
 		3A50DCDF1D9119EB00FE1A76 /* MKRAuthSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRAuthSplashViewController.h; sourceTree = "<group>"; };
 		3A50DCE01D9119EB00FE1A76 /* MKRAuthSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRAuthSplashViewController.m; sourceTree = "<group>"; };
+		3AB67AFE1D95FDE5003B4FE0 /* profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = profile.storyboard; sourceTree = "<group>"; };
+		3AB67B001D9604A4003B4FE0 /* MKRProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRProfileViewController.h; sourceTree = "<group>"; };
+		3AB67B011D9604A4003B4FE0 /* MKRProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRProfileViewController.m; sourceTree = "<group>"; };
+		3AB67B031D960E85003B4FE0 /* MKRProfileAchievementsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRProfileAchievementsCollectionViewController.h; sourceTree = "<group>"; };
+		3AB67B041D960E85003B4FE0 /* MKRProfileAchievementsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRProfileAchievementsCollectionViewController.m; sourceTree = "<group>"; };
+		3AB67B061D961084003B4FE0 /* MKRProfileAchievementCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRProfileAchievementCollectionViewCell.h; sourceTree = "<group>"; };
+		3AB67B071D961084003B4FE0 /* MKRProfileAchievementCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRProfileAchievementCollectionViewCell.m; sourceTree = "<group>"; };
 		58AAA000C7B0096CD0666E6C /* MKRAuthCredentialCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRAuthCredentialCacheManager.m; sourceTree = "<group>"; };
 		58AAA0388AD16CD433C26280 /* MKRUserAchievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRUserAchievement.m; sourceTree = "<group>"; };
 		58AAA04A1DD9CAE29831721B /* MKRServerError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRServerError.m; sourceTree = "<group>"; };
@@ -478,6 +489,7 @@
 				58AAACABB7F73B461AD02272 /* Base */,
 				58AAA7E8AE600FC00377C84A /* Auth */,
 				58AAAF26671CC7916C955DC5 /* Rating */,
+				58AAA79050E8D0CE9505081D /* Profile */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -500,6 +512,28 @@
 				58AAAA3F3DB8A8F2FB564F99 /* MKRDepartment.h */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		58AAA7893D81301154453957 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3AB67B061D961084003B4FE0 /* MKRProfileAchievementCollectionViewCell.h */,
+				3AB67B071D961084003B4FE0 /* MKRProfileAchievementCollectionViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		58AAA79050E8D0CE9505081D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				58AAA7893D81301154453957 /* Views */,
+				3AB67AFE1D95FDE5003B4FE0 /* profile.storyboard */,
+				3AB67B001D9604A4003B4FE0 /* MKRProfileViewController.h */,
+				3AB67B011D9604A4003B4FE0 /* MKRProfileViewController.m */,
+				3AB67B031D960E85003B4FE0 /* MKRProfileAchievementsCollectionViewController.h */,
+				3AB67B041D960E85003B4FE0 /* MKRProfileAchievementsCollectionViewController.m */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		58AAA79584AA30B684B1DAEA /* Methods */ = {
@@ -806,6 +840,7 @@
 			files = (
 				3A50DCD51D90E4B600FE1A76 /* auth.storyboard in Resources */,
 				3A146A3B1D952D910001F56D /* rating.storyboard in Resources */,
+				3AB67AFF1D95FDE5003B4FE0 /* profile.storyboard in Resources */,
 				3A50DCCD1D90DA9D00FE1A76 /* LaunchScreen.storyboard in Resources */,
 				3A50DCCA1D90DA9D00FE1A76 /* Assets.xcassets in Resources */,
 			);
@@ -894,6 +929,7 @@
 				58AAA94FF281E4A26104F829 /* MKRServerError.m in Sources */,
 				58AAAFF538291F2A1BF04086 /* MKREntityWithId.m in Sources */,
 				58AAA808280843555267CCB8 /* MKRResponseInfo.m in Sources */,
+				3AB67B051D960E85003B4FE0 /* MKRProfileAchievementsCollectionViewController.m in Sources */,
 				3A50DCDE1D91195A00FE1A76 /* MKRTabBarController.m in Sources */,
 				58AAA72BF3FC1D338B1070F8 /* MKRErrorContainer.m in Sources */,
 				58AAA53F3690BE978412B63C /* MKRNavigationController.m in Sources */,
@@ -912,6 +948,7 @@
 				58AAACE33618EE2595A806D5 /* MKRTeam.m in Sources */,
 				58AAA38AB697BDC68F0014E6 /* MKRFullTournament.m in Sources */,
 				58AAA1D2DA8E0FB75F5C0BCB /* MKRDuel.m in Sources */,
+				3AB67B081D961084003B4FE0 /* MKRProfileAchievementCollectionViewCell.m in Sources */,
 				58AAA1D1D32A4C2B3DCFA19B /* MKRGetCurrentUserNetworkMethod.m in Sources */,
 				58AAA21DF3474E05A6E03C49 /* MKRGetUserNetworkMethod.m in Sources */,
 				58AAADA0F73EB7E18C272474 /* MKRRegisterPushNotificationsNetworkMethod.m in Sources */,
@@ -921,6 +958,7 @@
 				58AAA282F0059D9BCD1A1675 /* MKRUserCacheManager.m in Sources */,
 				58AAAF0A3C3409FDB7ABA414 /* MKRSecurityManager.m in Sources */,
 				58AAAA35FA75AAF40E92095F /* MKRUsersListNetworkMethod.m in Sources */,
+				3AB67B021D9604A4003B4FE0 /* MKRProfileViewController.m in Sources */,
 				58AAA44C6DFF2A5880ED0F83 /* MKRUsersListPresenter.m in Sources */,
 				58AAAA513FA27A845F6A2B7E /* UIWindows+Additions.m in Sources */,
 				58AAA7347BA8260D6E9997D9 /* MKRUserDataSource.m in Sources */,
