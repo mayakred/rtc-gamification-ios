@@ -21,7 +21,6 @@
 		3A50DCE11D9119EB00FE1A76 /* MKRAuthSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A50DCE01D9119EB00FE1A76 /* MKRAuthSplashViewController.m */; };
 		3AB67AFF1D95FDE5003B4FE0 /* profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB67AFE1D95FDE5003B4FE0 /* profile.storyboard */; };
 		3AB67B021D9604A4003B4FE0 /* MKRProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB67B011D9604A4003B4FE0 /* MKRProfileViewController.m */; };
-		3AB67B051D960E85003B4FE0 /* MKRProfileAchievementsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB67B041D960E85003B4FE0 /* MKRProfileAchievementsCollectionViewController.m */; };
 		3AB67B081D961084003B4FE0 /* MKRProfileAchievementCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB67B071D961084003B4FE0 /* MKRProfileAchievementCollectionViewCell.m */; };
 		3AB67B0A1D961CA1003B4FE0 /* duel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB67B091D961CA1003B4FE0 /* duel.storyboard */; };
 		3AB67B0D1D962627003B4FE0 /* MKRDuelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB67B0C1D962627003B4FE0 /* MKRDuelsViewController.m */; };
@@ -117,8 +116,6 @@
 		3AB67AFE1D95FDE5003B4FE0 /* profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = profile.storyboard; sourceTree = "<group>"; };
 		3AB67B001D9604A4003B4FE0 /* MKRProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRProfileViewController.h; sourceTree = "<group>"; };
 		3AB67B011D9604A4003B4FE0 /* MKRProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRProfileViewController.m; sourceTree = "<group>"; };
-		3AB67B031D960E85003B4FE0 /* MKRProfileAchievementsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRProfileAchievementsCollectionViewController.h; sourceTree = "<group>"; };
-		3AB67B041D960E85003B4FE0 /* MKRProfileAchievementsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRProfileAchievementsCollectionViewController.m; sourceTree = "<group>"; };
 		3AB67B061D961084003B4FE0 /* MKRProfileAchievementCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRProfileAchievementCollectionViewCell.h; sourceTree = "<group>"; };
 		3AB67B071D961084003B4FE0 /* MKRProfileAchievementCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRProfileAchievementCollectionViewCell.m; sourceTree = "<group>"; };
 		3AB67B091D961CA1003B4FE0 /* duel.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = duel.storyboard; sourceTree = "<group>"; };
@@ -600,18 +597,16 @@
 				74233A351D964BF6007B3B4D /* MKRProgressView.h */,
 				74233A361D964BF6007B3B4D /* MKRProgressView.m */,
 			);
-			path = Views;
+			name = Views;
+			path = ../Profile/Views;
 			sourceTree = "<group>";
 		};
 		58AAA79050E8D0CE9505081D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				58AAA7893D81301154453957 /* Views */,
 				3AB67AFE1D95FDE5003B4FE0 /* profile.storyboard */,
 				3AB67B001D9604A4003B4FE0 /* MKRProfileViewController.h */,
 				3AB67B011D9604A4003B4FE0 /* MKRProfileViewController.m */,
-				3AB67B031D960E85003B4FE0 /* MKRProfileAchievementsCollectionViewController.h */,
-				3AB67B041D960E85003B4FE0 /* MKRProfileAchievementsCollectionViewController.m */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -730,6 +725,7 @@
 		58AAACABB7F73B461AD02272 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				58AAA7893D81301154453957 /* Views */,
 				58AAA1609B4BC8F283709118 /* MKRNavigationController.h */,
 				58AAA3AD5ED3E63E0F581B06 /* MKRNavigationController.m */,
 				3A50DCDC1D91195A00FE1A76 /* MKRTabBarController.h */,
@@ -1056,7 +1052,6 @@
 				58AAA94FF281E4A26104F829 /* MKRServerError.m in Sources */,
 				58AAAFF538291F2A1BF04086 /* MKREntityWithId.m in Sources */,
 				58AAA808280843555267CCB8 /* MKRResponseInfo.m in Sources */,
-				3AB67B051D960E85003B4FE0 /* MKRProfileAchievementsCollectionViewController.m in Sources */,
 				3A50DCDE1D91195A00FE1A76 /* MKRTabBarController.m in Sources */,
 				58AAA72BF3FC1D338B1070F8 /* MKRErrorContainer.m in Sources */,
 				58AAA53F3690BE978412B63C /* MKRNavigationController.m in Sources */,

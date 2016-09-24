@@ -10,4 +10,6 @@
 
 @interface MKRProfileViewController : UITableViewController
 
+- (void)reloadData;
+
 @end

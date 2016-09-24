@@ -9,12 +9,15 @@
 #import "MKRProfileViewController.h"
 #import "MKRAppDataProvider.h"
 #import "MKRFullUser.h"
-#import "MKRProfileAchievementsCollectionViewController.h"
 #import "MKRUtils.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "MKRProfileGraphTableViewCell.h"
+#import "UIScrollView+EmptyDataSet.h"
+#import "MKRProfileAchievementCollectionViewCell.h"
+#import "MKRUserAchievement.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
-@interface MKRProfileViewController ()
+@interface MKRProfileViewController () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *fullNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *departmentLabel;
@@ -24,14 +27,20 @@
 
 @end
 
-static NSString *const kMKRAchievementsSegueIdentitifer = @"achievementsSegue";
+static NSString * const reuseIdentifier = @"achievementCell";
 
 @implementation MKRProfileViewController {
-    MKRProfileAchievementsCollectionViewController *achievementsController;
+    NSArray *achievements;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if (!achievements) {
+        achievements = @[];
+    }
+    
+//    [self.collectionView registerClass:[MKRProfileAchievementCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
 
     [self.tableView setTableFooterView:[UIView new]];
 
@@ -51,6 +60,7 @@ static NSString *const kMKRAchievementsSegueIdentitifer = @"achievementsSegue";
 
 - (void)reloadUserInfo {
     MKRFullUser *user = [MKRAppDataProvider shared].userService.currentUser;
+    achievements = user.achievements;
     NSURL *headerUrl = [NSURL URLWithString:user.avatar.standard];
     [self.avatarImageView sd_setImageWithURL:headerUrl placeholderImage:nil options:SDWebImageRetryFailed completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         //
@@ -61,8 +71,10 @@ static NSString *const kMKRAchievementsSegueIdentitifer = @"achievementsSegue";
     NSString *ratingStr = [MKRUtils bytesToString:[user.rating integerValue]];
     [self.ratingLabel setText:[ratingStr componentsSeparatedByString:@" "][0]];
     [self.ratingTypeLabel setText:[ratingStr componentsSeparatedByString:@" "][1]];
-    [achievementsController setAchievements:user.achievements];
-    [achievementsController reloadData];
+    
+    if (!achievements) {
+        achievements = @[];
+    }
 }
 
 #pragma mark - Table view data source
@@ -84,50 +96,38 @@ static NSString *const kMKRAchievementsSegueIdentitifer = @"achievementsSegue";
     return cell;
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+#pragma mark <UICollectionViewDataSource>
 
 
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-   if ([segue.identifier isEqualToString:kMKRAchievementsSegueIdentitifer]) {
-       achievementsController = segue.destinationViewController;
-   }
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return [achievements count];
 }
 
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    MKRProfileAchievementCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    MKRUserAchievement *userAchievement = achievements[indexPath.row];
+    NSLog(@"%@", userAchievement);
+    NSURL *headerUrl = [NSURL URLWithString:userAchievement.achievement.image.standard];
+    [cell.achievementImageView sd_setImageWithURL:headerUrl placeholderImage:nil options:SDWebImageRetryFailed completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        //
+    }];
+    
+    return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(50, 50);
+}
+
+#pragma mark - EmptyDataSet Delegate
+
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView {
+    NSString *text = @"Достижения отсуствуют";
+    
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:15.0f],
+                                 NSForegroundColorAttributeName: [UIColor darkGrayColor]};
+    
+    return [[NSAttributedString alloc] initWithString:text attributes:attributes];
+}
 
 @end

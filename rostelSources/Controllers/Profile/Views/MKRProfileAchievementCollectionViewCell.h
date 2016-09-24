@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MKRProfileAchievementCollectionViewCell : UICollectionViewCell
+
 @property (weak, nonatomic) IBOutlet UIImageView *achievementImageView;
 
 @end

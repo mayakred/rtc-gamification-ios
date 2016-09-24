@@ -22,7 +22,7 @@
 
 - (MKRTournament *)tournamentWithType:(NSString *)tourType {
     RLMRealm *realm = [MKRSecurityManager getRealm];
-    NSArray *arr = [self RLMResultsToNSArray:[MKRTournament objectsInRealm:realm withPredicate:[NSPredicate predicateWithFormat:@"type == %@", tourType]];
+    NSArray *arr = [self RLMResultsToNSArray:[MKRTournament objectsInRealm:realm withPredicate:[NSPredicate predicateWithFormat:@"type == %@", tourType]]];
     return [arr count] > 0 ? arr[0] : nil;
 };
 

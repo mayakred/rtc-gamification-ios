@@ -32,15 +32,17 @@
     firstLabel = [[UILabel alloc] init];
     [progressViewBox addSubview:firstLabel];
     [firstLabel autoSetDimension:ALDimensionWidth toSize:40];
-    [firstLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:progressView];
+    [firstLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:progressView withOffset:4];
+    [firstLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom];
     [firstLabel setFont:[UIFont systemFontOfSize:14]];
     firstLabelLeftOffset = [firstLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:10];
     
     secondLabel = [[UILabel alloc] init];
     [progressViewBox addSubview:secondLabel];
     [secondLabel autoSetDimension:ALDimensionWidth toSize:40];
-    [secondLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:progressView];
+    [secondLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:progressView withOffset:4];
     [secondLabel setTextAlignment:NSTextAlignmentRight];
+    [secondLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom];
     [secondLabel setFont:[UIFont systemFontOfSize:14]];
     secondLabelRightOffset = [secondLabel autoPinEdgeToSuperviewEdge:ALEdgeRight];
 }
