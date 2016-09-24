@@ -10,6 +10,7 @@
 #import "MKRAppDataProvider.h"
 #import "MKRFullUser.h"
 #import "MKRProfileAchievementsCollectionViewController.h"
+#import "MKRUtils.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface MKRProfileViewController ()
@@ -56,8 +57,9 @@ static NSString *const kMKRAchievementsSegueIdentitifer = @"achievementsSegue";
     [self.fullNameLabel setText:[user fullName]];
     [self.departmentLabel setText:user.department.name];
     [self.positionLabel setText:[NSString stringWithFormat:@"%@", user.topPosition]];
-    [self.ratingLabel setText:[NSString stringWithFormat:@"%ld", [user.rating longValue]]];
-    [self.ratingTypeLabel setText:@"ТБ"];
+    NSString *ratingStr = [MKRUtils bytesToString:[user.rating integerValue]];
+    [self.ratingLabel setText:[ratingStr componentsSeparatedByString:@" "][0]];
+    [self.ratingTypeLabel setText:[ratingStr componentsSeparatedByString:@" "][1]];
     [achievementsController setAchievements:user.achievements];
 }
 
