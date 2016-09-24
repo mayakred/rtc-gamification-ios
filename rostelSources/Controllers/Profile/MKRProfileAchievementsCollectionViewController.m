@@ -22,12 +22,16 @@ static NSString * const reuseIdentifier = @"achievementCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    if (!self.achievements) {
+        self.achievements = @[];
+    }
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerClass:[MKRProfileAchievementCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
 }
@@ -35,6 +39,10 @@ static NSString * const reuseIdentifier = @"achievementCell";
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)reloadData {
+    [self.collectionView reloadData];
 }
 
 /*
@@ -57,6 +65,7 @@ static NSString * const reuseIdentifier = @"achievementCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MKRProfileAchievementCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     MKRUserAchievement *userAchievement = self.achievements[indexPath.row];
+    NSLog(@"%@", userAchievement);
     NSURL *headerUrl = [NSURL URLWithString:userAchievement.achievement.image.standard];
     [cell.achievementImageView sd_setImageWithURL:headerUrl placeholderImage:nil options:SDWebImageRetryFailed completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         //

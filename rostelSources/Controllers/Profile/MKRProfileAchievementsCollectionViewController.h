@@ -12,4 +12,5 @@
 
 @property (nonatomic, strong) NSArray *achievements;
 
+- (void)reloadData;
 @end

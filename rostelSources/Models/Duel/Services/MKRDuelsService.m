@@ -15,6 +15,8 @@
 #import "MKRDeclineDuelNetworkMethod.h"
 
 
+
+
 @implementation MKRDuelsService {
     MKRDuelsListNetworkMethod *duelsListNetworkMethod;
     MKRAcceptDuelNetworkMethod *acceptDuelNetworkMethod;

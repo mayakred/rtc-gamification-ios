@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *fullNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *metricNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *expiresAtLabel;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 
 - (void)setData:(MKRDuel *)duel;
 @end

@@ -10,7 +10,7 @@
         <scene sceneID="zw8-MV-s1O">
             <objects>
                 <tableViewController id="pPJ-Yg-2Bd" customClass="MKRDuelsViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="89" sectionHeaderHeight="28" sectionFooterHeight="28" id="DdD-JX-oDS">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="28" sectionFooterHeight="28" id="DdD-JX-oDS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -27,11 +27,11 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="duelCell" rowHeight="100" id="aor-Zc-nEj" customClass="MKRDuelTableViewCell">
-                                <rect key="frame" x="0.0" y="193" width="375" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="duelCell" rowHeight="108" id="aor-Zc-nEj" customClass="MKRDuelTableViewCell">
+                                <rect key="frame" x="0.0" y="193" width="375" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aor-Zc-nEj" id="Cju-as-PWT">
-                                    <frame key="frameInset" width="375" height="99"/>
+                                    <frame key="frameInset" width="375" height="107"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qzS-Zw-bGY">
@@ -64,12 +64,20 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhd-cY-RiM">
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.66666666669999997" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="qzS-Zw-bGY" firstAttribute="centerY" secondItem="Cju-as-PWT" secondAttribute="centerY" id="3BS-8s-pOY"/>
                                         <constraint firstItem="Noh-su-rfF" firstAttribute="top" secondItem="q41-8w-JGs" secondAttribute="bottom" constant="8" id="A6L-NY-7ku"/>
                                         <constraint firstItem="xaf-Cb-kLW" firstAttribute="top" secondItem="q41-8w-JGs" secondAttribute="bottom" constant="8" id="Fkd-qc-M9E"/>
+                                        <constraint firstItem="Yhd-cY-RiM" firstAttribute="leading" secondItem="qzS-Zw-bGY" secondAttribute="trailing" constant="16" id="GTL-h9-UJe"/>
+                                        <constraint firstAttribute="trailing" secondItem="Yhd-cY-RiM" secondAttribute="trailing" constant="16" id="Hkg-EG-c33"/>
                                         <constraint firstAttribute="trailing" secondItem="Noh-su-rfF" secondAttribute="trailing" constant="16" id="JVH-pD-M4m"/>
+                                        <constraint firstItem="Yhd-cY-RiM" firstAttribute="top" secondItem="Noh-su-rfF" secondAttribute="bottom" constant="8" id="ODx-vF-St2"/>
                                         <constraint firstItem="q41-8w-JGs" firstAttribute="top" secondItem="Cju-as-PWT" secondAttribute="top" constant="19" id="W0C-mw-xdg"/>
                                         <constraint firstItem="q41-8w-JGs" firstAttribute="leading" secondItem="qzS-Zw-bGY" secondAttribute="trailing" constant="16" id="ZPq-5Z-TlY"/>
                                         <constraint firstItem="qzS-Zw-bGY" firstAttribute="leading" secondItem="Cju-as-PWT" secondAttribute="leading" constant="16" id="ZcE-E3-kgc"/>
@@ -82,6 +90,7 @@
                                     <outlet property="expiresAtLabel" destination="Noh-su-rfF" id="4Th-tf-JLJ"/>
                                     <outlet property="fullNameLabel" destination="q41-8w-JGs" id="Jub-90-6ci"/>
                                     <outlet property="metricNameLabel" destination="xaf-Cb-kLW" id="YGZ-Wz-m7T"/>
+                                    <outlet property="statusLabel" destination="Yhd-cY-RiM" id="dTM-rf-e9D"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

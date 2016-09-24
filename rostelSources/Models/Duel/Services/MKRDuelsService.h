@@ -10,6 +10,13 @@
 @class MKRErrorContainer;
 
 
+#define DUEL_STATUS_WAITING_VICTIM @"duel_status_type.waiting_victim"
+#define DUEL_STATUS_IN_PROGRESS @"duel_status_type.in_progress"
+#define DUEL_STATUS_WICTIM_WIN @"duel_status_type.victim_win"
+#define DUEL_STATUS_INITIATOR_WIN @"duel_status_type.initiator_win"
+#define DUEL_STATUS_DRAW @"duel_status_type.draw"
+#define DUEL_STATUS_REJECTED_BY_VICTIM @"duel_status_type.rejected_by_victim"
+
 @interface MKRDuelsService : NSObject
 - (void)loadDuelsListFromServerWithPresenter:(MKRDuelsListPresenter *)presenter;
 
