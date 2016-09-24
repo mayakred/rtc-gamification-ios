@@ -14,5 +14,11 @@
 
 - (MKRDuel *)duelWithId:(NSNumber *)itemId;
 
+- (NSInteger)wonDuelsCount;
+
+- (NSInteger)drawDuelsCount;
+
+- (NSInteger)lostDuelsCount;
+
 - (NSArray *)duelsIdsWithComparator:(NSComparator)comparator;
 @end

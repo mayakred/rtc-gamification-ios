@@ -23,6 +23,8 @@
 @property (nonatomic) MKRImage *avatar;
 @property (nonatomic) RLMArray<MKRUserAchievement> *achievements;
 
+- (NSArray *)orderedAchievements;
+
 + (RKObjectMapping *)mappingForClass:(Class)mClass;
 
 + (RKObjectMapping *)mapping;

@@ -6,6 +6,9 @@
 #import "MKRDuelsDataSource.h"
 #import "MKRDuelsCacheManager.h"
 #import "MKRDuel.h"
+#import "MKRDuelsService.h"
+#import "MKRAppDataProvider.h"
+#import "MKRFullUser.h"
 
 
 @implementation MKRDuelsDataSource {
@@ -24,6 +27,48 @@
 
 - (MKRDuel *)duelWithId:(NSNumber *)itemId {
     return [cacheManager duelWithId:itemId];
+}
+
+- (NSInteger)wonDuelsCount {
+    NSInteger result = 0;
+    NSNumber *curUserId = [MKRAppDataProvider shared].userService.currentUser.itemId;
+    NSArray *duels = [cacheManager loadDuelsList];
+    for (MKRDuel *duel in duels) {
+        if ([duel.status isEqualToString:DUEL_STATUS_INITIATOR_WIN] && [curUserId isEqualToNumber:duel.initiator.itemId]) {
+            result++;
+        }
+        if ([duel.status isEqualToString:DUEL_STATUS_WICTIM_WIN] && [curUserId isEqualToNumber:duel.victim.itemId]) {
+            result++;
+        }
+    }
+    return result;
+}
+
+- (NSInteger)drawDuelsCount {
+    NSInteger result = 0;
+    NSArray *duels = [cacheManager loadDuelsList];
+    for (MKRDuel *duel in duels) {
+        if ([duel.status isEqualToString:DUEL_STATUS_DRAW]) {
+            result++;
+        }
+    }
+    return result;
+}
+
+
+- (NSInteger)lostDuelsCount {
+    NSInteger result = 0;
+    NSNumber *curUserId = [MKRAppDataProvider shared].userService.currentUser.itemId;
+    NSArray *duels = [cacheManager loadDuelsList];
+    for (MKRDuel *duel in duels) {
+        if ([duel.status isEqualToString:DUEL_STATUS_INITIATOR_WIN] && [curUserId isEqualToNumber:duel.victim.itemId]) {
+            result++;
+        }
+        if ([duel.status isEqualToString:DUEL_STATUS_WICTIM_WIN] && [curUserId isEqualToNumber:duel.initiator.itemId]) {
+            result++;
+        }
+    }
+    return result;
 }
 
 - (NSArray *)duelsIdsWithComparator:(NSComparator)comparator {

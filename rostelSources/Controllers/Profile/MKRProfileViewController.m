@@ -85,7 +85,7 @@ static NSString * const reuseIdentifier = @"achievementCell";
 }
 
 - (void)showUserInfo:(MKRFullUser *)user {
-    achievements = user.achievements;
+    achievements = [user orderedAchievements];
     if (!achievements) {
         achievements = @[];
     }

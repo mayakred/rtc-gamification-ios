@@ -46,10 +46,16 @@ static NSString *const kMKRDuelCellIdentifier = @"duelCell";
     [presenter updateDuels];
     [self.tableView setRowHeight:UITableViewAutomaticDimension];
     // Uncomment the following line to preserve selection between presentations.
-     self.clearsSelectionOnViewWillAppear = NO;
+    [self setClearsSelectionOnViewWillAppear:YES];
+    [self reloadData];
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)reloadData {
+    [self.tableView reloadData];
+    [self updateDuelsStats];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,7 +69,9 @@ static NSString *const kMKRDuelCellIdentifier = @"duelCell";
 }
 
 - (void)updateDuelsStats {
-    //Update stats here
+    [loseCountLabel setText:[NSString stringWithFormat:@"%d", [MKRAppDataProvider shared].duelsService.lostDuelsCount]];
+    [winCountLabel setText:[NSString stringWithFormat:@"%d", [MKRAppDataProvider shared].duelsService.wonDuelsCount]];
+    [drawCountLabel setText:[NSString stringWithFormat:@"%d", [MKRAppDataProvider shared].duelsService.drawDuelsCount]];
 }
 
 #pragma mark - Table view data source
@@ -158,8 +166,7 @@ static NSString *const kMKRDuelCellIdentifier = @"duelCell";
     isLoadingDuels = NO;
     [MBProgressHUD hideHUDForView:self.tableView animated:YES];
     dispatch_async(dispatch_get_main_queue(), ^(){
-        [self.tableView reloadData];
-        [self updateDuelsStats];
+        [self reloadData];
     });
 }
 
@@ -167,7 +174,7 @@ static NSString *const kMKRDuelCellIdentifier = @"duelCell";
     isLoadingDuels = NO;
     [MBProgressHUD hideHUDForView:self.tableView animated:YES];
     dispatch_async(dispatch_get_main_queue(), ^(){
-        [self.tableView reloadData];
+        [self reloadData];
     });
     [self showErrorForErrorContainer:errorContainer];
 }

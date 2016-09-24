@@ -29,4 +29,10 @@
 - (NSArray *)duelsIdsWithComparator:(NSComparator)comparator;
 
 - (void)clearAllCache;
+
+- (NSInteger)wonDuelsCount;
+
+- (NSInteger)drawDuelsCount;
+
+- (NSInteger)lostDuelsCount;
 @end

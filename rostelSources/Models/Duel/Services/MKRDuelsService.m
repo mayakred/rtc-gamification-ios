@@ -101,4 +101,17 @@
     [cacheManager clearAllCache];
 }
 
+- (NSInteger)wonDuelsCount {
+    return [dataSource wonDuelsCount];
+}
+
+- (NSInteger)drawDuelsCount {
+    return [dataSource drawDuelsCount];
+}
+
+- (NSInteger)lostDuelsCount {
+    return [dataSource lostDuelsCount];
+}
+
+
 @end
