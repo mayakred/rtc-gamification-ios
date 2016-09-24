@@ -34,7 +34,13 @@
     [ratingNavController.tabBarItem setImage:nil];
     [ratingNavController.tabBarItem setTitle:@"Рейтинг"];
 
+    UIStoryboard *profileStoryboard = [UIStoryboard storyboardWithName:@"profile" bundle:nil];
+    MKRNavigationController *profileNavController = [profileStoryboard instantiateInitialViewController];
+    [profileNavController.tabBarItem setImage:nil];
+    [profileNavController.tabBarItem setTitle:@"Профиль"];
+
     [self setViewControllers:@[
+            profileNavController,
             ratingNavController,
     ]];
     [[MKRAppDataProvider shared].pushService registerForPushNotifications];
