@@ -11,5 +11,6 @@
 @interface MKRAchivCollectionViewController : UICollectionViewController
 
 @property NSArray *userAchievements;
+@property NSNumber *userId;
 
 @end

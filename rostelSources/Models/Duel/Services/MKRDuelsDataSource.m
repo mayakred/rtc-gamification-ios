@@ -73,10 +73,36 @@
     return result;
 }
 
+- (NSNumber *)getOrderNumberFromDuel:(MKRDuel *)duel {
+    NSNumber *userId = [MKRAppDataProvider shared].userService.currentUser.itemId;
+    if ([duel.status isEqualToString:DUEL_STATUS_WAITING_VICTIM] && [duel.victim.itemId isEqualToNumber:userId]) {
+        return @1;
+    } else if ([duel.status isEqualToString:DUEL_STATUS_IN_PROGRESS]) {
+        return @2;
+    } else if ([duel.status isEqualToString:DUEL_STATUS_WAITING_VICTIM]) {
+        return @3;
+    } else if ([duel.status isEqualToString:DUEL_STATUS_WICTIM_WIN]) {
+        return @4;
+    } else if ([duel.status isEqualToString:DUEL_STATUS_DRAW]) {
+        return @5;
+    } else if ([duel.status isEqualToString:DUEL_STATUS_INITIATOR_WIN]) {
+        return @6;
+    } else if ([duel.status isEqualToString:DUEL_STATUS_REJECTED_BY_VICTIM]) {
+        return @7;
+    }
+    return @8;
+}
+
 - (NSArray *)duelsIdsWithComparator:(NSComparator)comparator {
     NSArray *duels = [cacheManager loadDuelsList];
     NSMutableArray *result = [NSMutableArray new];
     NSArray *duelsCopy = comparator ? [duels sortedArrayUsingComparator:comparator] : duels;
+    duelsCopy = [duelsCopy sortedArrayUsingComparator:^NSComparisonResult(MKRDuel *obj1, MKRDuel *obj2) {
+        NSNumber *order1 = [self getOrderNumberFromDuel:obj1];
+        NSNumber *order2 = [self getOrderNumberFromDuel:obj2];
+        
+        return [order1 compare:order2];
+    }];
     for (MKRDuel *duel in duelsCopy) {
         [result addObject:duel.itemId];
     }
