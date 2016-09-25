@@ -14,6 +14,7 @@
 #import "UIColor+MKRColor.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "MKRUserAchievement.h"
+#import "UIViewController+Errors.h"
 
 @interface MKRAchivCollectionViewController () <CNPPopupControllerDelegate>
 
@@ -22,6 +23,7 @@
 @end
 
 @implementation MKRAchivCollectionViewController {
+    UIRefreshControl *refreshControl;
 }
 
 static NSString * const reuseIdentifier = @"achivCell";
@@ -33,12 +35,29 @@ static NSString * const reuseIdentifier = @"achivCell";
         self.userAchievements = @[];
     }
 
+    refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl setAttributedTitle:[[NSAttributedString alloc] initWithString:@""]];
+    [refreshControl addTarget:self action:@selector(refreshTriggered) forControlEvents:UIControlEventValueChanged];
+    [self.collectionView addSubview:refreshControl];
+    [self.collectionView sendSubviewToBack:refreshControl];
+
     [self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)refreshTriggered {
+    [[MKRAppDataProvider shared].userService getUserWithId:self.userId success:^(MKRFullUser *user) {
+        [refreshControl endRefreshing];
+        [self setUserAchievements:[user orderedAchievements]];
+        [self.collectionView reloadData];
+    } failure:^(MKRErrorContainer *errorContainer) {
+        [refreshControl endRefreshing];
+        [self showErrorForErrorContainer:errorContainer];
+    }];
 }
 
 /*

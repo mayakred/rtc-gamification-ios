@@ -51,6 +51,7 @@
     UIStoryboard *achievementStoryboard = [UIStoryboard storyboardWithName:@"achiv" bundle:nil];
     MKRNavigationController *achievementNavController = [achievementStoryboard instantiateInitialViewController];
     [(MKRAchivCollectionViewController *)achievementNavController.visibleViewController setUserAchievements:[[MKRAppDataProvider shared].userService.currentUser orderedAchievements]];
+    [(MKRAchivCollectionViewController *)achievementNavController.visibleViewController setUserId:[MKRAppDataProvider shared].userService.currentUser.itemId];
     [achievementNavController.tabBarItem setImage:[UIImage imageNamed:@"achiv-icon"]];
     [achievementNavController.tabBarItem setTitle:@"Достижения"];
     

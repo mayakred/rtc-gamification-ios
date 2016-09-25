@@ -91,6 +91,7 @@ static NSString * const kMKRMetricSegue = @"metricSegue";
     UIStoryboard *achievementStoryboard = [UIStoryboard storyboardWithName:@"achiv" bundle:nil];
     MKRAchivCollectionViewController *achievementController = [achievementStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([MKRAchivCollectionViewController class])];
     [achievementController setUserAchievements:achievements];
+    [achievementController setUserId:self.userId];
     [self.navigationController pushViewController:achievementController animated:YES];
 }
 
