@@ -24,6 +24,8 @@
 #define API_STATISTIC                    @"users/:userId/tab1/statistic"
 #define API_STATISTIC_PATTERN            @"users/%@/tab1/statistic"
 #define API_METRICS_LIST                 @"metrics"
+#define API_USER_METRICS_VALUE_LIST             @":mCode/statistic/"
+#define API_USER_METRICS_VALUE_LIST_PATTERN     @"%@/statistic/"
 
 
 @interface MKRNetworkConfigManager : NSObject
