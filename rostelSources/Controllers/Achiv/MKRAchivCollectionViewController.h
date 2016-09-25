@@ -10,4 +10,6 @@
 
 @interface MKRAchivCollectionViewController : UICollectionViewController
 
+@property NSArray *userAchievements;
+
 @end
