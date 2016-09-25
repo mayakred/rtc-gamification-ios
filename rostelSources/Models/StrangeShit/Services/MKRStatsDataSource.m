@@ -31,7 +31,6 @@
     NSMutableArray *result = [NSMutableArray new];
     NSArray *statsCopy = comparator ? [stats sortedArrayUsingComparator:comparator] : stats;
     for (MKRStrangeObject *stat in statsCopy) {
-        NSLog(@"%@", stat);
         if ([stat.userId isEqualToNumber:userId] && stat.isPerviySubview.boolValue == ind) {
             [result addObject:stat.itemId];
         }

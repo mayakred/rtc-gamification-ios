@@ -16,13 +16,15 @@
 #import "MKRAppDataProvider.h"
 #import "MKRFullUser.h"
 #import "MKRProfileViewController.h"
+#import "MKRCreateDuelViewController.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 
-@interface MKRDuelsViewController () <MKRDuelsListDataDelegate, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource, MGSwipeTableCellDelegate>
+@interface MKRDuelsViewController () <MKRDuelsListDataDelegate, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource, MGSwipeTableCellDelegate, MKRDuelCreatedDelegate>
 
 @end
 
 static NSString *const kMKRDuelCellIdentifier = @"duelCell";
+static NSString *const kMKRCreateDuelIdentifier = @"createDuelSegue";
 
 @implementation MKRDuelsViewController {
     MKRDuelsListPresenter *presenter;
@@ -137,6 +139,10 @@ static NSString *const kMKRDuelCellIdentifier = @"duelCell";
     [self.navigationController pushViewController:profileController animated:YES];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 70;
+}
+
 #pragma mark - DZNEmptyDataSet delegate
 
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
@@ -198,8 +204,22 @@ static NSString *const kMKRDuelCellIdentifier = @"duelCell";
     [hud.bezelView setStyle:MBProgressHUDBackgroundStyleSolidColor];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 70;
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:kMKRCreateDuelIdentifier]) {
+        [(MKRCreateDuelViewController *)segue.destinationViewController setDelegate:self];
+    }
 }
+
+#pragma mark - CreateDuelDelegate
+
+- (void)duelCreated {
+    dispatch_async(dispatch_get_main_queue(), ^(){
+        [presenter loadDuelsIds];
+        [self reloadData];
+    });
+}
+
 
 @end

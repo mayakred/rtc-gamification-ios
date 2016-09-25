@@ -8,6 +8,7 @@
 #import "MKRPushService.h"
 #import "MKRUserService.h"
 #import "MKRStatsService.h"
+#import "MKRMetricsService.h"
 #import "MKRDuelsService.h"
 #import "MKRGlobalErrorsObserver.h"
 
@@ -18,6 +19,7 @@
 @property (nonatomic, strong, readonly) MKRPushService *pushService;
 @property (nonatomic, strong, readonly) MKRDuelsService *duelsService;
 @property (nonatomic, strong, readonly) MKRStatsService *statsService;
+@property (nonatomic, strong, readonly) MKRMetricsService *metricsService;
 @property (nonatomic, strong, readonly) MKRGlobalErrorsObserver *globalErrorsObserver;
 
 + (MKRAppDataProvider *)shared;

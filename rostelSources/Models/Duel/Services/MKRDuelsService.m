@@ -14,11 +14,13 @@
 #import "MKRAcceptDuelNetworkMethod.h"
 #import "MKRDeclineDuelNetworkMethod.h"
 #import "MKRSecurityManager.h"
+#import "MKRCreateDuelNetworkMethod.h"
 
 
 @implementation MKRDuelsService {
     MKRDuelsListNetworkMethod *duelsListNetworkMethod;
     MKRAcceptDuelNetworkMethod *acceptDuelNetworkMethod;
+    MKRCreateDuelNetworkMethod *createDuelNetworkMethod;
     MKRDeclineDuelNetworkMethod *declineDuelNetworkMethod;
     MKRDuelsCacheManager *cacheManager;
     MKRDuelsDataSource *dataSource;
@@ -33,6 +35,7 @@
     duelsListNetworkMethod = [[MKRDuelsListNetworkMethod alloc] init];
     acceptDuelNetworkMethod = [[MKRAcceptDuelNetworkMethod alloc] init];
     declineDuelNetworkMethod = [[MKRDeclineDuelNetworkMethod alloc] init];
+    createDuelNetworkMethod = [[MKRCreateDuelNetworkMethod alloc] init];
     cacheManager = [[MKRDuelsCacheManager alloc] init];
     dataSource = [[MKRDuelsDataSource alloc] initWithCacheManager:cacheManager];
 
@@ -44,7 +47,7 @@
     [presenter serviceWillUpdateDuelsList];
     [duelsListNetworkMethod duelsListWithSuccess:^(NSArray *duelsList) {
         NSLog(@"Success loading duels list");
-        [cacheManager clearAllCache];
+//        [cacheManager clearAllCache];
         [cacheManager saveDuelsList:duelsList];
         [presenter serviceUpdatedDuelsListSuccessfully];
     } failure:^(NSError *error, NSArray *serverErrors) {
@@ -88,6 +91,27 @@
         }
     }];
 }
+
+- (void)createDuelWithVictimId:(NSNumber *)victimId andMetricCode:(NSString *)metricCode andEndAt:(NSNumber *)endAt success:(void (^)(MKRDuel *duel))successBlock
+                       failure:(void (^)(MKRErrorContainer *errorContainer))failureBlock {
+    NSParameterAssert(victimId);
+    NSParameterAssert(metricCode);
+    NSParameterAssert(endAt);
+    NSLog(@"Start creating duel with user with id %@", victimId);
+
+    [createDuelNetworkMethod createDuelWithWictimId:victimId andMetricCode:metricCode andEndTime:endAt success:^(MKRDuel *duel) {
+        [cacheManager saveDuel:duel];
+        if (successBlock) {
+            successBlock(duel);
+        }
+    } failure:^(NSError *error, NSArray *serverErrors) {
+        if (failureBlock) {
+            failureBlock([MKRErrorContainer errorContainerWithError:error andServerErrors:serverErrors]);
+        }
+
+    }];
+}
+
 
 - (MKRDuel *)duelWithId:(NSNumber *)itemId {
     return [dataSource duelWithId:itemId];

@@ -19,6 +19,8 @@
 
 @property (nonatomic, weak) id <MKRDuelsListDataDelegate> delegate;
 
+- (void)loadDuelsIds;
+
 - (void)updateDuels;
 
 - (MKRDuel *)duelWithIndex:(NSUInteger)index;
