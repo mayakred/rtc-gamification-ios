@@ -16,6 +16,7 @@
             @"id"              : @"itemId",
             @"name"            : @"name",
             @"max_value"       : @"maxValue",
+            @"description"       : @"desc",
     }];
     RKRelationshipMapping *imgMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"image" toKeyPath:@"image" withMapping:[MKRImage mapping]];
     [achMapping addPropertyMapping:imgMapping];

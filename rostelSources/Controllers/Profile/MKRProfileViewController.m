@@ -20,6 +20,8 @@
 #import "MKRStrangeObject.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "CALayer+RuntimeAttribute.h"
+#import "MKRUsersMetricsViewController.h"
+#import "MKRAchivCollectionViewController.h"
 
 @interface MKRProfileViewController () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, MKRStatsListDataDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -29,17 +31,20 @@
 @property (weak, nonatomic) IBOutlet UILabel *positionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ratingTypeLabel;
+@property (weak, nonatomic) IBOutlet UIView *achAreaView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *statTypeSegment;
 - (IBAction)statTypeSegmentChange:(id)sender;
 
 @end
 
 static NSString * const reuseIdentifier = @"achievementCell";
+static NSString * const kMKRMetricSegue = @"metricSegue";
 
 @implementation MKRProfileViewController {
     NSArray *achievements;
     MKRStatsPresenter *statsPresenter;
     UIRefreshControl *refreshControl;
+    MKRMetric *selectedMetrics;
 }
 
 - (void)viewDidLoad {
@@ -48,7 +53,11 @@ static NSString * const reuseIdentifier = @"achievementCell";
     if (!achievements) {
         achievements = @[];
     }
-    
+
+    [self.achAreaView setUserInteractionEnabled:YES];
+    UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(achAreaTap)];
+    [self.achAreaView addGestureRecognizer:singleFingerTap];
+
 //    [self.collectionView registerClass:[MKRProfileAchievementCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
 
     [self.tableView setTableFooterView:[UIView new]];
@@ -73,6 +82,16 @@ static NSString * const reuseIdentifier = @"achievementCell";
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)achAreaTap {
+    if (!achievements) {
+        return;
+    }
+    UIStoryboard *achievementStoryboard = [UIStoryboard storyboardWithName:@"achiv" bundle:nil];
+    MKRAchivCollectionViewController *achievementController = [achievementStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([MKRAchivCollectionViewController class])];
+    [achievementController setUserAchievements:achievements];
+    [self.navigationController pushViewController:achievementController animated:YES];
 }
 
 - (void)refreshTriggered {
@@ -133,6 +152,12 @@ static NSString * const reuseIdentifier = @"achievementCell";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    MKRStrangeObject *stat = [statsPresenter statWithIndex:indexPath.row];
+    selectedMetrics = stat.metric;
+    [self performSegueWithIdentifier:kMKRMetricSegue sender:self];
+}
+
 #pragma mark <UICollectionViewDataSource>
 
 
@@ -191,4 +216,15 @@ static NSString * const reuseIdentifier = @"achievementCell";
     [statsPresenter loadStatsIds];
     [self.tableView reloadData];
 }
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:kMKRMetricSegue]) {
+        [(MKRUsersMetricsViewController *)segue.destinationViewController setMetricCode:selectedMetrics.code];
+        [(MKRUsersMetricsViewController *)segue.destinationViewController setPerviySubview:self.statTypeSegment.selectedSegmentIndex == 0];
+        [segue.destinationViewController setTitle:selectedMetrics.name];
+    }
+}
+
 @end

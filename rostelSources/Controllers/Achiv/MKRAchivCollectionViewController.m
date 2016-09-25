@@ -41,10 +41,6 @@ static NSString * const reuseIdentifier = @"achivCell";
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-//    [self.collectionView reloadData];
-}
-
 /*
 #pragma mark - Navigation
 
@@ -86,7 +82,7 @@ static NSString * const reuseIdentifier = @"achivCell";
     paragraphStyle.alignment = NSTextAlignmentCenter;
     
     NSAttributedString *title = [[NSAttributedString alloc] initWithString:achiv.name attributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:18], NSParagraphStyleAttributeName : paragraphStyle}];
-    NSAttributedString *lineOne = [[NSAttributedString alloc] initWithString:@"Для получения данного достижения необходимо провести 50 встреч" attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14], NSParagraphStyleAttributeName : paragraphStyle}];
+    NSAttributedString *lineOne = [[NSAttributedString alloc] initWithString:achiv.desc attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14], NSParagraphStyleAttributeName : paragraphStyle}];
     
 //    CNPPopupButton *button = [[CNPPopupButton alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame) - 50, 40)];
 //    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];

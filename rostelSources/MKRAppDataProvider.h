@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 #import "MKRAuthService.h"
 #import "MKRPushService.h"
+#import "MKRUserMetricService.h"
 #import "MKRUserService.h"
 #import "MKRStatsService.h"
 #import "MKRMetricsService.h"
@@ -20,6 +21,7 @@
 @property (nonatomic, strong, readonly) MKRDuelsService *duelsService;
 @property (nonatomic, strong, readonly) MKRStatsService *statsService;
 @property (nonatomic, strong, readonly) MKRMetricsService *metricsService;
+@property (nonatomic, strong, readonly) MKRUserMetricService *userMetricService;
 @property (nonatomic, strong, readonly) MKRGlobalErrorsObserver *globalErrorsObserver;
 
 + (MKRAppDataProvider *)shared;

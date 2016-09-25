@@ -6,6 +6,7 @@
 #import "MKRAppDataProvider.h"
 #import "MKRNetworkConfigManager.h"
 #import "MKRAuthCredentialCacheManager.h"
+#import "MKRUserMetricService.h"
 
 @interface MKRAppDataProvider()
 
@@ -14,6 +15,7 @@
 @property (nonatomic, readwrite) MKRUserService *userService;
 @property (nonatomic, readwrite) MKRStatsService *statsService;
 @property (nonatomic, readwrite) MKRDuelsService *duelsService;
+@property (nonatomic, readwrite) MKRUserMetricService *userMetricService;
 @property (nonatomic, readwrite) MKRMetricsService *metricsService;
 @property (nonatomic, readwrite) MKRGlobalErrorsObserver *globalErrorsObserver;
 
@@ -53,6 +55,7 @@
     [self setDuelsService:[[MKRDuelsService alloc] init]];
     [self setStatsService:[[MKRStatsService alloc] init]];
     [self setMetricsService:[[MKRMetricsService alloc] init]];
+    [self setUserMetricService:[[MKRUserMetricService alloc] init]];
     [self setGlobalErrorsObserver:[[MKRGlobalErrorsObserver alloc] init]];
 
 }

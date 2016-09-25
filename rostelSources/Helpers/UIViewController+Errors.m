@@ -55,6 +55,8 @@
     [[MKRAppDataProvider shared].userService clearAllCache];
     [[MKRAppDataProvider shared].duelsService clearAllCache];
     [[MKRAppDataProvider shared].statsService clearAllCache];
+    [[MKRAppDataProvider shared].metricsService clearAllCache];
+    [[MKRAppDataProvider shared].userMetricService clearAllCache];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"auth" bundle:nil];
     [[[UIApplication sharedApplication] keyWindow] setRootViewController:[storyboard instantiateInitialViewController] animated:YES];
     [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:[[NSBundle mainBundle] bundleIdentifier]];
