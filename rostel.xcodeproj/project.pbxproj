@@ -31,6 +31,8 @@
 		3AB67B0A1D961CA1003B4FE0 /* duel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB67B091D961CA1003B4FE0 /* duel.storyboard */; };
 		3AB67B0D1D962627003B4FE0 /* MKRDuelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB67B0C1D962627003B4FE0 /* MKRDuelsViewController.m */; };
 		3AB67B101D9627E7003B4FE0 /* MKRDuelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB67B0F1D9627E7003B4FE0 /* MKRDuelTableViewCell.m */; };
+		3ABEED6A1D978B46008BDE87 /* MKRUsersMetricsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEED691D978B46008BDE87 /* MKRUsersMetricsViewController.m */; };
+		3ABEED6D1D979217008BDE87 /* MKRUserMetricTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEED6C1D979217008BDE87 /* MKRUserMetricTableViewCell.m */; };
 		3ADA42C495B9B9C859ADEA98 /* libPods-rostel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA0D13DA0BB1AB30FB784D5 /* libPods-rostel.a */; };
 		58AAA00E28249D59B010CF0A /* MKRMetricsListNetworkMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA5E793B1FF72C6B161EC /* MKRMetricsListNetworkMethod.m */; };
 		58AAA08FBA70AC81E42E357C /* MKRGlobalErrorsObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAA92DCE44DC937AF47BCD /* MKRGlobalErrorsObserver.m */; };
@@ -153,6 +155,10 @@
 		3AB67B0C1D962627003B4FE0 /* MKRDuelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRDuelsViewController.m; sourceTree = "<group>"; };
 		3AB67B0E1D9627E7003B4FE0 /* MKRDuelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRDuelTableViewCell.h; sourceTree = "<group>"; };
 		3AB67B0F1D9627E7003B4FE0 /* MKRDuelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRDuelTableViewCell.m; sourceTree = "<group>"; };
+		3ABEED681D978B46008BDE87 /* MKRUsersMetricsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRUsersMetricsViewController.h; sourceTree = "<group>"; };
+		3ABEED691D978B46008BDE87 /* MKRUsersMetricsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRUsersMetricsViewController.m; sourceTree = "<group>"; };
+		3ABEED6B1D979217008BDE87 /* MKRUserMetricTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRUserMetricTableViewCell.h; sourceTree = "<group>"; };
+		3ABEED6C1D979217008BDE87 /* MKRUserMetricTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRUserMetricTableViewCell.m; sourceTree = "<group>"; };
 		58AAA000C7B0096CD0666E6C /* MKRAuthCredentialCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRAuthCredentialCacheManager.m; sourceTree = "<group>"; };
 		58AAA0388AD16CD433C26280 /* MKRUserAchievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRUserAchievement.m; sourceTree = "<group>"; };
 		58AAA04A1DD9CAE29831721B /* MKRServerError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRServerError.m; sourceTree = "<group>"; };
@@ -673,6 +679,8 @@
 				74233A331D96478E007B3B4D /* MKRProfileGraphTableViewCell.m */,
 				74233A351D964BF6007B3B4D /* MKRProgressView.h */,
 				74233A361D964BF6007B3B4D /* MKRProgressView.m */,
+				3ABEED6B1D979217008BDE87 /* MKRUserMetricTableViewCell.h */,
+				3ABEED6C1D979217008BDE87 /* MKRUserMetricTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -684,6 +692,8 @@
 				3AB67AFE1D95FDE5003B4FE0 /* profile.storyboard */,
 				3AB67B001D9604A4003B4FE0 /* MKRProfileViewController.h */,
 				3AB67B011D9604A4003B4FE0 /* MKRProfileViewController.m */,
+				3ABEED681D978B46008BDE87 /* MKRUsersMetricsViewController.h */,
+				3ABEED691D978B46008BDE87 /* MKRUsersMetricsViewController.m */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1168,6 +1178,7 @@
 				3A4BE3831D97489500C5EB24 /* MKRDuelSelectuserViewController.m in Sources */,
 				3A146A411D95456A0001F56D /* MKRRatingTableViewCell.m in Sources */,
 				58AAA732D353F726897274E5 /* MKRAuthConfirmNetworkMethod.m in Sources */,
+				3ABEED6D1D979217008BDE87 /* MKRUserMetricTableViewCell.m in Sources */,
 				58AAADACAB0CD23F7AA804D9 /* MKRAuthRequestNetworkMethod.m in Sources */,
 				3A50DCDB1D91072200FE1A76 /* MKRAuthCodeViewController.m in Sources */,
 				58AAA45ED8656E294F1A4853 /* MKRAuthCredentialCacheManager.m in Sources */,
@@ -1226,6 +1237,7 @@
 				58AAA88F10642D0B53125CDD /* MKRDuelsDataSource.m in Sources */,
 				58AAA19199021F6C5F1DB00C /* MKRDuelsListPresenter.m in Sources */,
 				58AAA8E298F92C9CC3507562 /* MKRAcceptDuelNetworkMethod.m in Sources */,
+				3ABEED6A1D978B46008BDE87 /* MKRUsersMetricsViewController.m in Sources */,
 				58AAAF264295006BF55C1AB9 /* MKRDeclineDuelNetworkMethod.m in Sources */,
 				58AAAF22BFD9508370BE80E6 /* MKRStrangeObject.m in Sources */,
 				58AAA3ED2AA044732B6059F8 /* MKRStatsNetworkMethod.m in Sources */,

@@ -27,12 +27,12 @@
 }
 
 
-- (NSArray *)usersMetricsIdsWithPerviySubview:(BOOL)perviySubiew andComparator:(NSComparator)comparator {
+- (NSArray *)usersMetricsIdsWithPerviySubview:(BOOL)perviySubiew andMetricCode:(NSString *)mCode andComparator:(NSComparator)comparator {
     NSArray *users = [cacheManager loadUsersMetrics];
     NSMutableArray *result = [NSMutableArray new];
     NSArray *usersCopy = comparator ? [users sortedArrayUsingComparator:comparator] : users;
     for (MKRUserMetricValue *userMetric in usersCopy) {
-        if (userMetric.isPerviySubview.boolValue == perviySubiew) {
+        if (userMetric.isPerviySubview.boolValue == perviySubiew && [userMetric.metric.code isEqualToString:mCode]) {
             [result addObject:userMetric.itemId];
         }
     }

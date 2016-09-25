@@ -14,5 +14,5 @@
 
 - (MKRUserMetricValue *)userMetricWithId:(NSNumber *)itemId;
 
-- (NSArray *)usersMetricsIdsWithPerviySubview:(BOOL)perviySubiew andComparator:(NSComparator)comparator;
+- (NSArray *)usersMetricsIdsWithPerviySubview:(BOOL)perviySubiew andMetricCode:(NSString *)mCode andComparator:(NSComparator)comparator;
 @end

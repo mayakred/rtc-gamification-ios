@@ -52,5 +52,9 @@
     return [dataSource metricsIdsWithComparator:comparator];
 }
 
+- (void)clearAllCache {
+    [cacheManager clearAllCache];
+}
+
 
 @end

@@ -12,7 +12,9 @@
 @interface MKRUserMetricService : NSObject
 - (void)loadMetricsListFromServerWithPresenter:(MKRUsersMetricsPresenter *)presenter;
 
-- (NSArray *)usersMetricsIdsWithPerviySubview:(BOOL)perviySubiew andComparator:(NSComparator)comparator;
+- (NSArray *)usersMetricsIdsWithPerviySubview:(BOOL)perviySubiew andMetricCode:(NSString *)mCode andComparator:(NSComparator)comparator;
 
 - (MKRUserMetricValue *)userMetricWithId:(NSNumber *)itemId;
+
+- (void)clearAllCache;
 @end

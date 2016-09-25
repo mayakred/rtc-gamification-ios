@@ -22,13 +22,14 @@
     }
     metricCode = mCode;
     perviySubview = pS;
+    [self loadUsersMetricsIds];
 
     return self;
 }
 
 - (NSComparator)getComparatorSort {
     return ^NSComparisonResult(MKRUserMetricValue *a, MKRUserMetricValue* b) {
-        return [a.metricValue compare:b.metricValue];
+        return [b.metricValue compare:a.metricValue];
     };
 }
 
@@ -41,7 +42,7 @@
 }
 
 - (void)loadUsersMetricsIds {
-    metricsIds = [[MKRAppDataProvider shared].metricsService metricsIdsWithComparator:[self getComparatorSort]];
+    metricsIds = [[MKRAppDataProvider shared].userMetricService usersMetricsIdsWithPerviySubview:perviySubview andMetricCode:metricCode andComparator:[self getComparatorSort]];
 }
 
 - (void)updateUsersMetrics {

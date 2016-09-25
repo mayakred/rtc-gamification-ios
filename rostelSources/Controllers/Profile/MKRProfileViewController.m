@@ -20,6 +20,7 @@
 #import "MKRStrangeObject.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "CALayer+RuntimeAttribute.h"
+#import "MKRUsersMetricsViewController.h"
 
 @interface MKRProfileViewController () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, MKRStatsListDataDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -35,11 +36,13 @@
 @end
 
 static NSString * const reuseIdentifier = @"achievementCell";
+static NSString * const kMKRMetricSegue = @"metricSegue";
 
 @implementation MKRProfileViewController {
     NSArray *achievements;
     MKRStatsPresenter *statsPresenter;
     UIRefreshControl *refreshControl;
+    MKRMetric *selectedMetrics;
 }
 
 - (void)viewDidLoad {
@@ -133,6 +136,12 @@ static NSString * const reuseIdentifier = @"achievementCell";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    MKRStrangeObject *stat = [statsPresenter statWithIndex:indexPath.row];
+    selectedMetrics = stat.metric;
+    [self performSegueWithIdentifier:kMKRMetricSegue sender:self];
+}
+
 #pragma mark <UICollectionViewDataSource>
 
 
@@ -191,4 +200,15 @@ static NSString * const reuseIdentifier = @"achievementCell";
     [statsPresenter loadStatsIds];
     [self.tableView reloadData];
 }
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:kMKRMetricSegue]) {
+        [(MKRUsersMetricsViewController *)segue.destinationViewController setMetricCode:selectedMetrics.code];
+        [(MKRUsersMetricsViewController *)segue.destinationViewController setPerviySubview:self.statTypeSegment.selectedSegmentIndex == 0];
+        [segue.destinationViewController setTitle:selectedMetrics.name];
+    }
+}
+
 @end

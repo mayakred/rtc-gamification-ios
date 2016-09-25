@@ -15,4 +15,6 @@
 - (MKRMetric *)metricWithId:(NSNumber *)itemId;
 
 - (NSArray *)metricsIdsWithComparator:(NSComparator)comparator;
+
+- (void)clearAllCache;
 @end

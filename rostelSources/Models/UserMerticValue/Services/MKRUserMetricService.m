@@ -46,12 +46,16 @@
     }];
 }
 
-- (NSArray *)usersMetricsIdsWithPerviySubview:(BOOL)perviySubiew andComparator:(NSComparator)comparator {
-    return [dataSource usersMetricsIdsWithPerviySubview:perviySubiew andComparator:comparator];
+- (NSArray *)usersMetricsIdsWithPerviySubview:(BOOL)perviySubiew andMetricCode:(NSString *)mCode andComparator:(NSComparator)comparator {
+    return [dataSource usersMetricsIdsWithPerviySubview:perviySubiew andMetricCode:mCode andComparator:comparator];
 }
 
 - (MKRUserMetricValue *)userMetricWithId:(NSNumber *)itemId {
     return [dataSource userMetricWithId:itemId];
+}
+
+- (void)clearAllCache {
+    [cacheManager clearAllCache];
 }
 
 @end

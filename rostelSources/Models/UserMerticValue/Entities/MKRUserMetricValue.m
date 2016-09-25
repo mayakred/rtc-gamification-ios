@@ -21,9 +21,9 @@
     }];
     RKRelationshipMapping *metricMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"metric" toKeyPath:@"metric" withMapping:[MKRMetric mapping]];
     [userMapping addPropertyMapping:metricMapping];
-    RKRelationshipMapping *avatarMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"avatar" toKeyPath:@"avatar" withMapping:[MKRImage mapping]];
+    RKRelationshipMapping *avatarMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"user_avatar" toKeyPath:@"userAvatar" withMapping:[MKRImage mapping]];
     [userMapping addPropertyMapping:avatarMapping];
-    RKRelationshipMapping *depMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"department" toKeyPath:@"department" withMapping:[MKRDepartment mapping]];
+    RKRelationshipMapping *depMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"user_department" toKeyPath:@"userDepartment" withMapping:[MKRDepartment mapping]];
     [userMapping addPropertyMapping:depMapping];
 
     return userMapping;
