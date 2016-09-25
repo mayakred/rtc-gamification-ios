@@ -21,6 +21,7 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "CALayer+RuntimeAttribute.h"
 #import "MKRUsersMetricsViewController.h"
+#import "MKRAchivCollectionViewController.h"
 
 @interface MKRProfileViewController () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, MKRStatsListDataDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -30,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *positionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ratingTypeLabel;
+@property (weak, nonatomic) IBOutlet UIView *achAreaView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *statTypeSegment;
 - (IBAction)statTypeSegmentChange:(id)sender;
 
@@ -51,7 +53,11 @@ static NSString * const kMKRMetricSegue = @"metricSegue";
     if (!achievements) {
         achievements = @[];
     }
-    
+
+    [self.achAreaView setUserInteractionEnabled:YES];
+    UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(achAreaTap)];
+    [self.achAreaView addGestureRecognizer:singleFingerTap];
+
 //    [self.collectionView registerClass:[MKRProfileAchievementCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
 
     [self.tableView setTableFooterView:[UIView new]];
@@ -76,6 +82,16 @@ static NSString * const kMKRMetricSegue = @"metricSegue";
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)achAreaTap {
+    if (!achievements) {
+        return;
+    }
+    UIStoryboard *achievementStoryboard = [UIStoryboard storyboardWithName:@"achiv" bundle:nil];
+    MKRAchivCollectionViewController *achievementController = [achievementStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([MKRAchivCollectionViewController class])];
+    [achievementController setUserAchievements:achievements];
+    [self.navigationController pushViewController:achievementController animated:YES];
 }
 
 - (void)refreshTriggered {
