@@ -8,6 +8,7 @@
 
 #import "MKRProfileGraphTableViewCell.h"
 #import "MKRProgressView.h"
+#import "UIColor+MKRColor.h"
 
 @implementation MKRProfileGraphTableViewCell {
     MKRProgressView *progressView;
@@ -21,27 +22,26 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    progressView = [[MKRProgressView alloc] initWithFirstNumber:10 secondNumber:100];
+    progressView = [[MKRProgressView alloc] initWithFirstNumber:0 secondNumber:0];
     
     [progressViewBox addSubview:progressView];
     [progressView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
     [progressView autoPinEdgeToSuperviewEdge:ALEdgeLeft];
     [progressView autoPinEdgeToSuperviewEdge:ALEdgeRight];
     
-    
     firstLabel = [[UILabel alloc] init];
     [progressViewBox addSubview:firstLabel];
-    [firstLabel autoSetDimension:ALDimensionWidth toSize:40];
+
+//    [firstLabel autoSetDimension:ALDimensionWidth toSize:40];
     [firstLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:progressView withOffset:4];
     [firstLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom];
     [firstLabel setFont:[UIFont systemFontOfSize:14]];
     firstLabelLeftOffset = [firstLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:10];
+    [firstLabel setTextAlignment:NSTextAlignmentRight];
     
     secondLabel = [[UILabel alloc] init];
     [progressViewBox addSubview:secondLabel];
-    [secondLabel autoSetDimension:ALDimensionWidth toSize:40];
     [secondLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:progressView withOffset:4];
-    [secondLabel setTextAlignment:NSTextAlignmentRight];
     [secondLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom];
     [secondLabel setFont:[UIFont systemFontOfSize:14]];
     secondLabelRightOffset = [secondLabel autoPinEdgeToSuperviewEdge:ALEdgeRight];
@@ -65,7 +65,19 @@
         r = first / second;
     }
     
-    [firstLabelLeftOffset setConstant:(progressView.frame.size.width - 20) * r];
+    [firstLabel setHidden:first == second];
+    
+    if (first == second && first != 0) {
+        [secondLabel setTextColor:[UIColor mkr_orangeColor]];
+    } else if (first == second && first == 0) {
+        [secondLabel setTextColor:[UIColor mkr_greyColor]];
+    } else {
+        [secondLabel setTextColor:[UIColor blackColor]];
+    }
+    
+
+    [firstLabelLeftOffset setConstant: (186 - firstLabel.bounds.size.width - secondLabel.bounds.size.width ) * r];
+    
 }
 
 @end

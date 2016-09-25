@@ -110,6 +110,7 @@ static NSString * const reuseIdentifier = @"achievementCell";
         [MBProgressHUD hideHUDForView:self.tableView animated:YES];
         [self showUserInfo:user];
         [statsPresenter updateStats];
+        [self.tableView reloadData];
     } failure:^(MKRErrorContainer *errorContainer) {
         [MBProgressHUD hideHUDForView:self.tableView animated:YES];
         [self showErrorForErrorContainer:errorContainer];
@@ -126,7 +127,9 @@ static NSString * const reuseIdentifier = @"achievementCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MKRProfileGraphTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"profileGraphIdentifier" forIndexPath:indexPath];
     MKRStrangeObject *stat = [statsPresenter statWithIndex:indexPath.row];
+    
     [cell setFirstNumber:stat.participantValue.floatValue secondNumber:stat.winnerValue.floatValue setTypeTitle:stat.metric.name];
+    
     return cell;
 }
 

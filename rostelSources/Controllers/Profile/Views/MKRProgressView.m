@@ -12,6 +12,7 @@
 
 @implementation MKRProgressView {
     UIView *backView, *firstView;
+    NSLayoutConstraint *rightFirstOffset;
 }
 
 - (instancetype)initWithFirstNumber:(float)first secondNumber:(float)second {
@@ -34,19 +35,21 @@
     [backView autoPinEdgeToSuperviewEdge:ALEdgeBottom];
     [backView.layer setCornerRadius:7];
     [backView.layer setMasksToBounds:YES];
-    [backView setBackgroundColor:[UIColor mkr_blueColor]];
+    [backView setBackgroundColor:[UIColor whiteColor]];
+    backView.layer.borderColor = [UIColor mkr_blueColor].CGColor;
+    backView.layer.borderWidth = 0.5f;
     
     firstView = [[UIView alloc] init];
     [backView addSubview:firstView];
-    [firstView setBackgroundColor:[UIColor whiteColor]];
-    [firstView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:0.5];
-    [firstView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0.5];
-    [firstView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0.5];
+    [firstView setBackgroundColor:[UIColor mkr_blueColor]];
+    [firstView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:1];
+    [firstView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:1];
+    [firstView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:1];
     [firstView autoSetDimension:ALDimensionWidth toSize:50];
     [firstView.layer setCornerRadius:7];
     [firstView.layer setMasksToBounds:YES];
     
-    [firstView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:backView withMultiplier:0.1];
+    rightFirstOffset = [firstView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:1];
     
     return self;
 }
@@ -56,7 +59,18 @@
     if (second != 0) {
         r = first / second;
     }
-    [firstView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:backView withMultiplier:r];
+    
+    r = MAX(0, MIN(1, r));
+    
+    if (first == second && first != 0) {
+        [rightFirstOffset setConstant:-1.f];
+        [firstView setBackgroundColor:[UIColor mkr_orangeColor]];
+        backView.layer.borderColor = [UIColor mkr_orangeColor].CGColor;
+    } else {
+        [rightFirstOffset setConstant:-(186 - 186 * r)];
+        [firstView setBackgroundColor:[UIColor mkr_blueColor]];
+        backView.layer.borderColor = [UIColor mkr_blueColor].CGColor;
+    }
 }
 
 @end
