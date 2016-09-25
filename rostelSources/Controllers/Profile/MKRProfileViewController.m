@@ -147,8 +147,12 @@ static NSString * const kMKRMetricSegue = @"metricSegue";
     MKRProfileGraphTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"profileGraphIdentifier" forIndexPath:indexPath];
     MKRStrangeObject *stat = [statsPresenter statWithIndex:indexPath.row];
     
-    [cell setFirstNumber:stat.participantValue.floatValue secondNumber:stat.winnerValue.floatValue setTypeTitle:stat.metric.name];
-    
+    if (self.statTypeSegment.selectedSegmentIndex == 0) {
+        [cell setFirstNumber:stat.participantValue.floatValue secondNumber:stat.winnerValue.floatValue setTypeTitle:stat.metric.name];
+    } else {
+        [cell setFirstNumber:stat.teamValue.floatValue secondNumber:stat.winnerValue.floatValue setTypeTitle:stat.metric.name];
+    }
+
     return cell;
 }
 
