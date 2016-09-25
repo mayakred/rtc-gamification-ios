@@ -22,17 +22,17 @@
 @end
 
 @implementation MKRAchivCollectionViewController {
-    NSArray *achivements;
 }
 
 static NSString * const reuseIdentifier = @"achivCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    MKRUser *user = [[MKRAppDataProvider shared].userService userWithId:[MKRAppDataProvider shared].userService.currentUser.itemId];
-    
-    achivements = [user orderedAchievements];
+
+    if (!self.userAchievements) {
+        self.userAchievements = @[];
+    }
+
     [self.collectionView reloadData];
 }
 
@@ -58,13 +58,13 @@ static NSString * const reuseIdentifier = @"achivCell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [achivements count];
+    return [self.userAchievements count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MKRAchivCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    [cell setAchivvement:achivements[indexPath.row]];
+    [cell setAchivvement:self.userAchievements[indexPath.row]];
     
     return cell;
 }
@@ -73,7 +73,7 @@ static NSString * const reuseIdentifier = @"achivCell";
 
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [self showPopupWithStyle: CNPPopupStyleCentered withAchiv: ((MKRUserAchievement*)achivements[indexPath.row]).achievement];
+    [self showPopupWithStyle: CNPPopupStyleCentered withAchiv: ((MKRUserAchievement*)self.userAchievements[indexPath.row]).achievement];
 }
 
 

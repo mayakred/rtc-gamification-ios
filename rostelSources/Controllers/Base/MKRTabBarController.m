@@ -12,6 +12,7 @@
 #import "MKRNavigationController.h"
 #import "MKRProfileViewController.h"
 #import "MKRFullUser.h"
+#import "MKRAchivCollectionViewController.h"
 
 @interface MKRTabBarController ()
 
@@ -49,10 +50,11 @@
     
     UIStoryboard *achievementStoryboard = [UIStoryboard storyboardWithName:@"achiv" bundle:nil];
     MKRNavigationController *achievementNavController = [achievementStoryboard instantiateInitialViewController];
+    [(MKRAchivCollectionViewController *)achievementNavController.visibleViewController setUserAchievements:[[MKRAppDataProvider shared].userService.currentUser orderedAchievements]];
     [achievementNavController.tabBarItem setImage:[UIImage imageNamed:@"achiv-icon"]];
     [achievementNavController.tabBarItem setTitle:@"Достижения"];
     
-    UIStoryboard *settingsStoryboard = [UIStoryboard storyboardWithName:@"rating" bundle:nil];
+    UIStoryboard *settingsStoryboard = [UIStoryboard storyboardWithName:@"settings" bundle:nil];
     MKRNavigationController *settingsNavController = [settingsStoryboard instantiateInitialViewController];
     [settingsNavController.tabBarItem setImage:[UIImage imageNamed:@"settings-icon"]];
     [settingsNavController.tabBarItem setTitle:@"Настройки"];
