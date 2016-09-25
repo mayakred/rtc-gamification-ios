@@ -17,6 +17,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *metricNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *expiresAtLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (strong, nonatomic) IBOutlet UILabel *duelName;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *duelYourView;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *duelOtherViewWidth;
+@property (strong, nonatomic) IBOutlet UILabel *duelYourCountLabel;
+@property (strong, nonatomic) IBOutlet UILabel *duelOtherCountLabel;
+@property (strong, nonatomic) IBOutlet UIView *inprogressBoxView;
 
 - (void)setData:(MKRDuel *)duel;
 @end

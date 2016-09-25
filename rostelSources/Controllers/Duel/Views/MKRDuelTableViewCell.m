@@ -39,12 +39,51 @@
         //
     }];
     [self.fullNameLabel setText:[user fullName]];
+    
+    [self.duelYourView setConstant:110];
+    [self.duelOtherViewWidth setConstant:110];
+    
+    
+    if ([duel.status isEqualToString:DUEL_STATUS_IN_PROGRESS]) {
+        [self.inprogressBoxView setHidden:NO];
+        [self.statusLabel setHidden:YES];
+        
+        if (isVictim) {
+            [self.duelYourCountLabel setText:[duel.victimValue stringValue]];
+            [self.duelOtherCountLabel setText:[duel.initiatorValue stringValue]];
+            
+        } else {
+            [self.duelYourCountLabel setText:[duel.initiatorValue stringValue]];
+            [self.duelOtherCountLabel setText:[duel.victimValue stringValue]];
+        }
+        
+        
+        
+        if ([duel.victimValue floatValue] <= [duel.initiatorValue floatValue]) {
+            if (isVictim) {
+                [self.duelYourView setConstant:MIN(110 * ([duel.victimValue floatValue]/[duel.initiatorValue floatValue]), 110)];
+            } else {
+                [self.duelOtherViewWidth setConstant:MIN(110 * ([duel.victimValue floatValue]/[duel.initiatorValue floatValue]), 110)];
+            }
+        } else if ([duel.victimValue floatValue] > [duel.initiatorValue floatValue]) {
+            if (isVictim) {
+                [self.duelOtherViewWidth setConstant:MIN(110 * ([duel.initiatorValue floatValue]/[duel.victimValue floatValue]), 110)];
+            } else {
+                [self.duelYourView setConstant:MIN(110 * ([duel.initiatorValue floatValue]/[duel.victimValue floatValue]), 110)];
+            }
+        }
+        
+        [self.duelName setText: !isVictim ? duel.victim.firstName : duel.initiator.firstName];
+        
+    } else {
+        [self.inprogressBoxView setHidden:YES];
+        [self.statusLabel setHidden:NO];
+    }
+    
     if ([duel.status isEqualToString:DUEL_STATUS_WAITING_VICTIM]) {
         [self.statusLabel setText:isVictim ? @"Ожидает вашего решения" : @"Ожидает решения соперника"];
     }
-    if ([duel.status isEqualToString:DUEL_STATUS_IN_PROGRESS]) {
-        [self.statusLabel setText:@"Дуэль в процессе"];
-    }
+
     if ([duel.status isEqualToString:DUEL_STATUS_WICTIM_WIN]) {
         [self.statusLabel setText:isVictim ? @"Вы победили" : @"Вы проиграли"];
     }
