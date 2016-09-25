@@ -609,13 +609,13 @@
 				74233A351D964BF6007B3B4D /* MKRProgressView.h */,
 				74233A361D964BF6007B3B4D /* MKRProgressView.m */,
 			);
-			name = Views;
-			path = ../Profile/Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		58AAA79050E8D0CE9505081D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				58AAA7893D81301154453957 /* Views */,
 				3AB67AFE1D95FDE5003B4FE0 /* profile.storyboard */,
 				3AB67B001D9604A4003B4FE0 /* MKRProfileViewController.h */,
 				3AB67B011D9604A4003B4FE0 /* MKRProfileViewController.m */,
@@ -748,7 +748,6 @@
 		58AAACABB7F73B461AD02272 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				58AAA7893D81301154453957 /* Views */,
 				58AAA1609B4BC8F283709118 /* MKRNavigationController.h */,
 				58AAA3AD5ED3E63E0F581B06 /* MKRNavigationController.m */,
 				3A50DCDC1D91195A00FE1A76 /* MKRTabBarController.h */,
