@@ -86,6 +86,9 @@
 		58AAAFF538291F2A1BF04086 /* MKREntityWithId.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAA4E703375BBEE818CC6 /* MKREntityWithId.m */; };
 		74233A341D96478F007B3B4D /* MKRProfileGraphTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74233A331D96478E007B3B4D /* MKRProfileGraphTableViewCell.m */; };
 		74233A371D964BF6007B3B4D /* MKRProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74233A361D964BF6007B3B4D /* MKRProgressView.m */; };
+		74233A3A1D96A71B007B3B4D /* MKRAchivCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74233A391D96A71B007B3B4D /* MKRAchivCollectionViewController.m */; };
+		74233A3D1D96A74C007B3B4D /* achiv.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74233A3C1D96A74C007B3B4D /* achiv.storyboard */; };
+		74233A401D96A95F007B3B4D /* MKRAchivCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74233A3F1D96A95F007B3B4D /* MKRAchivCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -243,6 +246,11 @@
 		74233A331D96478E007B3B4D /* MKRProfileGraphTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRProfileGraphTableViewCell.m; sourceTree = "<group>"; };
 		74233A351D964BF6007B3B4D /* MKRProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRProgressView.h; sourceTree = "<group>"; };
 		74233A361D964BF6007B3B4D /* MKRProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRProgressView.m; sourceTree = "<group>"; };
+		74233A381D96A71B007B3B4D /* MKRAchivCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKRAchivCollectionViewController.h; path = Achiv/MKRAchivCollectionViewController.h; sourceTree = "<group>"; };
+		74233A391D96A71B007B3B4D /* MKRAchivCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKRAchivCollectionViewController.m; path = Achiv/MKRAchivCollectionViewController.m; sourceTree = "<group>"; };
+		74233A3C1D96A74C007B3B4D /* achiv.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = achiv.storyboard; path = Achiv/achiv.storyboard; sourceTree = "<group>"; };
+		74233A3E1D96A95F007B3B4D /* MKRAchivCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKRAchivCollectionViewCell.h; path = Achiv/View/MKRAchivCollectionViewCell.h; sourceTree = "<group>"; };
+		74233A3F1D96A95F007B3B4D /* MKRAchivCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKRAchivCollectionViewCell.m; path = Achiv/View/MKRAchivCollectionViewCell.m; sourceTree = "<group>"; };
 		8C7213B989BA63949FC458B0 /* Pods-rostel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rostel.release.xcconfig"; path = "Pods/Target Support Files/Pods-rostel/Pods-rostel.release.xcconfig"; sourceTree = "<group>"; };
 		BAECC5DF7CA97FF3F08E0A09 /* Pods-rostel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rostel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rostel/Pods-rostel.debug.xcconfig"; sourceTree = "<group>"; };
 		DEA0D13DA0BB1AB30FB784D5 /* libPods-rostel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rostel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -524,6 +532,7 @@
 				58AAAF26671CC7916C955DC5 /* Rating */,
 				58AAA79050E8D0CE9505081D /* Profile */,
 				58AAAE3B9E0B88C933194980 /* Duel */,
+				74233A3B1D96A72C007B3B4D /* Achiv */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -840,6 +849,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		74233A3B1D96A72C007B3B4D /* Achiv */ = {
+			isa = PBXGroup;
+			children = (
+				74233A3C1D96A74C007B3B4D /* achiv.storyboard */,
+				74233A381D96A71B007B3B4D /* MKRAchivCollectionViewController.h */,
+				74233A391D96A71B007B3B4D /* MKRAchivCollectionViewController.m */,
+				74233A3E1D96A95F007B3B4D /* MKRAchivCollectionViewCell.h */,
+				74233A3F1D96A95F007B3B4D /* MKRAchivCollectionViewCell.m */,
+			);
+			name = Achiv;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -908,6 +929,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74233A3D1D96A74C007B3B4D /* achiv.storyboard in Resources */,
 				3A50DCD51D90E4B600FE1A76 /* auth.storyboard in Resources */,
 				3A146A3B1D952D910001F56D /* rating.storyboard in Resources */,
 				3AB67AFF1D95FDE5003B4FE0 /* profile.storyboard in Resources */,
@@ -979,6 +1001,7 @@
 				58AAA56B45C210E2CD3F0EE2 /* MKRAuthSecretKey.m in Sources */,
 				58AAA42A1604FB4A4E41CC50 /* MKRAuthCredentials.m in Sources */,
 				58AAA43FA547535CFA1DCFFF /* MKRAuthService.m in Sources */,
+				74233A401D96A95F007B3B4D /* MKRAchivCollectionViewCell.m in Sources */,
 				58AAA44E3E621942F874C2C3 /* MKRLogoutNetworkMethod.m in Sources */,
 				3A146A411D95456A0001F56D /* MKRRatingTableViewCell.m in Sources */,
 				58AAA732D353F726897274E5 /* MKRAuthConfirmNetworkMethod.m in Sources */,
@@ -1015,6 +1038,7 @@
 				58AAA30B6D94C7D4F0D7C697 /* MKRMetric.m in Sources */,
 				3AB67B0D1D962627003B4FE0 /* MKRDuelsViewController.m in Sources */,
 				58AAA1D2DA8E0FB75F5C0BCB /* MKRDuel.m in Sources */,
+				74233A3A1D96A71B007B3B4D /* MKRAchivCollectionViewController.m in Sources */,
 				3AB67B081D961084003B4FE0 /* MKRProfileAchievementCollectionViewCell.m in Sources */,
 				74233A371D964BF6007B3B4D /* MKRProgressView.m in Sources */,
 				58AAA1D1D32A4C2B3DCFA19B /* MKRGetCurrentUserNetworkMethod.m in Sources */,

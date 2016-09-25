@@ -11,11 +11,16 @@
 
 }
 
-+ (UIImage *)grayscaleImage:(UIImage *)image {
+
++ (UIImage *)grayscaleImage:(UIImage *)image withAlpha:(float)alpha {
     CIImage *ciImage = [[CIImage alloc] initWithImage:image];
     CIImage *grayscale = [ciImage imageByApplyingFilter:@"CIColorControls"
-                                    withInputParameters: @{kCIInputSaturationKey : @0.0}];
+                                    withInputParameters: @{kCIInputSaturationKey : @(alpha)}];
     return [UIImage imageWithCIImage:grayscale];
+}
+
++ (UIImage *)grayscaleImage:(UIImage *)image {
+    return [MKRUtils grayscaleImage:image withAlpha:0];
 }
 
 + (NSString *)deviceId {
