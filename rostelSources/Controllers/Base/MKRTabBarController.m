@@ -47,7 +47,7 @@
     [duelNavController.tabBarItem setImage:[UIImage imageNamed:@"fight-icon"]];
     [duelNavController.tabBarItem setTitle:@"Дуэли"];
     
-    UIStoryboard *achievementStoryboard = [UIStoryboard storyboardWithName:@"rating" bundle:nil];
+    UIStoryboard *achievementStoryboard = [UIStoryboard storyboardWithName:@"achiv" bundle:nil];
     MKRNavigationController *achievementNavController = [achievementStoryboard instantiateInitialViewController];
     [achievementNavController.tabBarItem setImage:[UIImage imageNamed:@"achiv-icon"]];
     [achievementNavController.tabBarItem setTitle:@"Достижения"];

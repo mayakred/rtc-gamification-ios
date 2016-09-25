@@ -10,6 +10,8 @@
 
 + (UIImage *)grayscaleImage:(UIImage *)image;
 
++ (UIImage *)grayscaleImage:(UIImage *)image withAlpha:(float)alpha;
+
 + (NSString *)deviceId;
 
 + (NSString *)humanReadableDate:(NSDate *)date;

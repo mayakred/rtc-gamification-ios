@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6yl-Sf-7FA">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Достижения-->
+        <scene sceneID="WH2-73-fqU">
+            <objects>
+                <collectionViewController title="Достижения" id="3Qx-tT-hRI" customClass="MKRAchivCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="C2h-rj-Eip">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="uwg-LJ-PAl">
+                            <size key="itemSize" width="150" height="160"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="5" minY="10" maxX="5" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="achivCell" id="RTA-uP-0Mp" customClass="MKRAchivCollectionViewCell">
+                                <rect key="frame" x="5" y="10" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="123" translatesAutoresizingMaskIntoConstraints="NO" id="APe-ib-j4o">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="sTb-sn-dVs"/>
+                                                <constraint firstAttribute="height" constant="150" id="txO-hX-Cls"/>
+                                            </constraints>
+                                        </imageView>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l9J-na-eGL">
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="giQ-ZJ-hOz" userLabel="grayImageView">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="wLB-9z-qoY"/>
+                                                        <constraint firstAttribute="height" constant="150" id="wUe-JM-33R"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="giQ-ZJ-hOz" firstAttribute="leading" secondItem="l9J-na-eGL" secondAttribute="leading" id="LXT-ak-474"/>
+                                                <constraint firstAttribute="width" constant="150" id="LuV-8e-NPD"/>
+                                                <constraint firstItem="giQ-ZJ-hOz" firstAttribute="top" secondItem="l9J-na-eGL" secondAttribute="top" id="Zfs-eW-UEs"/>
+                                                <constraint firstAttribute="height" constant="150" id="fVn-HO-H1S"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="APe-ib-j4o" firstAttribute="leading" secondItem="RTA-uP-0Mp" secondAttribute="leading" id="IjT-Fs-tc4"/>
+                                    <constraint firstItem="l9J-na-eGL" firstAttribute="leading" secondItem="RTA-uP-0Mp" secondAttribute="leading" id="PYH-UW-ZMg"/>
+                                    <constraint firstItem="l9J-na-eGL" firstAttribute="top" secondItem="RTA-uP-0Mp" secondAttribute="top" id="cqd-zy-hLy"/>
+                                    <constraint firstItem="APe-ib-j4o" firstAttribute="top" secondItem="RTA-uP-0Mp" secondAttribute="top" id="uur-7s-ztw"/>
+                                </constraints>
+                                <size key="customSize" width="150" height="150"/>
+                                <connections>
+                                    <outlet property="achivImage" destination="APe-ib-j4o" id="Yvg-Df-ob8"/>
+                                    <outlet property="grayAchivImage" destination="giQ-ZJ-hOz" id="hbT-gt-Jzw"/>
+                                    <outlet property="maskHeight" destination="fVn-HO-H1S" id="a51-bS-Ld3"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="3Qx-tT-hRI" id="RcQ-PB-LLf"/>
+                            <outlet property="delegate" destination="3Qx-tT-hRI" id="fQs-I1-9EX"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Достижения" id="hwR-Pd-Uhc"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fA5-Sf-ljL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920.625" y="50.70422535211268"/>
+        </scene>
+        <!--Достижения-->
+        <scene sceneID="to1-P3-d0l">
+            <objects>
+                <navigationController title="Достижения" automaticallyAdjustsScrollViewInsets="NO" id="6yl-Sf-7FA" customClass="MKRNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QUw-CM-shD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3Qx-tT-hRI" kind="relationship" relationship="rootViewController" id="3y0-0s-mAc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jiO-MX-26c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18.399999999999999" y="50.824587706146929"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="123" width="540" height="540"/>
+    </resources>
+</document>
