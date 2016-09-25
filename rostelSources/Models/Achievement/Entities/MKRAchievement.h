@@ -13,6 +13,7 @@
 @interface MKRAchievement : MKREntityWithId
 
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *desc;
 @property (nonatomic, copy) NSNumber<RLMDouble> *maxValue;
 @property (nonatomic) MKRImage *image;
 @property (nonatomic) MKRMetric *metric;
