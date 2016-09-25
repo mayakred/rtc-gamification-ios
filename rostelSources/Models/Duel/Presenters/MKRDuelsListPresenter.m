@@ -24,10 +24,9 @@
 }
 
 - (NSComparator)getComparatorSort {
-    return nil;
-//    return ^NSComparisonResult(MKRUser *a, MKRUser* b) {
-//        return [a.topPosition compare:b.topPosition];
-//    };
+    return ^NSComparisonResult(MKRDuel *a, MKRDuel* b) {
+        return [b.startAt compare:a.startAt];
+    };
 }
 
 - (void)loadDuelsIds {

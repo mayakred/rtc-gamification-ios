@@ -18,10 +18,12 @@
 #define API_ACCEPT_DUEL_PATTERN          @"users/me/duels/%@/accept"
 #define API_DECLINE_DUEL                 @"users/me/duels/:duelId/reject"
 #define API_DECLINE_DUEL_PATTERN         @"users/me/duels/%@/reject"
+#define API_CREATE_DUEL                  @"users/me/duels"
 #define API_TOURNAMENTS_LIST             @"users/:userId/tournaments/active"
 #define API_TOURNAMENTS_LIST_PATTERN     @"users/%@/tournaments/active"
 #define API_STATISTIC                    @"users/:userId/tab1/statistic"
 #define API_STATISTIC_PATTERN            @"users/%@/tab1/statistic"
+#define API_METRICS_LIST                 @"metrics"
 
 
 @interface MKRNetworkConfigManager : NSObject

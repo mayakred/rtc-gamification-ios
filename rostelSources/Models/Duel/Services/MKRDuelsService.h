@@ -24,6 +24,8 @@
 
 - (void)declineDuelWithId:(NSNumber *)duelId success:(void (^)())successBlock failure:(void (^)(MKRErrorContainer *errorContainer))failureBlock;
 
+- (void)createDuelWithVictimId:(NSNumber *)victimId andMetricCode:(NSString *)metricCode andEndAt:(NSNumber *)endAt success:(void (^)(MKRDuel *duel))successBlock failure:(void (^)(MKRErrorContainer *errorContainer))failureBlock;
+
 - (MKRDuel *)duelWithId:(NSNumber *)itemId;
 
 - (NSArray *)duelsIdsWithComparator:(NSComparator)comparator;

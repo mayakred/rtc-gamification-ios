@@ -14,6 +14,7 @@
 @property (nonatomic, readwrite) MKRUserService *userService;
 @property (nonatomic, readwrite) MKRStatsService *statsService;
 @property (nonatomic, readwrite) MKRDuelsService *duelsService;
+@property (nonatomic, readwrite) MKRMetricsService *metricsService;
 @property (nonatomic, readwrite) MKRGlobalErrorsObserver *globalErrorsObserver;
 
 @end
@@ -51,6 +52,7 @@
     [self setPushService:[[MKRPushService alloc] init]];
     [self setDuelsService:[[MKRDuelsService alloc] init]];
     [self setStatsService:[[MKRStatsService alloc] init]];
+    [self setMetricsService:[[MKRMetricsService alloc] init]];
     [self setGlobalErrorsObserver:[[MKRGlobalErrorsObserver alloc] init]];
 
 }
